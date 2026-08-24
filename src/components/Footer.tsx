@@ -69,6 +69,21 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram
           </div>
         </div>
 
+        {/* TMDB Attribution & Logo Section */}
+        <div className="p-5 bg-[#12131a] border border-[#2d2f39] rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <img
+              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              alt="TMDB Logo"
+              className="w-28 h-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          <p className="text-xs text-gray-400 text-center md:text-right max-w-lg leading-relaxed">
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+          </p>
+        </div>
+
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-[#2d2f39]/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} AsiaStream Portal. All rights reserved.</p>
