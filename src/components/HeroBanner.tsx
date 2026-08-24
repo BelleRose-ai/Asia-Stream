@@ -15,11 +15,11 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ drama, onSelectDrama }) 
         <img
           src={drama.backdropUrl}
           alt={drama.title}
-          className="w-full h-full object-cover object-center opacity-40 scale-105 transform transition-transform duration-1000"
+          className="w-full h-full object-cover object-center opacity-75 scale-105 transform transition-transform duration-1000"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0c10] via-[#0b0c10]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0c10]/90 via-[#0b0c10]/40 to-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-24 flex flex-col justify-end min-h-[460px] md:min-h-[520px]">

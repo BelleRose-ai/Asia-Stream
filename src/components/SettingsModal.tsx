@@ -1,26 +1,11 @@
-import React, { useState } from 'react';
-import { X, Key, Check, Info } from 'lucide-react';
+import React from 'react';
+import { X, Key, ShieldCheck, ExternalLink } from 'lucide-react';
 
 interface SettingsModalProps {
-  currentApiKey: string;
-  onSaveApiKey: (key: string) => void;
   onClose: () => void;
 }
 
-export const SettingsModal: React.FC<SettingsModalProps> = ({ currentApiKey, onSaveApiKey, onClose }) => {
-  const [apiKey, setApiKey] = useState(currentApiKey);
-  const [saved, setSaved] = useState(false);
-
-  const handleSave = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSaveApiKey(apiKey.trim());
-    setSaved(true);
-    setTimeout(() => {
-      setSaved(false);
-      onClose();
-    }, 700);
-  };
-
+export const SettingsModal: React.FC<SettingsModalProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-md bg-[#121212] border border-[#2d2f39] rounded-2xl shadow-2xl p-6 space-y-5">
@@ -32,48 +17,41 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ currentApiKey, onS
         </button>
 
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-violet-600/20 border border-violet-500/40 flex items-center justify-center text-violet-400">
-            <Key className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-xl bg-emerald-600/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+            <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white">TMDB API Configuration</h3>
-            <p className="text-xs text-gray-400">Fetch live high-res posters & metadata</p>
+            <h3 className="text-lg font-bold text-white">TMDB API & Server Security</h3>
+            <p className="text-xs text-gray-400">Secure server-side environment configuration</p>
           </div>
         </div>
 
-        <form onSubmit={handleSave} className="space-y-4">
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold text-gray-300">TMDB API Key (v3 auth)</label>
-            <input
-              type="password"
-              value={apiKey}
-              onChange={(e) => setApiKey(e.target.value)}
-              placeholder="Enter your TMDB API Key..."
-              className="w-full px-3.5 py-2.5 bg-[#1a1b23] border border-[#2d2f39] rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500"
-            />
-          </div>
+        <div className="space-y-4 text-xs text-gray-300 leading-relaxed">
+          <p>
+            To keep your TMDB API key completely secure and hidden from public visitors, this application uses a <strong>secure backend proxy (`/api/tmdb/*`)</strong>.
+          </p>
 
-          <div className="p-3 bg-[#1a1b23]/50 border border-[#2d2f39] rounded-xl text-xs text-gray-400 flex items-start gap-2.5">
-            <Info className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-            <p>
-              The app works fully out-of-the-box using curated fallback metadata. Providing your TMDB API key is completely optional.
-            </p>
+          <div className="p-3.5 bg-[#1a1b23] border border-[#2d2f39] rounded-xl space-y-2">
+            <h4 className="font-semibold text-white flex items-center gap-1.5">
+              <Key className="w-3.5 h-3.5 text-cyan-400" />
+              How to configure on Vercel:
+            </h4>
+            <ol className="list-decimal pl-4 space-y-1 text-gray-400">
+              <li>Go to your Vercel Project Dashboard.</li>
+              <li>Navigate to <strong>Settings → Environment Variables</strong>.</li>
+              <li>Add a new variable named <code className="text-cyan-300 bg-black/40 px-1 py-0.5 rounded">TMDB_API_KEY</code>.</li>
+              <li>Paste your TMDB v3 API Key or Bearer Token as the value.</li>
+              <li>Redeploy your project!</li>
+            </ol>
           </div>
+        </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-lg flex items-center justify-center gap-2 transition-all"
-          >
-            {saved ? (
-              <>
-                <Check className="w-4 h-4 text-white" />
-                <span>Saved Successfully!</span>
-              </>
-            ) : (
-              <span>Save API Key</span>
-            )}
-          </button>
-        </form>
+        <button
+          onClick={onClose}
+          className="w-full py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-lg transition-all"
+        >
+          Got It
+        </button>
       </div>
     </div>
   );

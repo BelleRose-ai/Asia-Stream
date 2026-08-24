@@ -1,12 +1,12 @@
 import { Drama, CategoryType, Episode } from '../types';
 
-export async function fetchTmdbMetadata(drama: Drama, apiKey?: string): Promise<Drama> {
-  if (!apiKey || !drama.tmdbId) {
+export async function fetchTmdbMetadata(drama: Drama): Promise<Drama> {
+  if (!drama.tmdbId) {
     return drama;
   }
 
   try {
-    const res = await fetch(`https://api.themoviedb.org/3/tv/${drama.tmdbId}?api_key=${apiKey}&language=en-US`);
+    const res = await fetch(`/api/tmdb/tv/${drama.tmdbId}?language=en-US`);
     if (!res.ok) return drama;
 
     const data = await res.json();
@@ -27,11 +27,11 @@ export async function fetchTmdbMetadata(drama: Drama, apiKey?: string): Promise<
   }
 }
 
-export async function searchTmdbLive(query: string, apiKey: string): Promise<Drama[]> {
-  if (!apiKey || !query.trim()) return [];
+export async function searchTmdbLive(query: string): Promise<Drama[]> {
+  if (!query.trim()) return [];
 
   try {
-    const res = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${encodeURIComponent(query)}&language=en-US&page=1&include_adult=false`);
+    const res = await fetch(`/api/tmdb/search/multi?query=${encodeURIComponent(query)}&language=en-US&page=1&include_adult=false`);
     if (!res.ok) return [];
 
     const data = await res.json();
@@ -87,16 +87,14 @@ export async function searchTmdbLive(query: string, apiKey: string): Promise<Dra
   }
 }
 
-export async function discoverTmdbCategory(category: CategoryType, apiKey: string): Promise<Drama[]> {
-  if (!apiKey) return [];
-
+export async function discoverTmdbCategory(category: CategoryType): Promise<Drama[]> {
   let langParam = 'ko';
   if (category === 'C-Drama') langParam = 'zh';
   if (category === 'Anime') langParam = 'ja';
+
   if (category === 'Trending') {
-    // fetch trending tv
     try {
-      const res = await fetch(`https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`);
+      const res = await fetch(`/api/tmdb/trending/tv/week`);
       if (!res.ok) return [];
       const data = await res.json();
       return (data.results || []).map((item: any): Drama => {
@@ -140,7 +138,7 @@ export async function discoverTmdbCategory(category: CategoryType, apiKey: strin
   }
 
   try {
-    const res = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&with_original_language=${langParam}&sort_by=popularity.desc&page=1`);
+    const res = await fetch(`/api/tmdb/discover/tv?with_original_language=${langParam}&sort_by=popularity.desc&page=1`);
     if (!res.ok) return [];
     const data = await res.json();
     return (data.results || []).map((item: any): Drama => {

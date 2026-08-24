@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 import { DRAMA_DATABASE } from './data/dramas';
 import { Drama, CategoryType } from './types';
 import { fetchTmdbMetadata, searchTmdbLive, discoverTmdbCategory } from './services/tmdb';
-import { Flame, Sparkles, SearchX, Key, Globe } from 'lucide-react';
+import { Flame, Sparkles, SearchX, Globe, ShieldCheck } from 'lucide-react';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('All');
@@ -17,40 +17,45 @@ export default function App() {
   const [selectedDrama, setSelectedDrama] = useState<Drama | null>(null);
   const [showTelegramModal, setShowTelegramModal] = useState<boolean>(false);
   const [showSettingsModal, setShowSettingsModal] = useState<boolean>(false);
-  const [tmdbApiKey, setTmdbApiKey] = useState<string>(() => localStorage.getItem('tmdb_api_key') || '');
   const [dramas, setDramas] = useState<Drama[]>(DRAMA_DATABASE);
   const [isSearchingTmdb, setIsSearchingTmdb] = useState<boolean>(false);
+  const [serverConfigured, setServerConfigured] = useState<boolean>(false);
 
-  // Load live TMDB data when API key is configured or category changes
+  // Check server configuration health on mount
+  useEffect(() => {
+    fetch('/api/health')
+      .then(res => res.json())
+      .then(data => {
+        if (data.tmdbConfigured) {
+          setServerConfigured(true);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  // Fetch live TMDB discover/trending data from server proxy
   useEffect(() => {
     let isMounted = true;
-    if (!tmdbApiKey) {
-      setDramas(DRAMA_DATABASE);
-      return;
-    }
-
-    // Fetch discovered / trending items from TMDB for this category
-    discoverTmdbCategory(activeCategory, tmdbApiKey)
+    discoverTmdbCategory(activeCategory)
       .then(results => {
         if (isMounted && results.length > 0) {
-          // Merge with static database or use live results
           setDramas(results);
         }
       })
       .catch(err => console.warn('TMDB discover error:', err));
 
     return () => { isMounted = false; };
-  }, [tmdbApiKey, activeCategory]);
+  }, [activeCategory]);
 
-  // Live TMDB search when query is typed and API key exists
+  // Live TMDB search via server proxy
   useEffect(() => {
-    if (!tmdbApiKey || !searchQuery.trim()) return;
+    if (!searchQuery.trim()) return;
 
     let isMounted = true;
     setIsSearchingTmdb(true);
 
     const timer = setTimeout(() => {
-      searchTmdbLive(searchQuery, tmdbApiKey)
+      searchTmdbLive(searchQuery)
         .then(results => {
           if (isMounted) {
             if (results.length > 0) {
@@ -68,14 +73,9 @@ export default function App() {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [searchQuery, tmdbApiKey]);
+  }, [searchQuery]);
 
-  const handleSaveApiKey = (key: string) => {
-    setTmdbApiKey(key);
-    localStorage.setItem('tmdb_api_key', key);
-  };
-
-  // Filtered dramas based on category and search query
+  // Filtered dramas
   const filteredDramas = useMemo(() => {
     return dramas.filter(drama => {
       const matchesCategory =
@@ -120,24 +120,9 @@ export default function App() {
         onOpenSettings={() => setShowSettingsModal(true)}
       />
 
-      {/* TMDB API Key Prompt Banner if not set */}
-      {!tmdbApiKey && (
-        <div className="bg-gradient-to-r from-violet-900/40 via-cyan-900/40 to-violet-900/40 border-b border-violet-500/30 px-4 py-2.5 text-center text-xs sm:text-sm text-gray-200 flex items-center justify-center gap-3 flex-wrap">
-          <span className="flex items-center gap-1.5 font-medium">
-            <Globe className="w-4 h-4 text-cyan-400" />
-            Want to browse unlimited live movies & series directly from TMDB?
-          </span>
-          <button
-            onClick={() => setShowSettingsModal(true)}
-            className="px-3 py-1 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs shadow transition-all flex items-center gap-1"
-          >
-            <Key className="w-3 h-3" />
-            <span>Enter TMDB API Key</span>
-          </button>
-        </div>
-      )}
 
-      {/* Hero Banner (Only shown on 'All' or 'Trending' when not searching) */}
+
+      {/* Hero Banner */}
       {heroDrama && !searchQuery && activeCategory === 'All' && (
         <HeroBanner drama={heroDrama} onSelectDrama={setSelectedDrama} />
       )}
@@ -155,9 +140,7 @@ export default function App() {
                 </div>
                 <div>
                   <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">Trending Now</h2>
-                  <p className="text-xs text-gray-400">
-                    {tmdbApiKey ? 'Live trending titles from TMDB' : 'Most popular Asian dramas and anime this week'}
-                  </p>
+                  <p className="text-xs text-gray-400">Most popular Asian dramas and anime this week</p>
                 </div>
               </div>
             </div>
@@ -206,30 +189,18 @@ export default function App() {
               <div className="space-y-1">
                 <h3 className="text-lg font-bold text-white">No Dramas Found</h3>
                 <p className="text-xs text-gray-400 max-w-sm mx-auto">
-                  {tmdbApiKey
-                    ? `No live TMDB results for "${searchQuery}". Try another keyword or category!`
-                    : `We couldn't find any matching titles for "${searchQuery}". Enter a TMDB API key in settings for live searches or request it on Telegram!`}
+                  We couldn't find any matching titles for "{searchQuery}". Request it on our Telegram channel!
                 </p>
               </div>
-              <div className="flex items-center justify-center gap-3">
-                {!tmdbApiKey && (
-                  <button
-                    onClick={() => setShowSettingsModal(true)}
-                    className="px-4 py-2 rounded-xl bg-cyan-500 text-black font-semibold text-xs transition-all shadow"
-                  >
-                    Add TMDB API Key
-                  </button>
-                )}
-                <button
-                  onClick={() => {
-                    setSearchQuery('');
-                    setActiveCategory('All');
-                  }}
-                  className="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-semibold transition-all shadow"
-                >
-                  Reset Filters
-                </button>
-              </div>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setActiveCategory('All');
+                }}
+                className="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-semibold transition-all shadow"
+              >
+                Reset Filters
+              </button>
             </div>
           )}
         </section>
@@ -261,8 +232,6 @@ export default function App() {
 
       {showSettingsModal && (
         <SettingsModal
-          currentApiKey={tmdbApiKey}
-          onSaveApiKey={handleSaveApiKey}
           onClose={() => setShowSettingsModal(false)}
         />
       )}
