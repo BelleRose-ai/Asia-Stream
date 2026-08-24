@@ -11,16 +11,30 @@ export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) =>
   return (
     <div
       onClick={() => onSelectDrama(drama)}
-      className="group relative bg-[#1a1b23] rounded-2xl overflow-hidden border border-[#2d2f39] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 cursor-pointer flex flex-col"
+      className="group relative bg-[#1a1b23] rounded-2xl overflow-hidden border border-[#2d2f39] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 cursor-pointer flex flex-col h-full"
     >
       {/* Poster Image Container */}
-      <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-900">
-        <img
-          src={drama.posterUrl}
-          alt={drama.title}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-          referrerPolicy="no-referrer"
-        />
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-900 flex items-center justify-center">
+        {drama.posterUrl ? (
+          <img
+            src={drama.posterUrl}
+            alt={drama.title}
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#1a1b23] to-gray-900 p-6 flex flex-col justify-between text-center border border-gray-800">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-cyan-400 bg-cyan-950/50 py-1 px-2 rounded self-center">
+              {drama.category}
+            </span>
+            <h4 className="text-sm font-extrabold text-white line-clamp-3">
+              {drama.title}
+            </h4>
+            <span className="text-[10px] text-gray-400">
+              {drama.year} • {drama.country}
+            </span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1b23] via-transparent to-transparent opacity-80" />
 
         {/* Top Badges */}
@@ -44,7 +58,7 @@ export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) =>
         {/* Episode / Status Tag at bottom of poster */}
         <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] font-medium text-gray-300">
           <span className="bg-[#121212]/70 backdrop-blur-md px-2 py-0.5 rounded border border-[#2d2f39]">
-            {drama.episodesCount} Eps ({drama.status})
+            {drama.genres.includes('Movie') || drama.category === 'Movie' ? 'Feature Film' : (drama.episodesCount && drama.episodesCount > 0 ? `${drama.episodesCount} Eps` : 'Info unavailable')}
           </span>
           <span className="bg-[#121212]/70 backdrop-blur-md px-2 py-0.5 rounded border border-[#2d2f39]">
             {drama.year}

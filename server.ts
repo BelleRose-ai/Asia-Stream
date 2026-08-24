@@ -22,10 +22,7 @@ async function startServer() {
 
   // Server-side TMDB Proxy Route (keeps API key secure and hidden from the browser)
   app.get("/api/tmdb/*", async (req, res) => {
-    const tmdbApiKey = process.env.TMDB_API_KEY;
-    if (!tmdbApiKey) {
-      return res.status(400).json({ error: "TMDB_API_KEY is not configured on the server environment." });
-    }
+    const tmdbApiKey = process.env.TMDB_API_KEY || "10eff5fb3987e79f2ed85855a807ea05";
 
     // Extract subpath (e.g., /tv/218230 or /search/multi or /trending/tv/week)
     const tmdbPath = req.path.replace(/^\/api\/tmdb/, "");

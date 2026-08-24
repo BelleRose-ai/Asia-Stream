@@ -6,6 +6,17 @@ export interface Episode {
   downloadUrl: string;
   title?: string;
   duration?: string;
+  overview?: string;
+  stillPath?: string;
+  airDate?: string;
+}
+
+export interface SeasonInfo {
+  seasonNumber: number;
+  name: string;
+  episodeCount: number;
+  overview?: string;
+  posterPath?: string;
 }
 
 export interface Drama {
@@ -27,5 +38,7 @@ export interface Drama {
   backdropUrl: string;
   cast: string[];
   episodes: Episode[];
+  seasons?: SeasonInfo[];
   views?: string;
 }
+
