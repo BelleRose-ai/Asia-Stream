@@ -358,5 +358,34 @@ export const DRAMA_DATABASE: Drama[] = [
     episodes: [
       { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 07m", downloadSources: [{ name: "Download Ep 1 (Playmogo)", url: "https://playmogo.com/e/t9shfxje7lym", size: "380MB", quality: "720p" }] }
     ]
+  },
+  {
+    id: "our-sticky-love",
+    tmdbId: 291496,
+    title: "Our Sticky Love",
+    originalTitle: "이런 엿같은 사랑",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.7,
+    genres: ["Drama", "Comedy"],
+    synopsis: "An ambitious prosecutor loses her memory and moves in with a boxing coach who claims to be her boyfriend. Can this sticky situation turn into real love?",
+    posterUrl: "https://image.tmdb.org/t/p/w500/tSZ4aFpTGc8Oj52SuzPUUZ7WKL0.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/mp2AFsWsuyxCzenJh3DTKw7z4jG.jpg",
+    cast: ["Kim Jang-han", "Mo Ji-hye"],
+    views: "2.4M",
+    downloadSources: [
+      { name: "Episode 1 (Mega)", url: "https://mega.nz/file/wcUFGbCI#IfRDXWmk2Qx8ygVzQ-sSon6i0EPCRHS7GamWeDoERro", size: "410MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-osl1", name: "KdramaLover", comment: "Episode 1 was so funny and sweet!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Mega)", url: "https://mega.nz/file/wcUFGbCI#IfRDXWmk2Qx8ygVzQ-sSon6i0EPCRHS7GamWeDoERro", size: "410MB", quality: "720p" }] }
+    ]
   }
 ];
