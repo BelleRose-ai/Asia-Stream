@@ -8,7 +8,8 @@ import { TelegramModal } from './components/TelegramModal';
 import { SettingsModal } from './components/SettingsModal';
 import { Footer } from './components/Footer';
 import { Drama, CategoryType } from './types';
-import { fetchAllGenreRows, searchTmdbLive, GenreSection } from './services/tmdb';
+import { fetchAllCuratedGenreRows, GenreSection } from './services/tmdb';
+import { DRAMA_DATABASE } from './data/dramas';
 import { SearchX, Sparkles } from 'lucide-react';
 
 export default function App() {
@@ -18,15 +19,13 @@ export default function App() {
   const [showTelegramModal, setShowTelegramModal] = useState<boolean>(false);
   const [showSettingsModal, setShowSettingsModal] = useState<boolean>(false);
   const [genreRows, setGenreRows] = useState<GenreSection[]>([]);
-  const [searchResults, setSearchResults] = useState<Drama[]>([]);
   const [isLoadingRows, setIsLoadingRows] = useState<boolean>(true);
-  const [isSearchingTmdb, setIsSearchingTmdb] = useState<boolean>(false);
 
-  // Fetch 5 distinct Genre rows on mount or category change
+  // Fetch curated rows strictly from local store & TMDB metadata loader
   useEffect(() => {
     let isMounted = true;
     setIsLoadingRows(true);
-    fetchAllGenreRows(activeCategory)
+    fetchAllCuratedGenreRows(activeCategory)
       .then(rows => {
         if (isMounted) {
           setGenreRows(rows);
@@ -34,57 +33,28 @@ export default function App() {
         }
       })
       .catch(err => {
-        console.warn('Genre rows fetch error:', err);
+        console.warn('Curated genre rows error:', err);
         if (isMounted) setIsLoadingRows(false);
       });
     return () => { isMounted = false; };
   }, [activeCategory]);
 
-  // Live TMDB search via server proxy
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      setSearchResults([]);
-      return;
-    }
-
-    let isMounted = true;
-    setIsSearchingTmdb(true);
-
-    const timer = setTimeout(() => {
-      searchTmdbLive(searchQuery)
-        .then(results => {
-          if (isMounted) {
-            setSearchResults(results);
-            setIsSearchingTmdb(false);
-          }
-        })
-        .catch(() => {
-          if (isMounted) setIsSearchingTmdb(false);
-        });
-    }, 400);
-
-    return () => {
-      isMounted = false;
-      clearTimeout(timer);
-    };
+  // Local filtered search across curated database (Nkiri-style curated blog catalog)
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase();
+    return DRAMA_DATABASE.filter(d => 
+      d.title.toLowerCase().includes(q) || 
+      (d.originalTitle && d.originalTitle.toLowerCase().includes(q)) ||
+      d.genres.some(g => g.toLowerCase().includes(q)) ||
+      d.country.toLowerCase().includes(q)
+    );
   }, [searchQuery]);
 
-  // Carousel featured dramas pulled from category rows confirmed by TMDB
+  // Carousel featured dramas from curated store
   const carouselDramas = useMemo(() => {
-    if (!genreRows || genreRows.length === 0) return [];
-    const featured: Drama[] = [];
-    const seenIds = new Set<string>();
-
-    genreRows.forEach(section => {
-      const best = section.dramas.find(d => d && d.backdropUrl && !seenIds.has(d.id));
-      if (best) {
-        seenIds.add(best.id);
-        featured.push(best);
-      }
-    });
-
-    return featured.slice(0, 5);
-  }, [genreRows]);
+    return DRAMA_DATABASE.filter(d => d.backdropUrl).slice(0, 5);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0b0c10] text-white flex flex-col font-sans selection:bg-cyan-500 selection:text-black">
@@ -109,10 +79,10 @@ export default function App() {
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-12">
         
-        {/* Shimmering Skeleton Loader on Initial Load */}
+        {/* Shimmering Skeleton Loader */}
         {isLoadingRows && !searchQuery && (
           <div className="space-y-12 animate-pulse">
-            {[1, 2, 3, 4, 5].map(i => (
+            {[1, 2, 3].map(i => (
               <div key={i} className="space-y-4">
                 <div className="h-6 w-56 bg-gray-800/80 rounded-md" />
                 <div className="flex gap-4 overflow-x-hidden">
@@ -138,7 +108,7 @@ export default function App() {
                     Search Results for "{searchQuery}"
                   </h2>
                   <p className="text-xs text-gray-400">
-                    {isSearchingTmdb ? 'Searching TMDB...' : `Showing ${searchResults.length} titles from TMDB`}
+                    Showing {searchResults.length} verified titles from curated archive
                   </p>
                 </div>
               </div>
@@ -158,9 +128,9 @@ export default function App() {
                   <SearchX className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-bold text-white">No Dramas Found</h3>
+                  <h3 className="text-lg font-bold text-white">No Titles Found</h3>
                   <p className="text-xs text-gray-400 max-w-sm mx-auto">
-                    We couldn't find any matching titles for "{searchQuery}". Request it on our Telegram channel!
+                    We couldn't find any matching titles for "{searchQuery}". Request it in the comments or on our Telegram channel!
                   </p>
                 </div>
                 <button
@@ -173,7 +143,7 @@ export default function App() {
             )}
           </section>
         ) : (
-          /* Mandatory 5-Row Homepage Feed */
+          /* Curated Homepage Feed */
           !isLoadingRows && genreRows.length > 0 && (
             <div className="space-y-12">
               {genreRows.map((row, idx) => (
@@ -191,7 +161,7 @@ export default function App() {
 
       </main>
 
-      {/* Footer strictly below all 5 rows */}
+      {/* Footer */}
       <Footer
         onSelectCategory={cat => {
           setActiveCategory(cat);
@@ -201,7 +171,7 @@ export default function App() {
         onOpenTelegram={() => setShowTelegramModal(true)}
       />
 
-      {/* Modals */}
+      {/* Details & Download Modal */}
       {selectedDrama && (
         <DramaModal
           drama={selectedDrama}

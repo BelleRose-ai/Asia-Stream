@@ -15,28 +15,52 @@ export const DRAMA_DATABASE: Drama[] = [
     country: "South Korea",
     rating: 9.2,
     genres: ["Romance", "Comedy", "Melodrama"],
-    synopsis: "The queen of department stores and her-husband-against-all-odds weather a marital crisis until fate hands them a miraculous second chance at love.",
+    synopsis: "The queen of department stores and her husband weather a marital crisis until fate hands them a miraculous second chance at love.",
     posterUrl: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop",
     cast: ["Kim Soo-hyun", "Kim Ji-won", "Park Sung-hoon", "Kwak Dong-yeon"],
     views: "2.4M",
+    downloadSources: [
+      { name: "480p Mobile HEVC (180MB)", url: "https://mixdrop.co/f/queen-tears-480p", size: "180MB", quality: "480p" },
+      { name: "720p HD Web-DL (450MB)", url: "https://streamwish.to/e/queen-tears-720p", size: "450MB", quality: "720p" },
+      { name: "1080p FHD Master (1.2GB)", url: "https://filemoon.sx/d/queen-tears-1080p", size: "1.2GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "c1", name: "Sarah Jenkins", comment: "Amazing chemistry between the leads! Thanks for the fast download links.", date: "2 hours ago" },
+      { id: "c2", name: "David Kim", comment: "The 720p file downloaded in under 2 minutes. Excellent quality.", date: "Yesterday" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/example1", title: "Episode 1: The Marriage of the Century", duration: "1h 15m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/example2", title: "Episode 2: The Cold War Begins", duration: "1h 12m" },
-      { epNum: 3, quality: "720p HD", downloadUrl: "https://streamwish.to/example3", title: "Episode 3: Secrets in Germany", duration: "1h 18m" },
-      { epNum: 4, quality: "720p HD", downloadUrl: "", title: "Episode 4: Unexpected Reunion", duration: "1h 10m" },
-      { epNum: 5, quality: "720p HD", downloadUrl: "", title: "Episode 5: Jealousy & Protection", duration: "1h 14m" },
-      { epNum: 6, quality: "720p HD", downloadUrl: "", title: "Episode 6: Turning the Tables", duration: "1h 16m" },
-      { epNum: 7, quality: "720p HD", downloadUrl: "", title: "Episode 7: Confessions in the Rain", duration: "1h 20m" },
-      { epNum: 8, quality: "720p HD", downloadUrl: "", title: "Episode 8: The Crisis Deepens", duration: "1h 15m" },
-      { epNum: 9, quality: "720p HD", downloadUrl: "", title: "Episode 9: Healing Wounds", duration: "1h 11m" },
-      { epNum: 10, quality: "720p HD", downloadUrl: "", title: "Episode 10: Unmasked Truths", duration: "1h 17m" },
-      { epNum: 11, quality: "720p HD", downloadUrl: "", title: "Episode 11: Standing Together", duration: "1h 13m" },
-      { epNum: 12, quality: "720p HD", downloadUrl: "", title: "Episode 12: Shattered Alibis", duration: "1h 15m" },
-      { epNum: 13, quality: "720p HD", downloadUrl: "", title: "Episode 13: The Trial", duration: "1h 19m" },
-      { epNum: 14, quality: "720p HD", downloadUrl: "", title: "Episode 14: Miraculous Recovery", duration: "1h 12m" },
-      { epNum: 15, quality: "720p HD", downloadUrl: "", title: "Episode 15: Eternity", duration: "1h 22m" },
-      { epNum: 16, quality: "1080p FHD", downloadUrl: "", title: "Episode 16: Finale - Forever Yours", duration: "1h 25m" }
+      { 
+        epNum: 1, 
+        quality: "1080p FHD", 
+        title: "Episode 1: The Marriage of the Century", 
+        duration: "1h 15m",
+        downloadSources: [
+          { name: "480p (210MB)", url: "https://mixdrop.co/f/qot-e1-480p", size: "210MB", quality: "480p" },
+          { name: "720p (480MB)", url: "https://streamwish.to/e/qot-e1-720p", size: "480MB", quality: "720p" },
+          { name: "1080p (1.1GB)", url: "https://filemoon.sx/d/qot-e1-1080p", size: "1.1GB", quality: "1080p" }
+        ]
+      },
+      { 
+        epNum: 2, 
+        quality: "1080p FHD", 
+        title: "Episode 2: The Cold War Begins", 
+        duration: "1h 12m",
+        downloadSources: [
+          { name: "480p (200MB)", url: "https://mixdrop.co/f/qot-e2-480p", size: "200MB", quality: "480p" },
+          { name: "720p (460MB)", url: "https://streamwish.to/e/qot-e2-720p", size: "460MB", quality: "720p" }
+        ]
+      },
+      { 
+        epNum: 3, 
+        quality: "1080p FHD", 
+        title: "Episode 3: Secrets in Germany", 
+        duration: "1h 18m",
+        downloadSources: [
+          { name: "480p (220MB)", url: "https://mixdrop.co/f/qot-e3-480p", size: "220MB", quality: "480p" },
+          { name: "720p (500MB)", url: "https://streamwish.to/e/qot-e3-720p", size: "500MB", quality: "720p" }
+        ]
+      }
     ]
   },
   {
@@ -53,16 +77,39 @@ export const DRAMA_DATABASE: Drama[] = [
     country: "China",
     rating: 9.0,
     genres: ["Fantasy", "Mystery", "Wuxia", "Action"],
-    synopsis: "Based on the BL web novel Mo Dao Zu Shi, two soulmates investigate a series of mysterious murders, linked to a dark power threatening the cultivation world.",
+    synopsis: "Two soulmates investigate a series of mysterious murders, linked to a dark power threatening the cultivation world.",
     posterUrl: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1600&auto=format&fit=crop",
     cast: ["Xiao Zhan", "Wang Yibo", "Lu Zhuo", "Wang Hao Xuan"],
     views: "5.1M",
+    downloadSources: [
+      { name: "Complete Boxset 720p (14GB)", url: "https://mixdrop.co/f/untamed-complete-720p", size: "14GB", quality: "720p" },
+      { name: "Complete Boxset 1080p (32GB)", url: "https://streamwish.to/e/untamed-complete-1080p", size: "32GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "c3", name: "Li Wei", comment: "Legendary C-drama! Glad to find direct download links here.", date: "3 days ago" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/untamed1", title: "Episode 1: Rebirth in Lotus Pier", duration: "45m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/untamed2", title: "Episode 2: Cloud Recesses", duration: "46m" },
-      { epNum: 3, quality: "720p HD", downloadUrl: "https://streamwish.to/untamed3", title: "Episode 3: The Iron Hook", duration: "44m" },
-      { epNum: 4, quality: "720p HD", downloadUrl: "", title: "Episode 4: Elegance in Defiance", duration: "45m" }
+      { 
+        epNum: 1, 
+        quality: "1080p FHD", 
+        title: "Episode 1: Rebirth in Lotus Pier", 
+        duration: "45m",
+        downloadSources: [
+          { name: "480p (150MB)", url: "https://mixdrop.co/f/untamed-e1-480p", size: "150MB", quality: "480p" },
+          { name: "720p (380MB)", url: "https://streamwish.to/e/untamed-e1-720p", size: "380MB", quality: "720p" }
+        ]
+      },
+      { 
+        epNum: 2, 
+        quality: "1080p FHD", 
+        title: "Episode 2: Cloud Recesses", 
+        duration: "46m",
+        downloadSources: [
+          { name: "480p (160MB)", url: "https://mixdrop.co/f/untamed-e2-480p", size: "160MB", quality: "480p" },
+          { name: "720p (390MB)", url: "https://streamwish.to/e/untamed-e2-720p", size: "390MB", quality: "720p" }
+        ]
+      }
     ]
   },
   {
@@ -79,15 +126,28 @@ export const DRAMA_DATABASE: Drama[] = [
     country: "Japan",
     rating: 8.9,
     genres: ["Action", "Fantasy", "Supernatural"],
-    synopsis: "Tanjiro goes to see the Stone Hashira, Himejima, who intends to prepare him for the battles to come. The training to become a Hashira - a high-ranking member of the Demon Slayer Corps - is intense and demanding.",
+    synopsis: "Tanjiro trains intensively under the Hashira to prepare for the ultimate showdown against Muzan Kibutsuji.",
     posterUrl: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Natsuki Hanae", "Akari Kito", "Hiro Shimono", "Yoshitsugu Matsuoka"],
+    cast: ["Natsuki Hanae", "Akari Kito", "Hiro Shimono"],
     views: "3.8M",
+    downloadSources: [
+      { name: "Batch 1080p HEVC (2.4GB)", url: "https://mixdrop.co/f/ds-hashira-batch", size: "2.4GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "c4", name: "Aiden", comment: "Animation quality is insane. Thanks for the quick uploads!", date: "1 week ago" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/ds1", title: "Episode 1: To Defeat Muzan Kibutsuji", duration: "48m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/ds2", title: "Episode 2: Water Hashira Tomioka's Pain", duration: "24m" },
-      { epNum: 3, quality: "1080p HD", downloadUrl: "", title: "Episode 3: Fully Recovered Tanjiro Joins", duration: "24m" }
+      {
+        epNum: 1,
+        quality: "1080p FHD",
+        title: "Episode 1: To Defeat Muzan Kibutsuji",
+        duration: "48m",
+        downloadSources: [
+          { name: "720p (250MB)", url: "https://mixdrop.co/f/ds-e1-720p", size: "250MB", quality: "720p" },
+          { name: "1080p (650MB)", url: "https://streamwish.to/e/ds-e1-1080p", size: "650MB", quality: "1080p" }
+        ]
+      }
     ]
   },
   {
@@ -103,16 +163,26 @@ export const DRAMA_DATABASE: Drama[] = [
     language: "Korean",
     country: "South Korea",
     rating: 9.3,
-    genres: ["Romance", "Time Travel", "Comedy", "Music"],
-    synopsis: "Im Sol is devastated by the sudden death of her favorite idol, Ryu Sun-jae. Miraculously, she travels back in time 15 years to high school where she vows to protect him from a tragic fate.",
+    genres: ["Romance", "Time Travel", "Comedy"],
+    synopsis: "Im Sol travels back in time 15 years to high school to save her favorite idol from a tragic fate.",
     posterUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Byeon Woo-seok", "Kim Hye-yoon", "Song Geon-hee", "Lee Seung-hyub"],
+    cast: ["Byeon Woo-seok", "Kim Hye-yoon"],
     views: "4.2M",
+    downloadSources: [
+      { name: "720p Complete Pack (7.5GB)", url: "https://mixdrop.co/f/lovely-runner-720p", size: "7.5GB", quality: "720p" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/lr1", title: "Episode 1: 15 Years Ago", duration: "1h 05m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/lr2", title: "Episode 2: Saving Sun-jae", duration: "1h 08m" },
-      { epNum: 3, quality: "720p HD", downloadUrl: "", title: "Episode 3: The Clock Resets", duration: "1h 04m" }
+      {
+        epNum: 1,
+        quality: "1080p FHD",
+        title: "Episode 1: 15 Years Ago",
+        duration: "1h 05m",
+        downloadSources: [
+          { name: "480p (190MB)", url: "https://mixdrop.co/f/lr-e1-480p", size: "190MB", quality: "480p" },
+          { name: "720p (450MB)", url: "https://streamwish.to/e/lr-e1-720p", size: "450MB", quality: "720p" }
+        ]
+      }
     ]
   },
   {
@@ -128,15 +198,26 @@ export const DRAMA_DATABASE: Drama[] = [
     language: "Mandarin",
     country: "China",
     rating: 8.8,
-    genres: ["Historical", "Revenge", "Drama", "Romance"],
-    synopsis: "After losing her family and status, a former county magistrate's daughter assumes a new identity and plots a meticulous revenge against those who betrayed her.",
+    genres: ["Historical", "Revenge", "Drama"],
+    synopsis: "A former magistrate's daughter assumes a new identity and plots a meticulous revenge against her betrayers.",
     posterUrl: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Wu Jinyan", "Wang Xingyue", "Chen Ruoxuan", "Meng Ziyi"],
+    cast: ["Wu Jinyan", "Wang Xingyue"],
     views: "3.1M",
+    downloadSources: [
+      { name: "720p Web-DL (18GB)", url: "https://mixdrop.co/f/the-double-720p", size: "18GB", quality: "720p" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/double1", title: "Episode 1: The Betrayal", duration: "45m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/double2", title: "Episode 2: Rebirth as Jiang Li", duration: "46m" }
+      {
+        epNum: 1,
+        quality: "1080p FHD",
+        title: "Episode 1: The Betrayal",
+        duration: "45m",
+        downloadSources: [
+          { name: "480p (170MB)", url: "https://mixdrop.co/f/double-e1-480p", size: "170MB", quality: "480p" },
+          { name: "720p (400MB)", url: "https://streamwish.to/e/double-e1-720p", size: "400MB", quality: "720p" }
+        ]
+      }
     ]
   },
   {
@@ -152,15 +233,26 @@ export const DRAMA_DATABASE: Drama[] = [
     language: "Japanese",
     country: "Japan",
     rating: 9.1,
-    genres: ["Action", "Dark Fantasy", "Supernatural"],
-    synopsis: "The Shibuya Incident unfolds as Gojo Satoru's past comes to light and cursed spirits orchestrate a massive trap on Halloween night in Tokyo.",
+    genres: ["Action", "Dark Fantasy"],
+    synopsis: "The Shibuya Incident unfolds as Gojo Satoru's past comes to light and curses trap Tokyo.",
     posterUrl: "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Junya Enoki", "Yuma Uchida", "Asami Seto", "Yuichi Nakamura"],
+    cast: ["Junya Enoki", "Yuma Uchida"],
     views: "6.5M",
+    downloadSources: [
+      { name: "Full Season 1080p (8.2GB)", url: "https://mixdrop.co/f/jjk-s2-1080p", size: "8.2GB", quality: "1080p" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/jjk1", title: "Episode 1: Hidden Inventory", duration: "24m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/jjk2", title: "Episode 2: The Star Plasma Vessel", duration: "24m" }
+      {
+        epNum: 1,
+        quality: "1080p FHD",
+        title: "Episode 1: Hidden Inventory",
+        duration: "24m",
+        downloadSources: [
+          { name: "720p (220MB)", url: "https://mixdrop.co/f/jjk-e1-720p", size: "220MB", quality: "720p" },
+          { name: "1080p (550MB)", url: "https://streamwish.to/e/jjk-e1-1080p", size: "550MB", quality: "1080p" }
+        ]
+      }
     ]
   },
   {
@@ -176,39 +268,95 @@ export const DRAMA_DATABASE: Drama[] = [
     language: "Korean",
     country: "South Korea",
     rating: 9.5,
-    genres: ["Romance", "Comedy", "Drama"],
-    synopsis: "A paragliding mishap drops a South Korean heiress in North Korea - and into the life of an army officer, who decides to help her hide.",
+    genres: ["Romance", "Comedy"],
+    synopsis: "A paragliding mishap drops a South Korean heiress in North Korea into the life of an army officer.",
     posterUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop",
     backdropUrl: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Hyun Bin", "Son Ye-jin", "Seo Ji-hye", "Kim Jung-hyun"],
+    cast: ["Hyun Bin", "Son Ye-jin"],
     views: "8.9M",
+    downloadSources: [
+      { name: "Complete Series 1080p (16GB)", url: "https://mixdrop.co/f/cloy-complete", size: "16GB", quality: "1080p" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/cloy1", title: "Episode 1: Emergency Landing", duration: "1h 20m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/cloy2", title: "Episode 2: Hidden Sanctuary", duration: "1h 18m" }
+      {
+        epNum: 1,
+        quality: "1080p FHD",
+        title: "Episode 1: Emergency Landing",
+        duration: "1h 20m",
+        downloadSources: [
+          { name: "480p (230MB)", url: "https://mixdrop.co/f/cloy-e1-480p", size: "230MB", quality: "480p" },
+          { name: "720p (520MB)", url: "https://streamwish.to/e/cloy-e1-720p", size: "520MB", quality: "720p" }
+        ]
+      }
     ]
   },
   {
-    id: "love-between-fairy-and-devil",
-    tmdbId: 206259,
-    title: "Love Between Fairy and Devil",
-    originalTitle: "苍兰诀",
-    category: "C-Drama",
-    isTrending: false,
-    year: 2022,
-    episodesCount: 36,
-    status: "Completed",
-    language: "Mandarin",
-    country: "China",
-    rating: 8.9,
-    genres: ["Xianxia", "Fantasy", "Romance"],
-    synopsis: "A low-ranking fairy accidentally resurrects the feared Moon Supreme, leading to a magical body-swap and an epic romance that defies realms.",
-    posterUrl: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
-    backdropUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop",
-    cast: ["Esther Yu", "Dylan Wang", "Jing Chao", "Xu Haiqiao"],
-    views: "4.7M",
+    id: "love-on-the-menu",
+    tmdbId: 310326,
+    title: "Love on the Menu",
+    originalTitle: "사랑이 온다",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 9.4,
+    genres: ["Romance", "Comedy", "Family"],
+    synopsis: "A hardworking woman becomes the head of her family after a financial collapse and reunites with her former boyfriend, an acclaimed chef who returns after eight years in Italy.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/6M34aDRWttbjApzgWqYr43xpJzA.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/4bIELFjQ8sHCwJrnYfq2hlGYSkm.jpg",
+    cast: ["Hani", "Ha Seok-jin", "Park You-na", "Bae Jung-nam"],
+    views: "1.8M",
+    downloadSources: [
+      { name: "Batch Pack 720p (4.2GB)", url: "https://akirabox.to/5pVzN4M1Wm7w/file", size: "4.2GB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm1", name: "K-Drama Addict", comment: "So excited for this new series! Thanks for posting all 12 episodes.", date: "1 hour ago" }
+    ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", downloadUrl: "https://streamwish.to/lbfd1", title: "Episode 1: The Demon King Awakens", duration: "45m" },
-      { epNum: 2, quality: "1080p FHD", downloadUrl: "https://streamwish.to/lbfd2", title: "Episode 2: The Curse", duration: "45m" }
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Akirabox)", url: "https://akirabox.to/5pVzN4M1Wm7w/file", size: "350MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Akirabox)", url: "https://akirabox.to/APVma0KajGXo/file", size: "360MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 05m", downloadSources: [{ name: "Download Ep 3 (Filecrypt)", url: "https://filecrypt.cc/Link/6A70DC3746.html", size: "380MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 03m", downloadSources: [{ name: "Download Ep 4 (Akirabox)", url: "https://akirabox.to/jJD3VDEQLGa5/file", size: "355MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "1h 01m", downloadSources: [{ name: "Download Ep 5 (Akirabox)", url: "https://akirabox.to/XkrzoKYRPzBO/file", size: "345MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "1h 04m", downloadSources: [{ name: "Download Ep 6 (Akirabox)", url: "https://akirabox.to/ex5z25BX53Kq/file", size: "370MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "1h 02m", downloadSources: [{ name: "Download Ep 7 (Akirabox)", url: "https://akirabox.to/E9Qz9XXKW3OL/file", size: "360MB", quality: "720p" }] },
+      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "1h 00m", downloadSources: [{ name: "Download Ep 8 (Akirabox)", url: "https://akirabox.to/ex5z25X683Kq/file", size: "350MB", quality: "720p" }] },
+      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Akirabox)", url: "https://akirabox.to/Pbe3PaLw9zlX/file", size: "380MB", quality: "720p" }] },
+      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Akirabox)", url: "https://akirabox.to/RMKGJK8aLm1o/file", size: "365MB", quality: "720p" }] },
+      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "1h 01m", downloadSources: [{ name: "Download Ep 11 (Akirabox)", url: "https://akirabox.to/7d5GLZ9Ob3xR/file", size: "355MB", quality: "720p" }] },
+      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "1h 06m", downloadSources: [{ name: "Download Ep 12 (Akirabox)", url: "https://akirabox.to/0rpmvpw6AzRg/file", size: "390MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "a-bona-fide-killer",
+    tmdbId: 294095,
+    title: "A Bona Fide Killer",
+    originalTitle: "유부녀 킬러",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 14,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.5,
+    genres: ["Drama", "Action & Adventure", "Mystery", "Crime"],
+    synopsis: "A seemingly ordinary working mother secretly lives as a legendary sniper who delivers justice where the law fails. After returning from a three-year hiatus, she must balance protecting her family with eliminating dangerous criminals, all while a determined journalist and a relentless detective close in on her hidden identity.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/e9ziA4Y6md4Ytr62r5y9vRdv4ll.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/22xRAaDSNIwOqFhFDXWp5IMnQPT.jpg",
+    cast: ["Kim Eun-hee"],
+    views: "2.1M",
+    downloadSources: [
+      { name: "Episode 1 (Playmogo)", url: "https://playmogo.com/e/t9shfxje7lym", size: "380MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-abfk1", name: "ActionFan99", comment: "Episode 1 was intense! Great action sequences.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 07m", downloadSources: [{ name: "Download Ep 1 (Playmogo)", url: "https://playmogo.com/e/t9shfxje7lym", size: "380MB", quality: "720p" }] }
     ]
   }
 ];

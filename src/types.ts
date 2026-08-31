@@ -1,9 +1,17 @@
 export type CategoryType = 'All' | 'K-Drama' | 'C-Drama' | 'Anime' | 'Trending';
 
+export interface DownloadSource {
+  name: string;
+  url: string;
+  size?: string;
+  quality?: string;
+}
+
 export interface Episode {
   epNum: number;
   quality: string;
-  downloadUrl: string;
+  downloadUrl?: string;
+  downloadSources?: DownloadSource[];
   title?: string;
   duration?: string;
   overview?: string;
@@ -19,9 +27,16 @@ export interface SeasonInfo {
   posterPath?: string;
 }
 
+export interface CommentItem {
+  id: string;
+  name: string;
+  comment: string;
+  date: string;
+}
+
 export interface Drama {
   id: string;
-  tmdbId?: number;
+  tmdbId: number;
   title: string;
   originalTitle?: string;
   category: 'K-Drama' | 'C-Drama' | 'Anime';
@@ -37,8 +52,11 @@ export interface Drama {
   posterUrl: string;
   backdropUrl: string;
   cast: string[];
+  downloadSources: DownloadSource[];
   episodes: Episode[];
   seasons?: SeasonInfo[];
   views?: string;
+  comments?: CommentItem[];
 }
+
 

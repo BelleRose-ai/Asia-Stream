@@ -1,57 +1,72 @@
 /**
- * Multi-Provider Video Streaming & Download Services (VidSrc, AutoEmbed, etc.)
+ * Video Streaming & Download Services (10 Alternative Embed Servers)
  */
 
-export type EmbedProvider = 'vidsrc.to' | 'vidsrc.cc' | 'autoembed.co' | 'vidsrc.icu';
+export interface StreamServer {
+  name: string;
+  getMovieUrl: (id: string | number) => string;
+  getTvUrl: (id: string | number, season: number, episode: number) => string;
+}
 
-export const PROVIDER_LABELS: Record<EmbedProvider, string> = {
-  'vidsrc.to': 'Server 1: VidSrc.to (HD)',
-  'vidsrc.cc': 'Server 2: VidSrc.cc (Backup 1)',
-  'autoembed.co': 'Server 3: AutoEmbed (Backup 2)',
-  'vidsrc.icu': 'Server 4: VidSrc.icu (Backup 3)'
-};
-
-/**
- * Generates streaming/playback URL for movies using TMDB ID and selected provider.
- */
-export const getEmbedMovieUrl = (tmdbId: string | number, provider: EmbedProvider = 'vidsrc.to'): string => {
-  switch (provider) {
-    case 'vidsrc.to':
-      return `https://vidsrc.to/embed/movie/${tmdbId}`;
-    case 'vidsrc.cc':
-      return `https://vidsrc.cc/v2/embed/movie/${tmdbId}`;
-    case 'autoembed.co':
-      return `https://autoembed.co/embed/movie/${tmdbId}`;
-    case 'vidsrc.icu':
-      return `https://vidsrc.icu/embed/movie/${tmdbId}`;
-    default:
-      return `https://vidsrc.to/embed/movie/${tmdbId}`;
-  }
-};
-
-/**
- * Generates streaming/playback URL for TV series and anime episodes using TMDB ID, Season, Episode, and provider.
- */
-export const getEmbedTvUrl = (
-  tmdbId: string | number,
-  season: number,
-  episode: number,
-  provider: EmbedProvider = 'vidsrc.to'
-): string => {
-  switch (provider) {
-    case 'vidsrc.to':
-      return `https://vidsrc.to/embed/tv/${tmdbId}/${season}/${episode}`;
-    case 'vidsrc.cc':
-      return `https://vidsrc.cc/v2/embed/tv/${tmdbId}/${season}/${episode}`;
-    case 'autoembed.co':
-      return `https://autoembed.co/embed/tv/${tmdbId}/${season}/${episode}`;
-    case 'vidsrc.icu':
-      return `https://vidsrc.icu/embed/tv/${tmdbId}/${season}/${episode}`;
-    default:
-      return `https://vidsrc.to/embed/tv/${tmdbId}/${season}/${episode}`;
-  }
-};
-
-// Backwards-compatible aliases
-export const getAutoEmbedMovieUrl = (tmdbId: string | number): string => getEmbedMovieUrl(tmdbId, 'vidsrc.to');
-export const getAutoEmbedTvUrl = (tmdbId: string | number, season: number, episode: number): string => getEmbedTvUrl(tmdbId, season, episode, 'vidsrc.to');
+export const STREAM_SERVERS: StreamServer[] = [
+  { 
+    name: "Server 1 (AutoEmbed)", 
+    getMovieUrl: (id) => `https://autoembed.co/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://autoembed.co/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 2 (VidSrc.to)", 
+    getMovieUrl: (id) => `https://vidsrc.to/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.to/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 3 (VidSrc.vip)", 
+    getMovieUrl: (id) => `https://vidsrc.vip/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.vip/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 4 (MultiEmbed)", 
+    getMovieUrl: (id) => `https://multiembed.mov/?video_id=${id}&tmdb=1`, 
+    getTvUrl: (id, s, e) => `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}` 
+  },
+  { 
+    name: "Server 5 (VidLink)", 
+    getMovieUrl: (id) => `https://vidlink.pro/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidlink.pro/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 6 (Embed.su)", 
+    getMovieUrl: (id) => `https://embed.su/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://embed.su/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 7 (VidSrc.cc)", 
+    getMovieUrl: (id) => `https://vidsrc.cc/v2/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 8 (2Embed)", 
+    getMovieUrl: (id) => `https://www.2embed.cc/embed/${id}`, 
+    getTvUrl: (id, s, e) => `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}` 
+  },
+  { 
+    name: "Server 9 (SuperEmbed)", 
+    getMovieUrl: (id) => `https://iframe.superembed.stream/movie/?tmdb=${id}`, 
+    getTvUrl: (id, s, e) => `https://iframe.superembed.stream/tv/?tmdb=${id}&season=${s}&episode=${e}` 
+  },
+  { 
+    name: "Server 10 (Vidsrc.icu)", 
+    getMovieUrl: (id) => `https://vidsrc.icu/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.icu/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 11 (VidSrc.me Alternate)", 
+    getMovieUrl: (id) => `https://vidsrc.me/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.me/embed/tv/${id}/${s}/${e}` 
+  },
+  { 
+    name: "Server 12 (VidSrc.net Alternate)", 
+    getMovieUrl: (id) => `https://vidsrc.net/embed/movie/${id}`, 
+    getTvUrl: (id, s, e) => `https://vidsrc.net/embed/tv/${id}/${s}/${e}` 
+  },
+];
