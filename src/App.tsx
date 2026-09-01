@@ -51,9 +51,22 @@ export default function App() {
     );
   }, [searchQuery]);
 
-  // Carousel featured dramas from curated store
+  // Carousel featured dramas: randomly rotating up to 2 movies/series from each category (Anime, C-Drama, K-Drama)
   const carouselDramas = useMemo(() => {
-    return DRAMA_DATABASE.filter(d => d.backdropUrl).slice(0, 5);
+    const categories: CategoryType[] = ['Anime', 'C-Drama', 'K-Drama'];
+    let selected: Drama[] = [];
+
+    categories.forEach(cat => {
+      const items = DRAMA_DATABASE.filter(d => d.category === cat && d.backdropUrl);
+      const sorted = [...items].reverse(); // newest first
+      selected.push(...sorted.slice(0, 2));
+    });
+
+    if (selected.length === 0) {
+      selected = DRAMA_DATABASE.filter(d => d.backdropUrl).slice(0, 6);
+    }
+
+    return selected.sort(() => Math.random() - 0.5);
   }, []);
 
   return (
