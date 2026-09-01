@@ -2,6 +2,46 @@ import { Drama } from '../types';
 
 export const DRAMA_DATABASE: Drama[] = [
   {
+    id: "spooky-in-love",
+    tmdbId: 298610,
+    title: "Spooky in Love",
+    originalTitle: "오싹한 연애",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.7,
+    genres: ["Comedy", "Sci-Fi & Fantasy", "Drama"],
+    synopsis: "When a ghost-seeing heir and an ace prosecutor learn that a single touch makes them a strangely effective duo, they team up to crack unsolved murders.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/acVOH8Pr5LEZ7WKZCbzwNuHVr9x.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/p9tpGftvG18M5y5wsBmPrQpVBsd.jpg",
+    cast: ["Hwang In-ho"],
+    views: "3.8M",
+    downloadSources: [
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", size: "380MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-sil1", name: "GhostHunter", comment: "Such a fun and spooky series! Loved every episode.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "61m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", size: "380MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "63m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/osjPXnkz", size: "380MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "60m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/JeNziAyP", size: "380MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "62m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/ib9dFGwe", size: "380MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/snN5ZWxf", size: "380MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "62m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/3C1DqZbi", size: "380MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "65m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/KfixgPGv", size: "380MB", quality: "720p" }] },
+      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "65m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/1CyQ7MqS", size: "380MB", quality: "720p" }] },
+      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "61m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/Hq6TkbxU", size: "380MB", quality: "720p" }] },
+      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "68m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/BUsuEtp2", size: "380MB", quality: "720p" }] },
+      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "64m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/VVN7PVFo", size: "380MB", quality: "720p" }] },
+      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "67m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/Tate8kKP", size: "380MB", quality: "720p" }] }
+    ]
+  },
+  {
     id: "a-shop-for-killers-season-2",
     tmdbId: 215072,
     title: "A Shop for Killers Season 2",
