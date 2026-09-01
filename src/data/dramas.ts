@@ -2,6 +2,157 @@ import { Drama } from '../types';
 
 export const DRAMA_DATABASE: Drama[] = [
   {
+    id: "a-shop-for-killers-season-2",
+    tmdbId: 215072,
+    title: "A Shop for Killers Season 2",
+    originalTitle: "킬러들의 쇼핑몰 시즌 2",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 8,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.7,
+    genres: ["Drama", "Action & Adventure", "Mystery"],
+    synopsis: "Season 2 returns with Jian in control of the weapons shop, Jinman returned from the dead, and BABYLON well and truly on the backfoot. Working to keep Jian safe, Jinman will take the fight to BABYLON's door, but the mercenary organization won't go down easily.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/lLwE6AEGUqpDGkNe1y923Siz3PK.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/mWVeYmtCfA3zvSeZtW5bN2Khe01.jpg",
+    cast: ["Lee Dong-wook", "Kim Hye-jun"],
+    views: "4.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", size: "380MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-asfk2-1", name: "ActionFanatic", comment: "Season 2 is even more epic than Season 1! Incredible action.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1: Jinman, That Same Day", duration: "60m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", size: "380MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2: Recluse", duration: "54m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/cw02ncm450b7", size: "350MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3: Past Is Past, Present Is Present", duration: "67m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/q2t7rybdf5as", size: "400MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4: Raid", duration: "56m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/5gyvllka4yie", size: "360MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5: Negotiation", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/4yr6cxl8p4ed", size: "390MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6: The Trojan Horse", duration: "57m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/alqjpmcmjzyk", size: "360MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7: The Enemy of My Enemy", duration: "58m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/b6iy5v00x3x4", size: "370MB", quality: "720p" }] },
+      { epNum: 8, quality: "720p HD", title: "Episode 8: Listen Up, Jinman", duration: "61m", downloadSources: [{ name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/fqwo5zdxhd8k", size: "390MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "four-hands-two-sonatas",
+    tmdbId: 305644,
+    title: "Four Hands, Two Sonatas",
+    originalTitle: "포핸즈",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 9.5,
+    genres: ["Drama"],
+    synopsis: "When two young pianists from completely different worlds meet at an elite music high school, the melodies of their lives become intimately intertwined.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/a7p6htiJKx68USDAcilJ5rzKAWB.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/fYL4I6cezb06BHhQlrNjNhy7jhf.jpg",
+    cast: ["Shin Yi-won"],
+    views: "3.2M",
+    downloadSources: [
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", size: "380MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-fhts1", name: "PianoLover", comment: "Such a beautiful drama! Glad link 2 is a bit lighter to download ✨", date: "Just now" }
+    ],
+    episodes: [
+      { 
+        epNum: 1, 
+        quality: "720p HD", 
+        title: "Episode 1", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", size: "380MB", quality: "720p" },
+          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/94kefltj3xmv", size: "280MB", quality: "720p" }
+        ] 
+      },
+      { 
+        epNum: 2, 
+        quality: "720p HD", 
+        title: "Episode 2", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/mkWzhiYZ", size: "380MB", quality: "720p" },
+          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/ycggyk4qs79m", size: "280MB", quality: "720p" }
+        ] 
+      }
+    ]
+  },
+  {
+    id: "the-affair-was-just-the-beginning",
+    tmdbId: 301418,
+    title: "The Affair Was Just The Beginning",
+    originalTitle: "지금 불륜이 문제가 아닙니다",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 8,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 9.6,
+    genres: ["Crime", "Comedy", "Drama"],
+    synopsis: "A successful entrepreneur with a seemingly perfect life sees everything fall apart after discovering her husband covering up a murder allegedly committed by their daughter. As the family scrambles to hide the truth, an anonymous blackmailer claims to have recorded everything, pulling them into a dangerous web of lies, secrets, and betrayal.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/xuOpHGP7ZRLHh6IJilxp6ocu7tb.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/463KX5md13Db6pIMCCnIZqtPWFK.jpg",
+    cast: ["Jeong Eun-kyeong"],
+    views: "2.8M",
+    downloadSources: [
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", size: "350MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-tawjtb1", name: "KdramaAddict", comment: "Episode 1 is wild! Can't wait for more.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "47m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", size: "350MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "47m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/uve3dvi4lt3e", size: "350MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "47m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/ltova7wcznmj", size: "350MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "47m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/o5vknfo11az4", size: "350MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "47m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/mqd3moyz7roe", size: "350MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "47m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/c9ch892eirhz", size: "350MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "47m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/bw0aic3ay7u0", size: "350MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "ok-lets-get-divorced",
+    tmdbId: 276470,
+    title: "OK! Let's Get Divorced",
+    originalTitle: "그래, 이혼하자",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 7.0,
+    genres: ["Drama", "Comedy", "Family"],
+    synopsis: "After seven years of marriage, a couple decides to call it quits—but their “perfect breakup” quickly turns into a messy battle of pride, jealousy, and unresolved feelings. As unexpected twists pull them back together, they must confront the love they thought was long gone. Can they truly walk away from each other?",
+    posterUrl: "https://image.tmdb.org/t/p/w500/eE15dAtxrO3m8O9puVgBOgpF4a8.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/7JlcvcsS0dfzElD97ucgI7WtjWG.jpg",
+    cast: ["Kim Hyun-kyung"],
+    views: "1.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", size: "350MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-okd1", name: "KdramaFan", comment: "So excited for this new series! Great start.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", size: "350MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/3x2mcz22y1zu", size: "350MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/dcvr1wzcce8o", size: "350MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 01m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/j7e2li6hvecl", size: "350MB", quality: "720p" }] }
+    ]
+  },
+  {
     id: "love-on-the-menu",
     tmdbId: 310326,
     title: "Love on the Menu",
