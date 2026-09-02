@@ -1,4 +1,4 @@
-export type CategoryType = 'All' | 'K-Drama' | 'K-Movies' | 'C-Drama' | 'Anime' | 'Trending';
+export type CategoryType = 'All' | 'K-Drama' | 'K-Movies' | 'C-Drama' | 'J-Drama' | 'PH-Drama' | 'Anime' | 'Trending';
 
 export interface DownloadSource {
   name: string;
@@ -39,7 +39,7 @@ export interface Drama {
   tmdbId: number;
   title: string;
   originalTitle?: string;
-  category: 'K-Drama' | 'K-Movies' | 'C-Drama' | 'Anime';
+  category: 'K-Drama' | 'K-Movies' | 'C-Drama' | 'J-Drama' | 'PH-Drama' | 'Anime';
   isTrending?: boolean;
   year: number;
   episodesCount: number;

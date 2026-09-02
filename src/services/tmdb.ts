@@ -197,6 +197,12 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
 
   const seriesDatabase = DRAMA_DATABASE.filter(item => item.category !== 'K-Movies');
   const moviesDatabase = DRAMA_DATABASE.filter(item => item.category === 'K-Movies');
+  
+  const kDramas = DRAMA_DATABASE.filter(item => item.category === 'K-Drama');
+  const cDramas = DRAMA_DATABASE.filter(item => item.category === 'C-Drama');
+  const jDramas = DRAMA_DATABASE.filter(item => item.category === 'J-Drama');
+  const phDramas = DRAMA_DATABASE.filter(item => item.category === 'PH-Drama');
+  const animeDramas = DRAMA_DATABASE.filter(item => item.category === 'Anime');
 
   const filtered = DRAMA_DATABASE.filter(item => {
     if (activeCategory === 'All') return true;
@@ -222,7 +228,6 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
   const trending = seriesDatabase.filter(item => item.isTrending);
   const romance = seriesDatabase.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'));
   const action = seriesDatabase.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical') || item.genres.includes('Crime'));
-  const anime = seriesDatabase.filter(item => item.category === 'Anime');
 
   if (activeCategory === 'Trending') {
     return [
@@ -240,7 +245,7 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
   }
 
   if (activeCategory === 'All') {
-    return [
+    const sections: GenreSection[] = [
       {
         title: "🔥 Curated Trending Series",
         subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
@@ -252,27 +257,64 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
         dramas: moviesDatabase
       },
       {
-        title: "💖 Romance & Melodrama Series",
-        subtitle: "Heartfelt emotional journeys with high-speed direct mirrors",
-        dramas: romance.length > 0 ? romance : seriesDatabase
+        title: "🇰🇷 Popular K-Dramas",
+        subtitle: "Top-rated Korean drama series",
+        dramas: kDramas
       },
       {
-        title: "⚔️ Action, Crime & Fantasy",
-        subtitle: "Epic adventures and high-octane blockbusters",
-        dramas: action.length > 0 ? action : seriesDatabase
-      },
-      {
-        title: "🌸 Top Rated Anime Series",
-        subtitle: "Masterpieces with multi-quality mobile & 1080p downloads",
-        dramas: anime.length > 0 ? anime : seriesDatabase
+        title: "🇨🇳 Popular C-Dramas",
+        subtitle: "Top-rated Chinese drama series",
+        dramas: cDramas
       }
     ];
+
+    if (jDramas.length > 0) {
+      sections.push({
+        title: "🇯🇵 Popular J-Dramas (Japanese)",
+        subtitle: "Top-rated Japanese series & mysteries",
+        dramas: jDramas
+      });
+    }
+
+    if (phDramas.length > 0) {
+      sections.push({
+        title: "🇵🇭 Popular Philippine Series",
+        subtitle: "Top-rated Philippine drama and comedy series",
+        dramas: phDramas
+      });
+    }
+
+    if (animeDramas.length > 0) {
+      sections.push({
+        title: "🌸 Anime Series",
+        subtitle: "Masterpieces with multi-quality mobile & 1080p downloads",
+        dramas: animeDramas
+      });
+    }
+
+    if (romance.length > 0) {
+      sections.push({
+        title: "💖 Romance & Melodrama",
+        subtitle: "Heartfelt emotional journeys with high-speed direct mirrors",
+        dramas: romance
+      });
+    }
+
+    if (action.length > 0) {
+      sections.push({
+        title: "⚔️ Action, Crime & Fantasy",
+        subtitle: "Epic adventures and high-octane blockbusters",
+        dramas: action
+      });
+    }
+
+    return sections;
   }
 
   return [
     {
-      title: `📦 ${activeCategory} Archives`,
-      subtitle: `Complete curated collection of ${activeCategory} series`,
+      title: `📦 ${activeCategory} Collection`,
+      subtitle: `Complete curated collection of ${activeCategory} titles`,
       dramas: filtered
     }
   ];

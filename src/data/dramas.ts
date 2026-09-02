@@ -2,6 +2,265 @@ import { Drama } from '../types';
 
 export const DRAMA_DATABASE: Drama[] = [
   {
+    id: "love-u-lots",
+    tmdbId: 329540,
+    title: "Love U Lots",
+    originalTitle: "Love U Lots",
+    category: "PH-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 6,
+    status: "Ongoing",
+    language: "Tagalog",
+    country: "Philippines",
+    rating: 7.5,
+    genres: ["Comedy", "Romance"],
+    synopsis: "Heartbroken Estong meets the mysterious Ysa, who has Dissociative Identity Disorder (DID), and learns that love comes with not one twist, but lots of it.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/qOjY3XE4C4prKGmFyJaPxANrhxI.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/jnP1DHf5VpCzGDAoFZlbCL4OPI6.jpg",
+    cast: [],
+    views: "2.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-lul1", name: "PinoyFan", comment: "Amazing Philippine series! Remember to use the slow download option on Clicknupload.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/5hcjehxt4aog/Love.U.Lots.E02.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3vdrtchyu5ec/Love.U.Lots.E03.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1hbrphpkvnti/Love.U.Lots.E04.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/de40ti6zb1ne/Love.U.Lots.2026.E05.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/n4wwmibfhgg0/LOVE.U.LOTS.E06.mp4", size: "450MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "until-the-t-shirt-dries",
+    tmdbId: 322570,
+    title: "Until the T-Shirt Dries",
+    originalTitle: "Tシャツが乾くまで",
+    category: "J-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 7,
+    status: "Ongoing",
+    language: "Japanese",
+    country: "Japan",
+    rating: 4.5,
+    genres: ["Drama", "Mystery"],
+    synopsis: "A sudden summer accident shatters the peaceful lives of two couples, dragging a happily married editor into a web of grief, human selfishness, and her husband's hidden secrets.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/xVZvNASRqY91hD09g1cXHpErhGX.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/j9rHrq3mz0hHchk3EJksCco9LJW.jpg",
+    cast: [],
+    views: "2.9M",
+    downloadSources: [
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-utd1", name: "JDramaFan", comment: "Gripping mystery series! Remember to use the slow download option on Clicknupload.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/e6z75x2g2ykx/Until.the.T-shirt.Dries.E02.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/54ey9agbo1uf/Until.the.T-shirt.Dries.E03.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/hm7smxhgzpq8/Until.the.T-shirt.Dries.E04.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/guo7yl53wsdb/Until.the.T-shirt.Dries.E05.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ybgvxegkhtun/Until.the.T-shirt.Dries.E06.mkv", size: "450MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/p2xdy5beynh4/Until.the.T.shirt.Dries.E07.mkv", size: "450MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "labyrinth-of-hortensia-and-the-minotaur",
+    tmdbId: 322420,
+    title: "Labyrinth of Hortensia and the Minotaur",
+    originalTitle: "一次元の挿し木",
+    category: "J-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 2,
+    status: "Ongoing",
+    language: "Japanese",
+    country: "Japan",
+    rating: 8.0,
+    genres: ["Drama", "Mystery"],
+    synopsis: "When 200-year-old human remains discovered in the Himalayas are identified as a perfect DNA match to a missing woman, a complex mystery involving suspicious deaths, lost memories, and hidden truths begins to unfold.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/7fBxawdSYJhvcCcLVALnKRjnqe1.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/3aLnQVep8gPaWWJrxtctfgDS6p.jpg",
+    cast: [],
+    views: "2.4M",
+    downloadSources: [
+      { name: "Download Ep 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", size: "450MB", quality: "720p" },
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-lhm1", name: "JDramaFan", comment: "Amazing Japanese mystery series! Remember to use the slow download option on Clicknupload links.", date: "Just now" }
+    ],
+    episodes: [
+      { 
+        epNum: 1, 
+        quality: "720p HD", 
+        title: "Episode 1", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", size: "450MB", quality: "720p" },
+          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", size: "450MB", quality: "720p" }
+        ] 
+      },
+      { 
+        epNum: 2, 
+        quality: "720p HD", 
+        title: "Episode 2", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/1nv0d16vsmzzxz?download", size: "450MB", quality: "720p" },
+          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/xwba9w9d2dw1/Labyrinth.of.Hortensia.and.the.Minotaur.E02.mkv", size: "450MB", quality: "720p" }
+        ] 
+      }
+    ]
+  },
+  {
+    id: "blossom-through-the-cloud",
+    tmdbId: 286988,
+    title: "Blossom Through the Cloud",
+    originalTitle: "飞到我心上",
+    category: "C-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 6,
+    status: "Ongoing",
+    language: "Chinese",
+    country: "China",
+    rating: 8.0,
+    genres: ["Drama", "Comedy"],
+    synopsis: "Once a flight attendant, Ruan Sixian pursues her piloting dream through flight school, later clashing and reconciling with aviation executive Fu Mingyu in a high-stakes race for industry innovation and mutual professional redemption.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/xX825RTjwGqkCiPiUCnJvT4mgxq.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/aYtWVJ5mUkPRFghrCHbc3I2v4WE.jpg",
+    cast: [],
+    views: "3.1M",
+    downloadSources: [
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-btc1", name: "CDramaFan", comment: "Exciting aviation romance! Remember to use the slow download option.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/6udbr0dt6hdm/Blossom.Through.The.Cloud.E02.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t0l5zuf8c2jp/Blossom.Through.The.Cloud.03.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/gpurlgiw62c9/Blossom.Through.The.Cloud.E05.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/g4amwqn1ayxj/Blossom.Through.The.Cloud.E06.mp4", size: "450MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "the-early-spring",
+    tmdbId: 299952,
+    title: "The Early Spring",
+    originalTitle: "早春晴朗",
+    category: "C-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 14,
+    status: "Ongoing",
+    language: "Chinese",
+    country: "China",
+    rating: 6.7,
+    genres: ["Drama"],
+    synopsis: "New to Beijing, Shang Zhitao crosses paths with Luan Nian, a true creative genius. Bold and open-hearted, she grows stronger step by step and gradually breaks through the defenses around Luan's guarded heart.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/yiAzR6wGqjyAotZ4DvFvFeo8QS0.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/oUFUvEMCBP80e4eYsfVfxC8n7ih.jpg",
+    cast: [],
+    views: "2.8M",
+    downloadSources: [
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-tes1", name: "CDramaFan", comment: "Great C-Drama series! Remember to use the slow download option.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/f2nsx3hlzr11/The.Early.Spring.E02.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/beu3ti0ry72l/The.Early.Spring.E03.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/y5r8wad9kyxn/The.Early.Spring.E05.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4vxizszbm2wz/The.Early.Spring.E06.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Strcloud) - use the SLOW DOWNLOAD OPTION", url: "https://strcloud.in/v/YOJx60kJ1PHogm", size: "450MB", quality: "720p" }] },
+      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "45m", downloadSources: [{ name: "Download Ep 8 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/j3p77vk8371q/The.Early.Spring.E08.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "45m", downloadSources: [{ name: "Download Ep 9 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3msa4mzx13p8/The.Early.Spring.E09.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "45m", downloadSources: [{ name: "Download Ep 10 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/72qysqx3hwaz/The.Early.Spring.E10.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "45m", downloadSources: [{ name: "Download Ep 11 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1f0lklq0npp0/The.Early.Spring.E11.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "45m", downloadSources: [{ name: "Download Ep 12 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/cp4t5e8hvqwp/The.Early.Spring.E12.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 13, quality: "720p HD", title: "Episode 13", duration: "45m", downloadSources: [{ name: "Download Ep 13 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ukjzw7y6me16/The.Early.Spring.E13.mp4", size: "450MB", quality: "720p" }] },
+      { epNum: 14, quality: "720p HD", title: "Episode 14", duration: "45m", downloadSources: [{ name: "Download Ep 14 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/u5jw1ai61rbt/The.Early.Spring.E14.mp4", size: "450MB", quality: "720p" }] }
+    ]
+  },
+  {
+    id: "pursuit-of-jade",
+    tmdbId: 279388,
+    title: "Pursuit of Jade",
+    originalTitle: "逐玉",
+    category: "C-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 4,
+    status: "Ongoing",
+    language: "Chinese",
+    country: "China",
+    rating: 8.1,
+    genres: ["Drama", "Action & Adventure", "War & Politics"],
+    synopsis: "This drama follows Fan Changyu, a butcher’s daughter, and Xie Zheng, a fallen noble seeking revenge. Their fake marriage turns into true love, but war tears them apart. Determined, Fan Changyu wields her butcher’s knife on the battlefield, searching for justice and her husband.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/g2CSCJuWm7IcpuRjxySQvZcJYnp.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/yiUZ8Ck86FF3obLztVvSQqeBi0Y.jpg",
+    cast: [],
+    views: "3.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", size: "450MB", quality: "720p" },
+      { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", size: "450MB", quality: "720p" }
+    ],
+    comments: [
+      { id: "cm-poj1", name: "CDramaFan", comment: "Such an epic historical romance! Remember to use the slow download option on Clicknupload ✨", date: "Just now" }
+    ],
+    episodes: [
+      { 
+        epNum: 1, 
+        quality: "720p HD", 
+        title: "Episode 1", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", size: "450MB", quality: "720p" }
+        ] 
+      },
+      { 
+        epNum: 2, 
+        quality: "720p HD", 
+        title: "Episode 2", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/pp2283w9dzn0/Pursuit.of.Jade.E02.mp4", size: "450MB", quality: "720p" }
+        ] 
+      },
+      { 
+        epNum: 3, 
+        quality: "720p HD", 
+        title: "Episode 3", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/2681mats6znu/Pursuit.of.Jade.E03.mp4", size: "450MB", quality: "720p" }
+        ] 
+      },
+      { 
+        epNum: 4, 
+        quality: "720p HD", 
+        title: "Episode 4", 
+        duration: "45m", 
+        downloadSources: [
+          { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", size: "450MB", quality: "720p" }
+        ] 
+      }
+    ]
+  },
+  {
     id: "somebody-2025",
     tmdbId: 1216662,
     title: "Somebody",
