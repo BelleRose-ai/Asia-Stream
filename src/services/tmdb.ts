@@ -193,40 +193,86 @@ export interface GenreSection {
  * No dynamic search index scraping for the catalog.
  */
 export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'All'): Promise<GenreSection[]> {
+  const isMovieCategory = activeCategory === 'K-Movies';
+
+  const seriesDatabase = DRAMA_DATABASE.filter(item => item.category !== 'K-Movies');
+  const moviesDatabase = DRAMA_DATABASE.filter(item => item.category === 'K-Movies');
+
   const filtered = DRAMA_DATABASE.filter(item => {
-    if (activeCategory === 'All' || activeCategory === 'Trending') return true;
+    if (activeCategory === 'All') return true;
+    if (activeCategory === 'Trending') return item.isTrending;
     return item.category === activeCategory;
   });
 
-  const trending = DRAMA_DATABASE.filter(item => item.isTrending);
-  const romance = DRAMA_DATABASE.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'));
-  const action = DRAMA_DATABASE.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical'));
-  const anime = DRAMA_DATABASE.filter(item => item.category === 'Anime');
+  if (isMovieCategory) {
+    return [
+      {
+        title: "🎬 Feature K-Movies",
+        subtitle: "Standalone Korean feature films with high-speed Pixeldrain 1080p downloads",
+        dramas: moviesDatabase
+      },
+      {
+        title: "🔥 Trending K-Movies",
+        subtitle: "Most popular standalone film releases",
+        dramas: moviesDatabase.filter(m => m.isTrending)
+      }
+    ];
+  }
+
+  const trending = seriesDatabase.filter(item => item.isTrending);
+  const romance = seriesDatabase.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'));
+  const action = seriesDatabase.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical') || item.genres.includes('Crime'));
+  const anime = seriesDatabase.filter(item => item.category === 'Anime');
+
+  if (activeCategory === 'Trending') {
+    return [
+      {
+        title: "🔥 Trending Series & Shows",
+        subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
+        dramas: trending
+      },
+      {
+        title: "🔥 Trending K-Movies",
+        subtitle: "Most popular standalone feature films",
+        dramas: moviesDatabase.filter(m => m.isTrending)
+      }
+    ];
+  }
+
+  if (activeCategory === 'All') {
+    return [
+      {
+        title: "🔥 Curated Trending Series",
+        subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
+        dramas: trending
+      },
+      {
+        title: "🎬 Feature K-Movies (Standalone Films)",
+        subtitle: "Standalone feature films kept strictly separate from series",
+        dramas: moviesDatabase
+      },
+      {
+        title: "💖 Romance & Melodrama Series",
+        subtitle: "Heartfelt emotional journeys with high-speed direct mirrors",
+        dramas: romance.length > 0 ? romance : seriesDatabase
+      },
+      {
+        title: "⚔️ Action, Crime & Fantasy",
+        subtitle: "Epic adventures and high-octane blockbusters",
+        dramas: action.length > 0 ? action : seriesDatabase
+      },
+      {
+        title: "🌸 Top Rated Anime Series",
+        subtitle: "Masterpieces with multi-quality mobile & 1080p downloads",
+        dramas: anime.length > 0 ? anime : seriesDatabase
+      }
+    ];
+  }
 
   return [
     {
-      title: "🔥 Curated Trending Releases",
-      subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
-      dramas: activeCategory === 'All' ? trending : filtered
-    },
-    {
-      title: "💖 Romance & Melodrama",
-      subtitle: "Heartfelt emotional journeys with high-speed direct mirrors",
-      dramas: romance.length > 0 ? romance : filtered
-    },
-    {
-      title: "⚔️ Action, Fantasy & Wuxia",
-      subtitle: "Epic adventures and high-octane blockbusters",
-      dramas: action.length > 0 ? action : filtered
-    },
-    {
-      title: "🌸 Top Rated Anime Series",
-      subtitle: "Masterpieces with multi-quality mobile & 1080p downloads",
-      dramas: anime.length > 0 ? anime : filtered
-    },
-    {
-      title: "📦 All Verified Archives",
-      subtitle: "Complete collection of curated Asian dramas ready for download",
+      title: `📦 ${activeCategory} Archives`,
+      subtitle: `Complete curated collection of ${activeCategory} series`,
       dramas: filtered
     }
   ];

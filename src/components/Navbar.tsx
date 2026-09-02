@@ -19,7 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenTelegram,
   onOpenSettings
 }) => {
-  const categories: CategoryType[] = ['All', 'K-Drama', 'C-Drama', 'Anime', 'Trending'];
+  const categories: CategoryType[] = ['All', 'K-Drama', 'K-Movies', 'C-Drama', 'Anime', 'Trending'];
 
   return (
     <header className="sticky top-0 z-40 bg-[#0b0c10]/90 backdrop-blur-md border-b border-[#2d2f39] transition-all">

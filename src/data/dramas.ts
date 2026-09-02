@@ -2,6 +2,122 @@ import { Drama } from '../types';
 
 export const DRAMA_DATABASE: Drama[] = [
   {
+    id: "somebody-2025",
+    tmdbId: 1216662,
+    title: "Somebody",
+    originalTitle: "침범",
+    category: "K-Movies",
+    isTrending: true,
+    year: 2025,
+    episodesCount: 1,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 6.7,
+    genres: ["Mystery", "Thriller", "Drama", "Movie"],
+    synopsis: "Swimming instructor, Young-eun is a single mom raising her 7-year-old daughter, So-hyun. However, a series of tragic events happens as So-hyun's puppy falls from the apartment and dies, and So-hyun bullies other kids in school. Twenty years later, Min, who works in handling unclaimed deaths, meets a new colleague, Hae-young, and they form a close bond.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/9pNlDKn3TX67u8hHEZH4zkXPkTL.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/cS3XRGttTVC4YPIyOC3jByznpG0.jpg",
+    cast: ["Young-eun", "So-hyun", "Min", "Hae-young"],
+    views: "2.1M",
+    downloadSources: [
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", size: "1.4GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "cm-sb1", name: "MovieFan", comment: "Such a tense and gripping thriller! Great watch.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 55m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", size: "1.4GB", quality: "1080p" }] }
+    ]
+  },
+  {
+    id: "colony-2026",
+    tmdbId: 1375646,
+    title: "Colony",
+    originalTitle: "군체",
+    category: "K-Movies",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 1,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.1,
+    genres: ["Action", "Horror", "Science Fiction", "Movie"],
+    synopsis: "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/hpBGCnzOvdtQoMyE48gvwp2y5yx.jpg",
+    cast: ["Se-jeong"],
+    views: "3.4M",
+    downloadSources: [
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", size: "1.6GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "cm-col1", name: "SciFiBuff", comment: "Intense outbreak movie! Highly recommended.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 48m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", size: "1.6GB", quality: "1080p" }] }
+    ]
+  },
+  {
+    id: "husbands-in-action",
+    tmdbId: 1451344,
+    title: "Husbands in Action",
+    originalTitle: "남편들",
+    category: "K-Movies",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 1,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 7.3,
+    genres: ["Comedy", "Action", "Crime", "Movie"],
+    synopsis: "A detective teams up with his ex-wife's new husband to chase down her kidnappers. Can this unlikely duo put aside their differences for one wild rescue?",
+    posterUrl: "https://image.tmdb.org/t/p/w500/ciLsGoyr0B8demTLDbLJmEUOHI5.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/doasZ6ROBhD0xIRsvAFdTeZsKhp.jpg",
+    cast: [],
+    views: "2.9M",
+    downloadSources: [
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", size: "1.3GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "cm-hia1", name: "ComedyLover", comment: "Hilarious chemistry between the ex and current husband lol", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 42m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", size: "1.3GB", quality: "1080p" }] }
+    ]
+  },
+  {
+    id: "the-kings-warden",
+    tmdbId: 1321179,
+    title: "The King's Warden",
+    originalTitle: "왕과 사는 남자",
+    category: "K-Movies",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 1,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 7.2,
+    genres: ["History", "Drama", "Movie"],
+    synopsis: "In a remote mountain village of 15th-century Joseon, humble headman Heung-do hears a rumor that any village hosting an exiled nobleman will be blessed with abundance and fortune. Hoping to bring prosperity to his impoverished community, he eagerly submits a petition to host one—unaware that his guest is none other than the fallen monarch, deposed boy-king Danjong.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/3CnVA1jAA64Q3qNVAW8DekCu19b.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/1s1r4OOdnU8VX2inALVTA2q94uY.jpg",
+    cast: [],
+    views: "3.1M",
+    downloadSources: [
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", size: "1.5GB", quality: "1080p" }
+    ],
+    comments: [
+      { id: "cm-tkw1", name: "HistoryBuff", comment: "Such a touching historical drama movie. Beautiful scenery and acting.", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "2h 05m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", size: "1.5GB", quality: "1080p" }] }
+    ]
+  },
+  {
     id: "spooky-in-love",
     tmdbId: 298610,
     title: "Spooky in Love",
