@@ -81,19 +81,19 @@ export const GenreRow: React.FC<GenreRowProps> = ({
               <div
                 key={drama.id}
                 onClick={() => onSelectDrama(drama)}
-                className="w-28 sm:w-38 md:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2"
+                className="w-28 sm:w-38 md:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between"
               >
-                <div className="relative h-40 sm:h-56 md:h-70 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg">
+                <div className="relative h-40 sm:h-56 md:h-70 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg flex flex-col justify-between p-3">
                   {drama.posterUrl ? (
                     <img
                       src={drama.posterUrl}
                       alt={drama.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                       loading="lazy"
                     />
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-violet-950/60 to-gray-900">
+                    <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-violet-950/60 to-gray-900">
                       <Film className="w-10 h-10 text-violet-400 mb-2" />
                       <span className="text-xs font-bold text-white line-clamp-3">{drama.title}</span>
                       <span className="mt-2 px-2 py-0.5 rounded text-[10px] bg-violet-500/20 text-violet-300 border border-violet-500/30">
@@ -102,22 +102,27 @@ export const GenreRow: React.FC<GenreRowProps> = ({
                     </div>
                   )}
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d12] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                  {/* Heavy Gradient Overlay for flawless text legibility */}
+                  <div 
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0) 100%)'
+                    }}
+                  />
 
                   {/* Rating & Category Badge */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                    <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-black/70 backdrop-blur-md text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow">
-                      <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                  <div className="absolute top-2 left-2 right-2 z-10 flex items-center justify-between pointer-events-none">
+                    <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-black/70 backdrop-blur-md text-amber-300 border border-amber-500/30 flex items-center gap-0.5 shadow">
+                      <Star className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
                       {drama.rating}
                     </span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-violet-600/90 text-white shadow">
+                    <span className="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-violet-600/90 text-white shadow">
                       {drama.category}
                     </span>
                   </div>
 
-                  {/* Title & Year on Hover/Bottom */}
-                  <div className="absolute bottom-3 left-3 right-3 pointer-events-none">
+                  {/* Title & Year at absolute bottom */}
+                  <div className="relative z-10 pointer-events-none mt-auto">
                     <h4 
                       className="text-sm font-bold text-white drop-shadow leading-snug"
                       style={{

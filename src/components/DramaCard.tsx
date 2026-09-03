@@ -35,15 +35,21 @@ export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) =>
             </span>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1b23] via-transparent to-transparent opacity-80" />
+        {/* Heavy Gradient Overlay for text legibility */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0) 100%)'
+          }}
+        />
 
         {/* Top Badges */}
-        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
-          <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-violet-600/90 text-white backdrop-blur-md shadow-md">
+        <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none">
+          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-violet-600/90 text-white backdrop-blur-md shadow">
             {drama.category}
           </span>
-          <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[#121212]/80 text-cyan-400 border border-[#2d2f39] backdrop-blur-md flex items-center gap-1 shadow-md">
-            <Star className="w-3 h-3 fill-cyan-400 text-cyan-400" />
+          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-[#121212]/80 text-cyan-400 border border-[#2d2f39] backdrop-blur-md flex items-center gap-0.5 shadow">
+            <Star className="w-2.5 h-2.5 fill-cyan-400 text-cyan-400" />
             {drama.rating}
           </span>
         </div>

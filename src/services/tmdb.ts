@@ -213,8 +213,8 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
   if (isMovieCategory) {
     return [
       {
-        title: "🎬 Feature K-Movies",
-        subtitle: "Standalone Korean feature films with high-speed Pixeldrain 1080p downloads",
+        title: "Feature K-Movies",
+        subtitle: "Standalone full-length Korean films.",
         dramas: moviesDatabase
       },
       {
@@ -252,8 +252,8 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
         dramas: trending
       },
       {
-        title: "🎬 Feature K-Movies (Standalone Films)",
-        subtitle: "Full-length Korean movies in HD.",
+        title: "Feature K-Movies",
+        subtitle: "Standalone full-length Korean films.",
         dramas: moviesDatabase
       },
       {

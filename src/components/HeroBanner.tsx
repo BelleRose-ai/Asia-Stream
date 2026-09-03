@@ -122,7 +122,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
         {validDramas.length > 1 && (
           <div 
             style={{ marginTop: '20px' }}
-            className="w-full pt-4 border-t border-[#2d2f39]/40 flex items-center justify-between sm:justify-end gap-4 z-10"
+            className="w-full pt-4 border-t border-[#2d2f39]/40 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 z-10"
           >
             <div className="flex items-center gap-1.5 bg-[#1a1b23]/80 backdrop-blur-md p-1.5 rounded-xl border border-[#2d2f39]">
               {validDramas.map((_, idx) => (
@@ -136,7 +136,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
                 />
               ))}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2">
               <button
                 onClick={handlePrev}
                 className="p-2.5 rounded-xl bg-[#1a1b23]/80 hover:bg-[#2d2f39] text-white border border-[#2d2f39] backdrop-blur-md transition-all shadow-lg cursor-pointer"
