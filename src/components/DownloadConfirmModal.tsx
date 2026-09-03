@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { ShieldCheck, ExternalLink, X, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react';
 import { DownloadSource } from '../types';
 
@@ -51,24 +51,6 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
   pendingDownload,
   onClose
 }) => {
-  const [isVerified, setIsVerified] = useState<boolean>(false);
-  const [widgetError, setWidgetError] = useState<boolean>(false);
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    (window as any).onTurnstileSuccess = (token: string) => {
-      setIsVerified(true);
-      setWidgetError(false);
-    };
-    (window as any).onTurnstileError = () => {
-      setWidgetError(true);
-    };
-    return () => {
-      delete (window as any).onTurnstileSuccess;
-      delete (window as any).onTurnstileError;
-    };
-  }, []);
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -77,36 +59,8 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
     };
     if (pendingDownload) {
       window.addEventListener('keydown', handleKeyDown);
-      setIsVerified(false);
-      setWidgetError(false);
-      
-      if ((window as any).turnstile && widgetRef.current) {
-        try {
-          (window as any).turnstile.render(widgetRef.current, {
-            sitekey: '0x4AAAAAAElw_dX8f0_0CCmz', // User production sitekey
-            callback: 'onTurnstileSuccess',
-            'error-callback': 'onTurnstileError',
-            theme: 'dark'
-          });
-        } catch (err) {
-          setWidgetError(true);
-        }
-      } else {
-        // If turnstile script hasn't loaded or blocked
-        const loadCheckTimer = setTimeout(() => {
-          if (!(window as any).turnstile && widgetRef.current) {
-            setWidgetError(true);
-          }
-        }, 3000);
-        return () => {
-          clearTimeout(loadCheckTimer);
-          window.removeEventListener('keydown', handleKeyDown);
-        };
-      }
-      return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-      };
     }
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [pendingDownload, onClose]);
 
   if (!pendingDownload) return null;
@@ -114,9 +68,7 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
   const { source, itemTitle, serverName } = pendingDownload;
 
   const handleProceed = () => {
-    if (!isVerified) return;
     window.open(source.url, '_blank', 'noopener,noreferrer');
-    setIsVerified(false);
     onClose();
   };
 
@@ -128,7 +80,7 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-lg bg-[#121216] border border-[#2d2f39] rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5 text-left max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-lg bg-[#121216] border border-[#2d2f39] rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 text-left"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -176,7 +128,7 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
         </div>
 
         {/* Warning Checklist */}
-        <div className="space-y-2.5">
+        <div className="space-y-3">
           <div className="flex items-start gap-3 text-xs sm:text-sm text-gray-300">
             <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
             <span>Make sure the page you land on matches the server name.</span>
@@ -199,22 +151,6 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
           </div>
         )}
 
-        {/* Turnstile Verification Widget */}
-        <div className="py-2 flex flex-col items-center justify-center">
-          <div className="text-xs font-semibold text-gray-400 mb-2 flex items-center gap-1.5">
-            <span>Complete security check to unlock download:</span>
-          </div>
-          <div ref={widgetRef} className="cf-turnstile" data-sitekey="0x4AAAAAAElw_dX8f0_0CCmz" data-callback="onTurnstileSuccess" data-theme="dark" />
-          
-          {isVerified && (
-            <div className="mt-3 text-center animate-fade-in">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5" /> Verification Successful! Download Unlocked.
-              </span>
-            </div>
-          )}
-        </div>
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 pt-2">
           <button
@@ -225,15 +161,10 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
           </button>
           <button
             onClick={handleProceed}
-            disabled={!isVerified}
             style={{ minHeight: '48px', touchAction: 'manipulation' }}
-            className={`w-full sm:w-auto px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-2xl flex items-center justify-center gap-2.5 transition-all ${
-              isVerified
-                ? 'bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-emerald-500/30 cursor-pointer transform active:scale-95 animate-pulse'
-                : 'bg-[#1a1b23] text-gray-500 border border-[#2d2f39] cursor-not-allowed opacity-60 shadow-none'
-            }`}
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-600/20 flex items-center justify-center gap-2 transform active:scale-95 transition-all cursor-pointer"
           >
-            <span>{isVerified ? '🚀 DOWNLOAD NOW — PROCEED TO FILE' : 'Please Complete Verification Above'}</span>
+            <span>I Understand — Proceed to File</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

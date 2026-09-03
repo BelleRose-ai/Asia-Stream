@@ -39,31 +39,31 @@ export const GenreRow: React.FC<GenreRowProps> = ({
           </h3>
           <p className="text-xs sm:text-sm text-gray-400 mt-0.5">{subtitle}</p>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className="hidden sm:flex items-center gap-1.5 opacity-0 group-hover/row:opacity-100 transition-opacity">
           <button
             onClick={() => handleScroll('left')}
-            className="w-8 h-8 rounded-full bg-[#1e2029] hover:bg-violet-600 border border-[#2d2f39] text-white flex items-center justify-center transition-all shadow-md cursor-pointer"
+            className="w-9 h-9 rounded-full bg-[#1e2029] hover:bg-violet-600 border border-[#2d2f39] text-white flex items-center justify-center transition-all shadow-md"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={() => handleScroll('right')}
-            className="w-8 h-8 rounded-full bg-[#1e2029] hover:bg-violet-600 border border-[#2d2f39] text-white flex items-center justify-center transition-all shadow-md cursor-pointer"
+            className="w-9 h-9 rounded-full bg-[#1e2029] hover:bg-violet-600 border border-[#2d2f39] text-white flex items-center justify-center transition-all shadow-md"
             aria-label="Scroll right"
           >
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </div>
 
       <div className="relative">
         {isLoading ? (
-          <div className="flex gap-3 overflow-x-hidden py-2">
+          <div className="flex gap-4 overflow-x-hidden py-2">
             {[1, 2, 3, 4, 5].map((n) => (
               <div
                 key={n}
-                className="w-36 sm:w-44 lg:w-48 h-52 sm:h-64 lg:h-72 flex-shrink-0 rounded-2xl bg-gray-900/80 border border-gray-800 animate-pulse"
+                className="w-48 sm:w-56 h-72 sm:h-80 flex-shrink-0 rounded-2xl bg-gray-900/80 border border-gray-800 animate-pulse"
               />
             ))}
           </div>
@@ -74,16 +74,16 @@ export const GenreRow: React.FC<GenreRowProps> = ({
         ) : (
           <div
             ref={rowRef}
-            className="flex gap-3 overflow-x-auto scrollbar-hide py-2 px-1 snap-x scroll-smooth"
+            className="flex gap-4 overflow-x-auto scrollbar-hide py-2 px-1 snap-x scroll-smooth"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {dramas.map((drama) => (
               <div
                 key={drama.id}
                 onClick={() => onSelectDrama(drama)}
-                className="w-32 sm:w-42 lg:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-1.5"
+                className="w-44 sm:w-52 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2"
               >
-                <div className="relative h-48 sm:h-60 lg:h-72 w-full rounded-xl sm:rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg">
+                <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg">
                   {drama.posterUrl ? (
                     <img
                       src={drama.posterUrl}

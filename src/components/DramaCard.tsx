@@ -8,13 +8,9 @@ interface DramaCardProps {
 }
 
 export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) => {
-  const handleClick = () => {
-    onSelectDrama(drama);
-  };
-
   return (
     <div
-      onClick={handleClick}
+      onClick={() => onSelectDrama(drama)}
       className="group relative bg-[#1a1b23] rounded-2xl overflow-hidden border border-[#2d2f39] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 cursor-pointer flex flex-col h-full"
     >
       {/* Poster Image Container */}
