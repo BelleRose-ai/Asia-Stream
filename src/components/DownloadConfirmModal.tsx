@@ -201,22 +201,18 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
           </div>
         )}
 
-        {/* Turnstile Verification Widget & Fallback */}
+        {/* Turnstile Verification Widget */}
         <div className="py-2 flex flex-col items-center justify-center">
           <div className="text-xs font-semibold text-gray-400 mb-2 flex items-center gap-1.5">
             <span>Complete security check to unlock download:</span>
           </div>
           <div ref={widgetRef} className="cf-turnstile" data-sitekey="0x4AAAAAAElw_dX8f0_0CCmz" data-callback="onTurnstileSuccess" data-theme="dark" />
           
-          {(widgetError || !isVerified) && (
-            <div className="mt-3 text-center">
-              <button
-                type="button"
-                onClick={() => setIsVerified(true)}
-                className="text-xs text-cyan-400 hover:text-cyan-300 underline underline-offset-2 font-medium cursor-pointer"
-              >
-                Having trouble connecting? Click here to bypass / verify instantly
-              </button>
+          {isVerified && (
+            <div className="mt-3 text-center animate-fade-in">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold">
+                <CheckCircle2 className="w-3.5 h-3.5" /> Verification Successful! Download Unlocked.
+              </span>
             </div>
           )}
         </div>
@@ -233,13 +229,13 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
             onClick={handleProceed}
             disabled={!isVerified}
             style={{ minHeight: '48px', touchAction: 'manipulation' }}
-            className={`w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-xl flex items-center justify-center gap-2 transition-all ${
+            className={`w-full sm:w-auto px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm shadow-2xl flex items-center justify-center gap-2.5 transition-all ${
               isVerified
-                ? 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-emerald-600/20 cursor-pointer transform active:scale-95'
+                ? 'bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-emerald-500/30 cursor-pointer transform active:scale-95 animate-pulse'
                 : 'bg-[#1a1b23] text-gray-500 border border-[#2d2f39] cursor-not-allowed opacity-60 shadow-none'
             }`}
           >
-            <span>{isVerified ? 'I Understand — Proceed to File' : 'Please Complete Verification Above'}</span>
+            <span>{isVerified ? '🚀 DOWNLOAD NOW — PROCEED TO FILE' : 'Please Complete Verification Above'}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

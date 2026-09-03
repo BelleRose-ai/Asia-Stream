@@ -3,22 +3,26 @@ let clickCounter = 0;
 
 export const triggerPopunder = () => {
   clickCounter += 1;
-  // Trigger on every 2nd interaction so ad network events fire reliably
-  if (clickCounter % 2 === 0) {
+  // Trigger on every tap/click for immediate impression testing
+  if (clickCounter % 1 === 0) {
     try {
-      const windowOpenUrl = 'https://www.highrevenueformat.com/543ef6d342ff74a9f327ef45894dd199';
-      // Attempt opening ad in a new background tab
-      const newWindow = window.open(windowOpenUrl, '_blank');
-      if (newWindow) {
-        try {
-          newWindow.blur();
-          window.focus();
-        } catch (e) {
-          // Ignore cross-origin blur restrictions
-        }
-      }
+      const adUrl = 'https://www.highrevenueformat.com/543ef6d342ff74a9f327ef45894dd199';
+      
+      // Simulate genuine anchor click to bypass strict modern browser window.open blockers
+      const a = document.createElement('a');
+      a.href = adUrl;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     } catch (e) {
-      // Ignore popup restrictions
+      try {
+        window.open('https://www.highrevenueformat.com/543ef6d342ff74a9f327ef45894dd199', '_blank');
+      } catch (err) {
+        // Ignore
+      }
     }
   }
 };

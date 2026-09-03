@@ -171,6 +171,10 @@ export default function App() {
                   onSelectDrama={setSelectedDrama}
                 />
               ))}
+              {/* Bottom Homepage Catalog Ad Banner */}
+              <div className="pt-6 pb-2 border-t border-[#2d2f39]/60">
+                <AdBanner type="300x250" className="my-6" />
+              </div>
             </div>
           )
         )}

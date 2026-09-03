@@ -66,7 +66,11 @@ export const AdBanner: React.FC<AdBannerProps> = ({ type, className = '', deskto
       <span className="text-[10px] uppercase tracking-widest text-gray-500/80 mb-1 font-medium select-none">
         Advertisement
       </span>
-      <div ref={containerRef} className="flex justify-center items-center max-w-full overflow-x-auto" />
+      <div 
+        ref={containerRef} 
+        className="flex justify-center items-center max-w-full overflow-x-auto bg-[#14151a] border border-[#2d2f39] rounded-xl shadow-lg"
+        style={{ minHeight: type === '300x250' ? '250px' : 'auto', minWidth: type === '300x250' ? '300px' : 'auto' }}
+      />
     </div>
   );
 

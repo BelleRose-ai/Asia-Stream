@@ -24,11 +24,29 @@ export const ReportModal: React.FC<ReportModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
+
+    try {
+      const mailtoUrl = `mailto:michelleehomazino@gmail.com?subject=${encodeURIComponent(
+        `Broken Link Report: ${dramaTitle} Ep ${episode}`
+      )}&body=${encodeURIComponent(
+        `Drama: ${dramaTitle}\nEpisode: ${episode}\nIssue Type: ${issueType}\nDetails: ${details || 'None'}`
+      )}`;
+
+      const a = document.createElement('a');
+      a.href = mailtoUrl;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } catch (err) {
+      // Ignore popup blocking errors
+    }
+
     setTimeout(() => {
       setIsSubmitted(false);
       setDetails('');
       onClose();
-    }, 2000);
+    }, 2500);
   };
 
   // Google Form prefill URL or direct report action

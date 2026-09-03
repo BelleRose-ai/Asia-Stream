@@ -293,6 +293,9 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
             {/* Native Banner Ad (Centered) */}
             <AdBanner type="native" className="my-4" />
 
+            {/* 300x250 Banner Ad directly above episode list */}
+            <AdBanner type="300x250" className="my-6" />
+
             {/* Episode Cards with Download Sources */}
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
