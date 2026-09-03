@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Send, Film, Settings, Flame, X } from 'lucide-react';
+import { Search, Send, Film, Flame, X } from 'lucide-react';
 import { CategoryType } from '../types';
 
 interface NavbarProps {
@@ -8,7 +8,6 @@ interface NavbarProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   onOpenTelegram: () => void;
-  onOpenSettings: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -16,8 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSelectCategory,
   searchQuery,
   onSearchChange,
-  onOpenTelegram,
-  onOpenSettings
+  onOpenTelegram
 }) => {
   const categories: CategoryType[] = ['All', 'K-Drama', 'K-Movies', 'C-Drama', 'J-Drama', 'PH-Drama', 'Anime', 'Trending'];
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
@@ -93,16 +91,6 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <Send className="w-3.5 h-3.5 text-cyan-400" />
             <span>Join Telegram</span>
-          </button>
-
-          {/* Settings / TMDB Key */}
-          <button
-            onClick={onOpenSettings}
-            className="min-w-[44px] min-h-[44px] p-2.5 rounded-xl bg-[#1a1b23] border border-[#2d2f39] text-gray-400 hover:text-white hover:bg-[#2d2f39] flex items-center justify-center transition-all"
-            title="TMDB API Settings"
-            aria-label="Settings"
-          >
-            <Settings className="w-4 h-4" />
           </button>
         </div>
       </div>

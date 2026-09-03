@@ -5,7 +5,6 @@ import { GenreRow } from './components/GenreRow';
 import { DramaCard } from './components/DramaCard';
 import { DramaModal } from './components/DramaModal';
 import { TelegramModal } from './components/TelegramModal';
-import { SettingsModal } from './components/SettingsModal';
 import { Footer } from './components/Footer';
 import { AdBanner } from './components/AdBanner';
 import { Drama, CategoryType } from './types';
@@ -18,7 +17,6 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedDrama, setSelectedDrama] = useState<Drama | null>(null);
   const [showTelegramModal, setShowTelegramModal] = useState<boolean>(false);
-  const [showSettingsModal, setShowSettingsModal] = useState<boolean>(false);
   const [genreRows, setGenreRows] = useState<GenreSection[]>([]);
   const [isLoadingRows, setIsLoadingRows] = useState<boolean>(true);
 
@@ -82,7 +80,6 @@ export default function App() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         onOpenTelegram={() => setShowTelegramModal(true)}
-        onOpenSettings={() => setShowSettingsModal(true)}
       />
 
       {/* Hero Banner Carousel */}
@@ -198,12 +195,6 @@ export default function App() {
 
       {showTelegramModal && (
         <TelegramModal onClose={() => setShowTelegramModal(false)} />
-      )}
-
-      {showSettingsModal && (
-        <SettingsModal
-          onClose={() => setShowSettingsModal(false)}
-        />
       )}
     </div>
   );

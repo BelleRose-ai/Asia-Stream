@@ -81,9 +81,9 @@ export const GenreRow: React.FC<GenreRowProps> = ({
               <div
                 key={drama.id}
                 onClick={() => onSelectDrama(drama)}
-                className="w-28 sm:w-38 md:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between"
+                className="w-36 sm:w-40 md:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between"
               >
-                <div className="relative h-40 sm:h-56 md:h-70 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg flex flex-col justify-between p-3">
+                <div className="relative h-52 sm:h-58 md:h-70 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg flex flex-col justify-between p-2.5 sm:p-3">
                   {drama.posterUrl ? (
                     <img
                       src={drama.posterUrl}
@@ -112,11 +112,11 @@ export const GenreRow: React.FC<GenreRowProps> = ({
 
                   {/* Rating & Category Badge */}
                   <div className="absolute top-2 left-2 right-2 z-10 flex items-center justify-between pointer-events-none">
-                    <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-black/70 backdrop-blur-md text-amber-300 border border-amber-500/30 flex items-center gap-0.5 shadow">
-                      <Star className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
+                    <span className="px-1.5 py-0.5 rounded text-[8px] sm:text-xs font-bold bg-black/70 backdrop-blur-md text-amber-300 border border-amber-500/30 flex items-center gap-0.5 shadow">
+                      <Star className="w-2 h-2 sm:w-3 sm:h-3 fill-amber-400 text-amber-400" />
                       {drama.rating}
                     </span>
-                    <span className="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-violet-600/90 text-white shadow">
+                    <span className="px-1.5 py-0.5 rounded text-[8px] sm:text-[10px] font-semibold bg-violet-600/90 text-white shadow">
                       {drama.category}
                     </span>
                   </div>
@@ -124,7 +124,7 @@ export const GenreRow: React.FC<GenreRowProps> = ({
                   {/* Title & Year at absolute bottom */}
                   <div className="relative z-10 pointer-events-none mt-auto">
                     <h4 
-                      className="text-sm font-bold text-white drop-shadow leading-snug"
+                      className="text-xs sm:text-sm font-bold text-white drop-shadow leading-snug"
                       style={{
                         display: '-webkit-box',
                         WebkitLineClamp: 2,
@@ -135,7 +135,7 @@ export const GenreRow: React.FC<GenreRowProps> = ({
                     >
                       {drama.title}
                     </h4>
-                    <p className="text-[11px] text-gray-300 flex items-center gap-2 mt-0.5">
+                    <p className="text-[9px] sm:text-[11px] text-gray-300 flex items-center gap-2 mt-0.5">
                       <span>{drama.year}</span>
                       <span>•</span>
                       <span>{drama.episodesCount} Eps</span>
