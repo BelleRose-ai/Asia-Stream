@@ -74,16 +74,16 @@ export const GenreRow: React.FC<GenreRowProps> = ({
         ) : (
           <div
             ref={rowRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide py-2 px-1 snap-x scroll-smooth"
+            className="flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide py-2 px-1 snap-x scroll-smooth"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {dramas.map((drama) => (
               <div
                 key={drama.id}
                 onClick={() => onSelectDrama(drama)}
-                className="w-44 sm:w-52 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2"
+                className="w-28 sm:w-38 md:w-48 flex-shrink-0 group cursor-pointer snap-start transition-transform duration-300 hover:-translate-y-2"
               >
-                <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg">
+                <div className="relative h-40 sm:h-56 md:h-70 w-full rounded-2xl overflow-hidden bg-[#1a1b23] border border-[#2d2f39] shadow-lg">
                   {drama.posterUrl ? (
                     <img
                       src={drama.posterUrl}
