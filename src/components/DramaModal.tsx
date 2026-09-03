@@ -294,6 +294,36 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
             {/* Native Banner Ad (Centered) */}
             <AdBanner type="native" className="my-4" />
 
+            {/* Subtitle Tips Banner */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#181924] border border-cyan-500/40 shadow-lg space-y-2">
+              <div className="flex items-center gap-2 text-cyan-400">
+                <Sparkles className="w-4 h-4 flex-shrink-0" />
+                <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
+                  Subtitles are Embedded in the Video!
+                </h4>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Every episode comes with built-in multi-language subtitles (English included). If they do not appear automatically, open the file using a recommended player and select the subtitle track manually:
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="px-2.5 py-1 rounded-lg bg-[#222433] border border-[#2d2f39] text-[11px] font-semibold text-gray-200">
+                  🟠 VLC Player
+                </span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#222433] border border-[#2d2f39] text-[11px] font-semibold text-gray-200">
+                  🔵 MX Player
+                </span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#222433] border border-[#2d2f39] text-[11px] font-semibold text-gray-200">
+                  🟣 KMPlayer
+                </span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#222433] border border-[#2d2f39] text-[11px] font-semibold text-gray-200">
+                  🟢 PotPlayer / Default Player
+                </span>
+              </div>
+              <p className="text-[11px] text-gray-400 pt-1">
+                <strong>How to turn it on:</strong> Tap the screen while playing → Click the <strong>Subtitle / Audio icon</strong> (usually looks like a speech bubble or CC) → Choose <strong>English</strong>.
+              </p>
+            </div>
+
             {/* Episode Download Links List */}
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
@@ -357,6 +387,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                         <Download className="w-4 h-4 text-emerald-400" />
                         <span>Download (Clicknupload)</span>
                       </button>
+
                       <div
                         style={{
                           marginTop: '6px',

@@ -1,5 +1,5 @@
 {
-  "name": "Asian Drama Portal",
+  "name": "Asia Stream",
   "description": "An Asian entertainment and drama streaming and download portal featuring K-Dramas, C-Dramas, and Anime.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
