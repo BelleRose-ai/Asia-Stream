@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 interface AdBannerProps {
-  type: '300x250' | '728x90' | 'native';
+  type: 'native' | '300x250' | '728x90';
   className?: string;
   desktopOnly?: boolean;
 }
@@ -13,79 +13,60 @@ export const AdBanner: React.FC<AdBannerProps> = ({ type, className = '', deskto
     const container = containerRef.current;
     if (!container) return;
 
-    // Clear previous content if any
+    // Clear previous content
     container.innerHTML = '';
 
     if (type === 'native') {
-      const div = document.createElement('div');
-      div.id = 'container-0a6e7c853cf7cadc77355879408278bf';
-      container.appendChild(div);
+      // Native banner requires the specific container ID div
+      const innerDiv = document.createElement('div');
+      innerDiv.id = 'container-0a6e7c853cf7cadc77355879408278bf';
+      container.appendChild(innerDiv);
 
       const script = document.createElement('script');
       script.async = true;
       script.setAttribute('data-cfasync', 'false');
       script.src = 'https://pl31151261.profitableratecpmnetwork.com/0a6e7c853cf7cadc77355879408278bf/invoke.js';
       container.appendChild(script);
-    } else if (type === '300x250') {
-      const scriptOptions = document.createElement('script');
-      scriptOptions.innerHTML = `
-        atOptions = {
-          'key' : '543ef6d342ff74a9f327ef45894dd199',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      `;
-      container.appendChild(scriptOptions);
+    } else {
+      const key = type === '300x250' ? '543ef6d342ff74a9f327ef45894dd199' : '41537a0f3a0bc47014ec37f8606e807c';
+      const height = type === '300x250' ? 250 : 90;
+      const width = type === '300x250' ? 300 : 728;
+
+      // Set global atOptions required by HighRevenueFormat/Adsterra
+      (window as any).atOptions = {
+        'key': key,
+        'format': 'iframe',
+        'height': height,
+        'width': width,
+        'params': {}
+      };
 
       const scriptInvoke = document.createElement('script');
-      scriptInvoke.src = 'https://www.highrevenueformat.com/543ef6d342ff74a9f327ef45894dd199/invoke.js';
-      container.appendChild(scriptInvoke);
-    } else if (type === '728x90') {
-      const scriptOptions = document.createElement('script');
-      scriptOptions.innerHTML = `
-        atOptions = {
-          'key' : '41537a0f3a0bc47014ec37f8606e807c',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-      `;
-      container.appendChild(scriptOptions);
-
-      const scriptInvoke = document.createElement('script');
-      scriptInvoke.src = 'https://www.highrevenueformat.com/41537a0f3a0bc47014ec37f8606e807c/invoke.js';
+      scriptInvoke.type = 'text/javascript';
+      scriptInvoke.src = `https://www.highrevenueformat.com/${key}/invoke.js`;
       container.appendChild(scriptInvoke);
     }
   }, [type]);
 
-  const innerContent = (
-    <div className="flex flex-col items-center w-full max-w-full overflow-hidden">
-      <span className="text-[10px] uppercase tracking-widest text-gray-500/80 mb-1 font-medium select-none">
-        Advertisement
-      </span>
-      <div 
-        ref={containerRef} 
-        className="flex justify-center items-center max-w-full overflow-x-auto bg-[#14151a] border border-[#2d2f39] rounded-xl shadow-lg"
-        style={{ minHeight: type === '300x250' ? '250px' : 'auto', minWidth: type === '300x250' ? '300px' : 'auto' }}
-      />
-    </div>
-  );
-
   if (desktopOnly) {
     return (
-      <div className={`hidden md:flex flex-col items-center my-6 max-w-full overflow-hidden ${className}`}>
-        {innerContent}
+      <div className={`hidden md:flex justify-center items-center my-4 ${className}`}>
+        <div 
+          ref={containerRef} 
+          className="flex justify-center items-center bg-[#14151a] border border-[#2d2f39] rounded-xl shadow-lg p-2 min-h-[100px]"
+          style={{ minWidth: type === '728x90' ? '728px' : '300px' }}
+        />
       </div>
     );
   }
 
   return (
-    <div className={`flex flex-col items-center my-6 max-w-full overflow-hidden ${className}`}>
-      {innerContent}
+    <div className={`flex flex-col items-center justify-center my-4 ${className}`}>
+      <div 
+        ref={containerRef} 
+        className="flex justify-center items-center max-w-full overflow-x-auto bg-[#14151a] border border-[#2d2f39] rounded-xl shadow-lg p-2"
+        style={{ minHeight: type === '300x250' ? '260px' : type === '728x90' ? '100px' : 'auto' }}
+      />
     </div>
   );
 };
-

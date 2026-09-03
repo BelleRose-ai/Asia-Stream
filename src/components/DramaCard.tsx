@@ -1,7 +1,6 @@
 import React from 'react';
 import { Star, Download, Play } from 'lucide-react';
 import { Drama } from '../types';
-import { triggerPopunder } from '../utils/adTrigger';
 
 interface DramaCardProps {
   drama: Drama;
@@ -10,7 +9,6 @@ interface DramaCardProps {
 
 export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) => {
   const handleClick = () => {
-    triggerPopunder();
     onSelectDrama(drama);
   };
 

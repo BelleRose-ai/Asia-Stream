@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ShieldCheck, ExternalLink, X, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react';
 import { DownloadSource } from '../types';
-import { triggerPopunder } from '../utils/adTrigger';
 
 export interface PendingDownload {
   source: DownloadSource;
@@ -116,7 +115,6 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
 
   const handleProceed = () => {
     if (!isVerified) return;
-    triggerPopunder();
     window.open(source.url, '_blank', 'noopener,noreferrer');
     setIsVerified(false);
     onClose();
