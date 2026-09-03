@@ -4,7 +4,7 @@ import { Drama, Episode, CommentItem, DownloadSource } from '../types';
 import { fetchMovieDetails, fetchSeasonEpisodes, enrichCuratedDrama } from '../services/tmdb';
 import { DownloadConfirmModal, PendingDownload, parseServerName } from './DownloadConfirmModal';
 import { ReportModal } from './ReportModal';
-import { AdBanner } from './AdBanner';
+import { NativeBanner } from './NativeBanner';
 
 interface DramaModalProps {
   drama: Drama;
@@ -290,8 +290,8 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
               </div>
             )}
 
-            {/* Native Banner Ad (Centered) right above episode list */}
-            <AdBanner type="native" className="my-4" />
+            {/* Native Banner Ad */}
+            <NativeBanner className="my-4" />
 
             {/* Episode Cards with Download Sources */}
             <div className="space-y-4">
@@ -422,11 +422,6 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
               </div>
             ))}
           </div>
-        </div>
-
-        {/* 300x250 Rectangle Ad Banner */}
-        <div className="pt-6">
-          <AdBanner type="300x250" className="my-6" />
         </div>
 
       </main>
