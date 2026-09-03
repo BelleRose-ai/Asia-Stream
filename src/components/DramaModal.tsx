@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Star, Download, Film, Sparkles, MessageSquare, Send, CheckCircle2, ShieldCheck, HardDrive } from 'lucide-react';
+import { ArrowLeft, Star, Download, Film, Sparkles, MessageSquare, Send, CheckCircle2, ShieldCheck, HardDrive, Flag } from 'lucide-react';
 import { Drama, Episode, CommentItem, DownloadSource } from '../types';
 import { fetchMovieDetails, fetchSeasonEpisodes, enrichCuratedDrama } from '../services/tmdb';
 import { DownloadConfirmModal, PendingDownload, parseServerName } from './DownloadConfirmModal';
+import { ReportModal } from './ReportModal';
 import { AdBanner } from './AdBanner';
 
 interface DramaModalProps {
@@ -18,6 +19,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
   const [seasonEpisodes, setSeasonEpisodes] = useState<Episode[]>(drama.episodes || []);
   const [isLoadingSeason, setIsLoadingSeason] = useState<boolean>(false);
   const [pendingDownload, setPendingDownload] = useState<PendingDownload | null>(null);
+  const [reportEpisode, setReportEpisode] = useState<{ epNum: number; title?: string } | null>(null);
 
   // Comment & Request form state
   const [comments, setComments] = useState<CommentItem[]>(drama.comments || [
@@ -319,36 +321,46 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                       </div>
                     </div>
 
-                    {/* Episode Download Buttons */}
-                    <div className="flex flex-wrap items-center gap-2">
-                      {ep.downloadSources && ep.downloadSources.length > 0 ? (
-                        ep.downloadSources.map((ds, sIdx) => (
+                    {/* Episode Download Buttons & Report Link */}
+                    <div className="flex flex-col items-end gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        {ep.downloadSources && ep.downloadSources.length > 0 ? (
+                          ep.downloadSources.map((ds, sIdx) => (
+                            <button
+                              key={sIdx}
+                              onClick={() => handleInitiateDownload(ds, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
+                              className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] hover:border-emerald-500 font-bold text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer group"
+                            >
+                              <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
+                              <span>{ds.name}</span>
+                            </button>
+                          ))
+                        ) : (
                           <button
-                            key={sIdx}
-                            onClick={() => handleInitiateDownload(ds, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
-                            className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] hover:border-emerald-500 font-bold text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer group"
+                            onClick={() => handleInitiateDownload({ name: 'Download 720p (Mixdrop)', url: 'https://mixdrop.co', quality: '720p' }, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
+                            className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer group"
                           >
                             <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
-                            <span>{ds.name}</span>
+                            <span>Download 720p</span>
                           </button>
-                        ))
-                      ) : (
-                        <button
-                          onClick={() => handleInitiateDownload({ name: 'Download 720p (Mixdrop)', url: 'https://mixdrop.co', quality: '720p' }, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
-                          className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer group"
-                        >
-                          <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
-                          <span>Download 720p</span>
-                        </button>
-                      )}
+                        )}
+                      </div>
+                      <button
+                        onClick={() => setReportEpisode({ epNum: ep.epNum, title: ep.title })}
+                        className="text-[11px] text-gray-400 hover:text-amber-400 flex items-center gap-1 transition-colors cursor-pointer py-1 px-2 rounded-lg hover:bg-[#1a1b23]"
+                        title="Report broken or dead link"
+                      >
+                        <Flag className="w-3 h-3 text-amber-500/80" />
+                        <span>Report Dead Link</span>
+                      </button>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* 300x250 Rectangle Ad Banner */}
-            <AdBanner type="300x250" className="my-6" />
+            {/* 300x250 Rectangle Ad Banner with generous margin from download section */}
+            <AdBanner type="300x250" className="mt-8 mb-6" />
           </div>
         )}
 
@@ -421,6 +433,14 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
       <DownloadConfirmModal
         pendingDownload={pendingDownload}
         onClose={() => setPendingDownload(null)}
+      />
+
+      {/* Report Dead Link Modal */}
+      <ReportModal
+        isOpen={!!reportEpisode}
+        onClose={() => setReportEpisode(null)}
+        dramaTitle={currentDrama.title}
+        defaultEpisode={reportEpisode ? `Episode ${reportEpisode.epNum}${reportEpisode.title ? ` - ${reportEpisode.title}` : ''}` : '1'}
       />
     </div>
   );

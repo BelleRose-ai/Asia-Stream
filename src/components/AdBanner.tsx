@@ -61,17 +61,27 @@ export const AdBanner: React.FC<AdBannerProps> = ({ type, className = '', deskto
     }
   }, [type]);
 
+  const innerContent = (
+    <div className="flex flex-col items-center w-full max-w-full overflow-hidden">
+      <span className="text-[10px] uppercase tracking-widest text-gray-500/80 mb-1 font-medium select-none">
+        Advertisement
+      </span>
+      <div ref={containerRef} className="flex justify-center items-center max-w-full overflow-x-auto" />
+    </div>
+  );
+
   if (desktopOnly) {
     return (
-      <div className={`hidden md:flex justify-center items-center my-4 overflow-hidden ${className}`}>
-        <div ref={containerRef} className="flex justify-center items-center min-h-[90px]" />
+      <div className={`hidden md:flex flex-col items-center my-6 max-w-full overflow-hidden ${className}`}>
+        {innerContent}
       </div>
     );
   }
 
   return (
-    <div className={`flex justify-center items-center my-4 overflow-hidden ${className}`}>
-      <div ref={containerRef} className="flex justify-center items-center" />
+    <div className={`flex flex-col items-center my-6 max-w-full overflow-hidden ${className}`}>
+      {innerContent}
     </div>
   );
 };
+

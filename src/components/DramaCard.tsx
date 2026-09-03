@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, Download, Play } from 'lucide-react';
 import { Drama } from '../types';
+import { triggerPopunder } from '../utils/adTrigger';
 
 interface DramaCardProps {
   drama: Drama;
@@ -8,9 +9,14 @@ interface DramaCardProps {
 }
 
 export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) => {
+  const handleClick = () => {
+    triggerPopunder();
+    onSelectDrama(drama);
+  };
+
   return (
     <div
-      onClick={() => onSelectDrama(drama)}
+      onClick={handleClick}
       className="group relative bg-[#1a1b23] rounded-2xl overflow-hidden border border-[#2d2f39] hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 cursor-pointer flex flex-col h-full"
     >
       {/* Poster Image Container */}
