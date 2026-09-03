@@ -102,7 +102,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
           className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-[#2d2f39] text-white border border-[#2d2f39] flex items-center gap-2 text-sm font-semibold transition-all shadow-md group"
         >
           <ArrowLeft className="w-4 h-4 text-cyan-400 group-hover:-translate-x-1 transition-transform" />
-          <span>Back to Curated Catalog</span>
+          <span>Back</span>
         </button>
         <div className="flex items-center gap-2">
           <span className="px-3 py-1 rounded-full text-xs font-bold bg-violet-600 text-white shadow">
@@ -271,19 +271,22 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                   <span>Select Season</span>
                 </h3>
                 <div className="flex flex-wrap gap-2.5">
-                  {currentDrama.seasons.map((season) => (
-                    <button
-                      key={season.seasonNumber}
-                      onClick={() => handleSeasonChange(season.seasonNumber)}
-                      className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all border ${
-                        selectedSeason === season.seasonNumber
-                          ? 'bg-violet-600 text-white border-violet-500 shadow-xl shadow-violet-600/30'
-                          : 'bg-[#121212] text-gray-300 border-[#2d2f39] hover:bg-[#1a1b23]'
-                      }`}
-                    >
-                      {season.name} ({season.episodeCount} Eps)
-                    </button>
-                  ))}
+                  {currentDrama.seasons.map((season) => {
+                    const isSelected = selectedSeason === season.seasonNumber;
+                    return (
+                      <button
+                        key={season.seasonNumber}
+                        onClick={() => handleSeasonChange(season.seasonNumber)}
+                        style={{
+                          backgroundColor: isSelected ? '#6D28D9' : '#1F2937',
+                          borderRadius: '9999px',
+                        }}
+                        className="px-5 py-2 text-xs sm:text-sm font-semibold text-white transition-all cursor-pointer border-0 hover:opacity-90"
+                      >
+                        {season.name} ({season.episodeCount} Eps)
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -291,7 +294,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
             {/* Native Banner Ad (Centered) */}
             <AdBanner type="native" className="my-4" />
 
-            {/* Episode Cards with Download Sources */}
+            {/* Episode Download Links List */}
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
                 <Download className="w-5 h-5 text-emerald-400" />
@@ -299,48 +302,71 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                 {isLoadingSeason && <span className="text-xs text-amber-400 animate-pulse">(Loading...)</span>}
               </h3>
 
-              <div className="space-y-3">
+              <div className="space-y-0">
                 {seasonEpisodes.map((ep) => (
                   <div
                     key={ep.epNum}
-                    className="p-5 rounded-2xl bg-[#121212] border border-[#2d2f39] hover:border-emerald-500/50 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                    style={{
+                      borderBottom: '1px solid #2A2A2A',
+                      paddingTop: '20px',
+                      paddingBottom: '20px',
+                    }}
+                    className="flex flex-col md:flex-row md:items-center justify-between gap-4"
                   >
-                    <div className="flex items-center gap-4 min-w-0">
-                      <div className="w-12 h-12 rounded-xl bg-[#1a1b23] border border-[#2d2f39] text-emerald-400 flex items-center justify-center font-extrabold text-sm flex-shrink-0 shadow">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div
+                        style={{ width: '32px' }}
+                        className="text-[1.25rem] font-bold text-[#9CA3AF] flex-shrink-0 text-center"
+                      >
                         {ep.epNum}
                       </div>
                       <div className="min-w-0">
-                        <h4 className="text-sm font-bold text-white truncate">
+                        <h4
+                          style={{
+                            fontWeight: 600,
+                            fontSize: '1rem',
+                            color: '#FFFFFF',
+                          }}
+                          className="truncate"
+                        >
                           {ep.title || `Episode ${ep.epNum}`}
                         </h4>
-                        <p className="text-xs text-gray-400 mt-0.5 line-clamp-1">
-                          {ep.overview || `${currentDrama.title} Season ${selectedSeason} Episode ${ep.epNum}`}
-                        </p>
                       </div>
                     </div>
 
-                    {/* Episode Download Buttons */}
-                    <div className="flex flex-wrap items-center gap-2">
-                      {ep.downloadSources && ep.downloadSources.length > 0 ? (
-                        ep.downloadSources.map((ds, sIdx) => (
-                          <button
-                            key={sIdx}
-                            onClick={() => handleInitiateDownload(ds, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
-                            className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] hover:border-emerald-500 font-bold text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer group"
-                          >
-                            <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
-                            <span>{ds.name}</span>
-                          </button>
-                        ))
-                      ) : (
-                        <button
-                          onClick={() => handleInitiateDownload({ name: 'Download 720p (Mixdrop)', url: 'https://mixdrop.co', quality: '720p' }, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
-                          className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer group"
-                        >
-                          <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
-                          <span>Download 720p</span>
-                        </button>
-                      )}
+                    {/* Episode Download Button CTA */}
+                    <div className="w-full md:w-auto md:min-w-[260px]">
+                      <button
+                        onClick={() => handleInitiateDownload(
+                          ep.downloadSources?.[0] || { name: 'Clicknupload', url: 'https://clicknupload.click', quality: 'HD' },
+                          `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`
+                        )}
+                        style={{
+                          padding: '12px 16px',
+                          borderRadius: '8px',
+                          width: '100%',
+                          backgroundColor: '#1F2937',
+                          border: '1px solid #374151',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          gap: '8px',
+                        }}
+                        className="text-white text-sm font-semibold hover:bg-[#374151] transition-all cursor-pointer shadow-sm group"
+                      >
+                        <Download className="w-4 h-4 text-emerald-400" />
+                        <span>Download (Clicknupload)</span>
+                      </button>
+                      <div
+                        style={{
+                          marginTop: '6px',
+                          fontSize: '0.75rem',
+                          color: '#6B7280',
+                          textAlign: 'center',
+                        }}
+                      >
+                        💡 Note: Select the 'Slow Download' option on the next page.
+                      </div>
                     </div>
                   </div>
                 ))}
