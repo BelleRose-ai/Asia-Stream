@@ -6,9 +6,10 @@ import { AdBanner } from './AdBanner';
 interface FooterProps {
   onSelectCategory: (cat: CategoryType) => void;
   onOpenTelegram: () => void;
+  onOpenDMCA: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram }) => {
+export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram, onOpenDMCA }) => {
   return (
     <footer className="bg-[#0b0c10] border-t border-[#2d2f39] text-gray-400 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
@@ -29,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram
               <span className="text-lg font-bold text-white">AsiaStream Portal</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-              Your ultimate destination for streaming and downloading Asian entertainment, including hit K-Dramas, C-Dramas, and Anime series in 720p & 1080p HD.
+              Your ultimate destination for streaming and downloading Asian entertainment, including hit K-Dramas, C-Dramas, and Anime series in high definition.
             </p>
             <div className="pt-2">
               <button
@@ -71,8 +72,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Legal & DMCA</h4>
             <p className="text-[11px] leading-relaxed text-gray-400">
-              This site does not host any files on its servers. All contents are provided by non-affiliated third parties. DMCA takedown requests should be directed to our Telegram channel support.
+              AsiaStream does not host any media files. All content is indexed from external third-party sources.
             </p>
+            <button
+              onClick={onOpenDMCA}
+              className="text-xs text-cyan-400 hover:text-cyan-300 font-medium underline underline-offset-2 transition-colors cursor-pointer"
+            >
+              View Full DMCA Policy
+            </button>
           </div>
         </div>
 

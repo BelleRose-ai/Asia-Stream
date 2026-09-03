@@ -5,6 +5,7 @@ import { GenreRow } from './components/GenreRow';
 import { DramaCard } from './components/DramaCard';
 import { DramaModal } from './components/DramaModal';
 import { TelegramModal } from './components/TelegramModal';
+import { DMCAModal } from './components/DMCAModal';
 import { Footer } from './components/Footer';
 import { AdBanner } from './components/AdBanner';
 import { Drama, CategoryType } from './types';
@@ -17,6 +18,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedDrama, setSelectedDrama] = useState<Drama | null>(null);
   const [showTelegramModal, setShowTelegramModal] = useState<boolean>(false);
+  const [showDMCAModal, setShowDMCAModal] = useState<boolean>(false);
   const [genreRows, setGenreRows] = useState<GenreSection[]>([]);
   const [isLoadingRows, setIsLoadingRows] = useState<boolean>(true);
 
@@ -182,6 +184,7 @@ export default function App() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         onOpenTelegram={() => setShowTelegramModal(true)}
+        onOpenDMCA={() => setShowDMCAModal(true)}
       />
 
       {/* Details & Download Modal */}
@@ -195,6 +198,13 @@ export default function App() {
 
       {showTelegramModal && (
         <TelegramModal onClose={() => setShowTelegramModal(false)} />
+      )}
+
+      {showDMCAModal && (
+        <DMCAModal
+          onClose={() => setShowDMCAModal(false)}
+          onOpenTelegram={() => setShowTelegramModal(true)}
+        />
       )}
     </div>
   );

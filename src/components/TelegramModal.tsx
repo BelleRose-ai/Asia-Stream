@@ -7,7 +7,7 @@ interface TelegramModalProps {
 
 export const TelegramModal: React.FC<TelegramModalProps> = ({ onClose }) => {
   const handleJoinTelegram = () => {
-    window.open('https://t.me/example_asian_dramas', '_blank', 'noopener,noreferrer');
+    window.open('https://t.me/+4lXPDEV2qp9kNGY0', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -27,7 +27,7 @@ export const TelegramModal: React.FC<TelegramModalProps> = ({ onClose }) => {
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-white">Join Our Telegram Channel</h3>
           <p className="text-sm text-gray-300 leading-relaxed">
-            Get instant notifications when new K-Drama, C-Drama, and Anime episodes are uploaded in 1080p HD. Request missing episodes or report broken links directly!
+            Get instant notifications when new K-Drama, C-Drama, and Anime episodes are uploaded in HD. Request missing episodes or report broken links directly!
           </p>
         </div>
 

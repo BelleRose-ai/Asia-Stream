@@ -21,7 +21,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
 
   // Comment & Request form state
   const [comments, setComments] = useState<CommentItem[]>(drama.comments || [
-    { id: '1', name: 'K-Drama Fan 99', comment: 'Thanks for uploading the 720p mirror! Works like a charm.', date: '3 hours ago' },
+    { id: '1', name: 'K-Drama Fan 99', comment: 'Thanks for uploading the HD mirror! Works like a charm.', date: '3 hours ago' },
     { id: '2', name: 'Alex M.', comment: 'Please upload batch subtitles for episode 12 when you get a chance!', date: 'Yesterday' }
   ]);
   const [newCommentName, setNewCommentName] = useState<string>('');

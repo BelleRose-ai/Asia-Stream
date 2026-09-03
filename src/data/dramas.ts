@@ -21,18 +21,18 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "2.5M",
     downloadSources: [
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", quality: "HD" }
     ],
     comments: [
       { id: "cm-lul1", name: "PinoyFan", comment: "Amazing Philippine series! Remember to use the slow download option on Clicknupload.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/5hcjehxt4aog/Love.U.Lots.E02.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3vdrtchyu5ec/Love.U.Lots.E03.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1hbrphpkvnti/Love.U.Lots.E04.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/de40ti6zb1ne/Love.U.Lots.2026.E05.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/n4wwmibfhgg0/LOVE.U.LOTS.E06.mp4", size: "450MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/oi5f1wf3upwv/Love.U.Lots.2026.E01.mp4", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/5hcjehxt4aog/Love.U.Lots.E02.mp4", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3vdrtchyu5ec/Love.U.Lots.E03.mp4", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1hbrphpkvnti/Love.U.Lots.E04.mp4", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/de40ti6zb1ne/Love.U.Lots.2026.E05.mp4", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/n4wwmibfhgg0/LOVE.U.LOTS.E06.mp4", quality: "HD" }] }
     ]
   },
   {
@@ -55,19 +55,19 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "2.9M",
     downloadSources: [
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", quality: "HD" }
     ],
     comments: [
       { id: "cm-utd1", name: "JDramaFan", comment: "Gripping mystery series! Remember to use the slow download option on Clicknupload.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/e6z75x2g2ykx/Until.the.T-shirt.Dries.E02.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/54ey9agbo1uf/Until.the.T-shirt.Dries.E03.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/hm7smxhgzpq8/Until.the.T-shirt.Dries.E04.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/guo7yl53wsdb/Until.the.T-shirt.Dries.E05.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ybgvxegkhtun/Until.the.T-shirt.Dries.E06.mkv", size: "450MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/p2xdy5beynh4/Until.the.T.shirt.Dries.E07.mkv", size: "450MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/7p9c5bv00jy9/Until.the.T-shirt.Dries.E01.mp4", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/e6z75x2g2ykx/Until.the.T-shirt.Dries.E02.mp4", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/54ey9agbo1uf/Until.the.T-shirt.Dries.E03.mp4", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/hm7smxhgzpq8/Until.the.T-shirt.Dries.E04.mp4", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/guo7yl53wsdb/Until.the.T-shirt.Dries.E05.mp4", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ybgvxegkhtun/Until.the.T-shirt.Dries.E06.mkv", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/p2xdy5beynh4/Until.the.T.shirt.Dries.E07.mkv", quality: "HD" }] }
     ]
   },
   {
@@ -90,8 +90,8 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "2.4M",
     downloadSources: [
-      { name: "Download Ep 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", size: "450MB", quality: "720p" },
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", quality: "HD" },
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", quality: "HD" }
     ],
     comments: [
       { id: "cm-lhm1", name: "JDramaFan", comment: "Amazing Japanese mystery series! Remember to use the slow download option on Clicknupload links.", date: "Just now" }
@@ -99,22 +99,22 @@ export const DRAMA_DATABASE: Drama[] = [
     episodes: [
       { 
         epNum: 1, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 1", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", size: "450MB", quality: "720p" },
-          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", size: "450MB", quality: "720p" }
+          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/ow71dqnzfmlgwe?download", quality: "HD" },
+          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t30mybc8otu7/Labyrinth.of.Hortensia.and.the.Minotaur.E01.mkv", quality: "HD" }
         ] 
       },
       { 
         epNum: 2, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 2", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/1nv0d16vsmzzxz?download", size: "450MB", quality: "720p" },
-          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/xwba9w9d2dw1/Labyrinth.of.Hortensia.and.the.Minotaur.E02.mkv", size: "450MB", quality: "720p" }
+          { name: "Download Link 1 (Miiixdrop)", url: "https://miiixdrop.top/f/1nv0d16vsmzzxz?download", quality: "HD" },
+          { name: "Download Link 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/xwba9w9d2dw1/Labyrinth.of.Hortensia.and.the.Minotaur.E02.mkv", quality: "HD" }
         ] 
       }
     ]
@@ -139,18 +139,18 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "3.1M",
     downloadSources: [
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", quality: "HD" }
     ],
     comments: [
       { id: "cm-btc1", name: "CDramaFan", comment: "Exciting aviation romance! Remember to use the slow download option.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/6udbr0dt6hdm/Blossom.Through.The.Cloud.E02.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t0l5zuf8c2jp/Blossom.Through.The.Cloud.03.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/gpurlgiw62c9/Blossom.Through.The.Cloud.E05.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/g4amwqn1ayxj/Blossom.Through.The.Cloud.E06.mp4", size: "450MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/h44uapu51r1j/Blossom.Through.The.Cloud.E01.mp4", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/6udbr0dt6hdm/Blossom.Through.The.Cloud.E02.mp4", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/t0l5zuf8c2jp/Blossom.Through.The.Cloud.03.mp4", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/gpurlgiw62c9/Blossom.Through.The.Cloud.E05.mp4", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/g4amwqn1ayxj/Blossom.Through.The.Cloud.E06.mp4", quality: "HD" }] }
     ]
   },
   {
@@ -173,26 +173,26 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "2.8M",
     downloadSources: [
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", quality: "HD" }
     ],
     comments: [
       { id: "cm-tes1", name: "CDramaFan", comment: "Great C-Drama series! Remember to use the slow download option.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/f2nsx3hlzr11/The.Early.Spring.E02.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/beu3ti0ry72l/The.Early.Spring.E03.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/y5r8wad9kyxn/The.Early.Spring.E05.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4vxizszbm2wz/The.Early.Spring.E06.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Strcloud) - use the SLOW DOWNLOAD OPTION", url: "https://strcloud.in/v/YOJx60kJ1PHogm", size: "450MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "45m", downloadSources: [{ name: "Download Ep 8 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/j3p77vk8371q/The.Early.Spring.E08.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "45m", downloadSources: [{ name: "Download Ep 9 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3msa4mzx13p8/The.Early.Spring.E09.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "45m", downloadSources: [{ name: "Download Ep 10 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/72qysqx3hwaz/The.Early.Spring.E10.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "45m", downloadSources: [{ name: "Download Ep 11 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1f0lklq0npp0/The.Early.Spring.E11.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "45m", downloadSources: [{ name: "Download Ep 12 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/cp4t5e8hvqwp/The.Early.Spring.E12.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 13, quality: "720p HD", title: "Episode 13", duration: "45m", downloadSources: [{ name: "Download Ep 13 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ukjzw7y6me16/The.Early.Spring.E13.mp4", size: "450MB", quality: "720p" }] },
-      { epNum: 14, quality: "720p HD", title: "Episode 14", duration: "45m", downloadSources: [{ name: "Download Ep 14 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/u5jw1ai61rbt/The.Early.Spring.E14.mp4", size: "450MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/by2fn2wp4plx/The.Early.Spring.E01.mp4", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/f2nsx3hlzr11/The.Early.Spring.E02.mp4", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/beu3ti0ry72l/The.Early.Spring.E03.mp4", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4at30h4i2lqg/The.Early.Spring.E04.mp4", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/y5r8wad9kyxn/The.Early.Spring.E05.mp4", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/4vxizszbm2wz/The.Early.Spring.E06.mp4", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (Strcloud) - use the SLOW DOWNLOAD OPTION", url: "https://strcloud.in/v/YOJx60kJ1PHogm", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "45m", downloadSources: [{ name: "Download Ep 8 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/j3p77vk8371q/The.Early.Spring.E08.mp4", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "45m", downloadSources: [{ name: "Download Ep 9 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/3msa4mzx13p8/The.Early.Spring.E09.mp4", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "45m", downloadSources: [{ name: "Download Ep 10 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/72qysqx3hwaz/The.Early.Spring.E10.mp4", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "45m", downloadSources: [{ name: "Download Ep 11 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1f0lklq0npp0/The.Early.Spring.E11.mp4", quality: "HD" }] },
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "45m", downloadSources: [{ name: "Download Ep 12 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/cp4t5e8hvqwp/The.Early.Spring.E12.mp4", quality: "HD" }] },
+      { epNum: 13, quality: "HD", title: "Episode 13", duration: "45m", downloadSources: [{ name: "Download Ep 13 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ukjzw7y6me16/The.Early.Spring.E13.mp4", quality: "HD" }] },
+      { epNum: 14, quality: "HD", title: "Episode 14", duration: "45m", downloadSources: [{ name: "Download Ep 14 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/u5jw1ai61rbt/The.Early.Spring.E14.mp4", quality: "HD" }] }
     ]
   },
   {
@@ -215,8 +215,8 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "3.5M",
     downloadSources: [
-      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", size: "450MB", quality: "720p" },
-      { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", size: "450MB", quality: "720p" }
+      { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", quality: "HD" },
+      { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", quality: "HD" }
     ],
     comments: [
       { id: "cm-poj1", name: "CDramaFan", comment: "Such an epic historical romance! Remember to use the slow download option on Clicknupload ✨", date: "Just now" }
@@ -224,38 +224,38 @@ export const DRAMA_DATABASE: Drama[] = [
     episodes: [
       { 
         epNum: 1, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 1", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", size: "450MB", quality: "720p" }
+          { name: "Download Ep 1 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ch1y8j39olp2/Pursuit.of.Jade.E01.mp4", quality: "HD" }
         ] 
       },
       { 
         epNum: 2, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 2", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/pp2283w9dzn0/Pursuit.of.Jade.E02.mp4", size: "450MB", quality: "720p" }
+          { name: "Download Ep 2 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/pp2283w9dzn0/Pursuit.of.Jade.E02.mp4", quality: "HD" }
         ] 
       },
       { 
         epNum: 3, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 3", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/2681mats6znu/Pursuit.of.Jade.E03.mp4", size: "450MB", quality: "720p" }
+          { name: "Download Ep 3 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/2681mats6znu/Pursuit.of.Jade.E03.mp4", quality: "HD" }
         ] 
       },
       { 
         epNum: 4, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 4", 
         duration: "45m", 
         downloadSources: [
-          { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", size: "450MB", quality: "720p" }
+          { name: "Download Ep 4 (Send.now)", url: "https://send.now/d/1hlhf", quality: "HD" }
         ] 
       }
     ]
@@ -280,13 +280,13 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Young-eun", "So-hyun", "Min", "Hae-young"],
     views: "2.1M",
     downloadSources: [
-      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", size: "1.4GB", quality: "1080p" }
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", quality: "HD" }
     ],
     comments: [
       { id: "cm-sb1", name: "MovieFan", comment: "Such a tense and gripping thriller! Great watch.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 55m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", size: "1.4GB", quality: "1080p" }] }
+      { epNum: 1, quality: "HD", title: "Feature Film", duration: "1h 55m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/J7CErTdA", quality: "HD" }] }
     ]
   },
   {
@@ -309,13 +309,13 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Se-jeong"],
     views: "3.4M",
     downloadSources: [
-      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", size: "1.6GB", quality: "1080p" }
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", quality: "HD" }
     ],
     comments: [
       { id: "cm-col1", name: "SciFiBuff", comment: "Intense outbreak movie! Highly recommended.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 48m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", size: "1.6GB", quality: "1080p" }] }
+      { epNum: 1, quality: "HD", title: "Feature Film", duration: "1h 48m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/3JdXZzXY", quality: "HD" }] }
     ]
   },
   {
@@ -338,13 +338,13 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "2.9M",
     downloadSources: [
-      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", size: "1.3GB", quality: "1080p" }
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", quality: "HD" }
     ],
     comments: [
       { id: "cm-hia1", name: "ComedyLover", comment: "Hilarious chemistry between the ex and current husband lol", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "1h 42m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", size: "1.3GB", quality: "1080p" }] }
+      { epNum: 1, quality: "HD", title: "Feature Film", duration: "1h 42m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/mZbn18P7", quality: "HD" }] }
     ]
   },
   {
@@ -367,13 +367,13 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: [],
     views: "3.1M",
     downloadSources: [
-      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", size: "1.5GB", quality: "1080p" }
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", quality: "HD" }
     ],
     comments: [
       { id: "cm-tkw1", name: "HistoryBuff", comment: "Such a touching historical drama movie. Beautiful scenery and acting.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "1080p FHD", title: "Feature Film", duration: "2h 05m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", size: "1.5GB", quality: "1080p" }] }
+      { epNum: 1, quality: "HD", title: "Feature Film", duration: "2h 05m", downloadSources: [{ name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/UaVPDpCB", quality: "HD" }] }
     ]
   },
   {
@@ -396,24 +396,24 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Hwang In-ho"],
     views: "3.8M",
     downloadSources: [
-      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", size: "380MB", quality: "720p" }
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", quality: "HD" }
     ],
     comments: [
       { id: "cm-sil1", name: "GhostHunter", comment: "Such a fun and spooky series! Loved every episode.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "61m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", size: "380MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "63m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/osjPXnkz", size: "380MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "60m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/JeNziAyP", size: "380MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "62m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/ib9dFGwe", size: "380MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/snN5ZWxf", size: "380MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "62m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/3C1DqZbi", size: "380MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "65m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/KfixgPGv", size: "380MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "65m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/1CyQ7MqS", size: "380MB", quality: "720p" }] },
-      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "61m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/Hq6TkbxU", size: "380MB", quality: "720p" }] },
-      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "68m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/BUsuEtp2", size: "380MB", quality: "720p" }] },
-      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "64m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/VVN7PVFo", size: "380MB", quality: "720p" }] },
-      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "67m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/Tate8kKP", size: "380MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "61m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/jdfG3NTE", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "63m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/osjPXnkz", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "60m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/JeNziAyP", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "62m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/ib9dFGwe", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/snN5ZWxf", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "62m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/3C1DqZbi", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "65m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/KfixgPGv", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "65m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/1CyQ7MqS", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "61m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/Hq6TkbxU", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "68m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/BUsuEtp2", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "64m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/VVN7PVFo", quality: "HD" }] },
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "67m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/Tate8kKP", quality: "HD" }] }
     ]
   },
   {
@@ -436,20 +436,20 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Lee Dong-wook", "Kim Hye-jun"],
     views: "4.5M",
     downloadSources: [
-      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", size: "380MB", quality: "720p" }
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", quality: "HD" }
     ],
     comments: [
       { id: "cm-asfk2-1", name: "ActionFanatic", comment: "Season 2 is even more epic than Season 1! Incredible action.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1: Jinman, That Same Day", duration: "60m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", size: "380MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2: Recluse", duration: "54m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/cw02ncm450b7", size: "350MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3: Past Is Past, Present Is Present", duration: "67m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/q2t7rybdf5as", size: "400MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4: Raid", duration: "56m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/5gyvllka4yie", size: "360MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5: Negotiation", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/4yr6cxl8p4ed", size: "390MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6: The Trojan Horse", duration: "57m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/alqjpmcmjzyk", size: "360MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7: The Enemy of My Enemy", duration: "58m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/b6iy5v00x3x4", size: "370MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8: Listen Up, Jinman", duration: "61m", downloadSources: [{ name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/fqwo5zdxhd8k", size: "390MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1: Jinman, That Same Day", duration: "60m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/kqmq1x0qbj86", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2: Recluse", duration: "54m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/cw02ncm450b7", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3: Past Is Past, Present Is Present", duration: "67m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/q2t7rybdf5as", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4: Raid", duration: "56m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/5gyvllka4yie", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5: Negotiation", duration: "65m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/4yr6cxl8p4ed", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6: The Trojan Horse", duration: "57m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/alqjpmcmjzyk", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7: The Enemy of My Enemy", duration: "58m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/b6iy5v00x3x4", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8: Listen Up, Jinman", duration: "61m", downloadSources: [{ name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/fqwo5zdxhd8k", quality: "HD" }] }
     ]
   },
   {
@@ -472,7 +472,7 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Shin Yi-won"],
     views: "3.2M",
     downloadSources: [
-      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", size: "380MB", quality: "720p" }
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", quality: "HD" }
     ],
     comments: [
       { id: "cm-fhts1", name: "PianoLover", comment: "Such a beautiful drama! Glad link 2 is a bit lighter to download ✨", date: "Just now" }
@@ -480,22 +480,22 @@ export const DRAMA_DATABASE: Drama[] = [
     episodes: [
       { 
         epNum: 1, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 1", 
         duration: "59m", 
         downloadSources: [
-          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", size: "380MB", quality: "720p" },
-          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/94kefltj3xmv", size: "280MB", quality: "720p" }
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/S59eRj96", quality: "HD" },
+          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/94kefltj3xmv", quality: "HD" }
         ] 
       },
       { 
         epNum: 2, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 2", 
         duration: "59m", 
         downloadSources: [
-          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/mkWzhiYZ", size: "380MB", quality: "720p" },
-          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/ycggyk4qs79m", size: "280MB", quality: "720p" }
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/mkWzhiYZ", quality: "HD" },
+          { name: "Download Ep 2 (Buzzheavier) - Smaller Size ✨", url: "https://buzzheavier.com/ycggyk4qs79m", quality: "HD" }
         ] 
       }
     ]
@@ -520,19 +520,19 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Jeong Eun-kyeong"],
     views: "2.8M",
     downloadSources: [
-      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", size: "350MB", quality: "720p" }
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", quality: "HD" }
     ],
     comments: [
       { id: "cm-tawjtb1", name: "KdramaAddict", comment: "Episode 1 is wild! Can't wait for more.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "47m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", size: "350MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "47m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/uve3dvi4lt3e", size: "350MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "47m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/ltova7wcznmj", size: "350MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "47m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/o5vknfo11az4", size: "350MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "47m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/mqd3moyz7roe", size: "350MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "47m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/c9ch892eirhz", size: "350MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "47m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/bw0aic3ay7u0", size: "350MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "47m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/3n896lm19x7b", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "47m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/uve3dvi4lt3e", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "47m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/ltova7wcznmj", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "47m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/o5vknfo11az4", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "47m", downloadSources: [{ name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/mqd3moyz7roe", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "47m", downloadSources: [{ name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/c9ch892eirhz", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "47m", downloadSources: [{ name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/bw0aic3ay7u0", quality: "HD" }] }
     ]
   },
   {
@@ -555,16 +555,16 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Kim Hyun-kyung"],
     views: "1.5M",
     downloadSources: [
-      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", size: "350MB", quality: "720p" }
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", quality: "HD" }
     ],
     comments: [
       { id: "cm-okd1", name: "KdramaFan", comment: "So excited for this new series! Great start.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", size: "350MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/3x2mcz22y1zu", size: "350MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/dcvr1wzcce8o", size: "350MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 01m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/j7e2li6hvecl", size: "350MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/5nrr8yg7polv", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/3x2mcz22y1zu", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/dcvr1wzcce8o", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "1h 01m", downloadSources: [{ name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/j7e2li6hvecl", quality: "HD" }] }
     ]
   },
   {
@@ -587,24 +587,24 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Hani", "Ha Seok-jin", "Park You-na", "Bae Jung-nam"],
     views: "1.8M",
     downloadSources: [
-      { name: "Download Batch Pack (Pixeldrain)", url: "https://pixeldrain.com/u/myCA2EhS", size: "4.2GB", quality: "720p" }
+      { name: "Download Batch Pack (Pixeldrain)", url: "https://pixeldrain.com/u/myCA2EhS", quality: "HD" }
     ],
     comments: [
       { id: "cm1", name: "K-Drama Addict", comment: "So excited for this new series! Thanks for posting all 12 episodes.", date: "1 hour ago" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/myCA2EhS", size: "380MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/CHE5RZGa", size: "380MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 05m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/b2ne9guF", size: "380MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 03m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/Vfc4H3u7", size: "380MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "1h 01m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/LnAuVDKJ", size: "380MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "1h 04m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/vNKhjpKF", size: "380MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "1h 02m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/pYGXb959", size: "380MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "1h 00m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/wHcrSnM8", size: "380MB", quality: "720p" }] },
-      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/Rj4EH7Ux", size: "380MB", quality: "720p" }] },
-      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/1mxc4hpE", size: "380MB", quality: "720p" }] },
-      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "1h 01m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/HRRAk5H8", size: "380MB", quality: "720p" }] },
-      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "1h 06m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/dtjvLGQR", size: "380MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/myCA2EhS", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "1h 00m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/CHE5RZGa", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "1h 05m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/b2ne9guF", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "1h 03m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/Vfc4H3u7", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "1h 01m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/LnAuVDKJ", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "1h 04m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/vNKhjpKF", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "1h 02m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/pYGXb959", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "1h 00m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/wHcrSnM8", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/Rj4EH7Ux", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/1mxc4hpE", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "1h 01m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/HRRAk5H8", quality: "HD" }] },
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "1h 06m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/dtjvLGQR", quality: "HD" }] }
     ]
   },
   {
@@ -627,22 +627,22 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Kim Eun-hee"],
     views: "2.1M",
     downloadSources: [
-      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vTL8aqDn", size: "380MB", quality: "720p" }
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vTL8aqDn", quality: "HD" }
     ],
     comments: [
       { id: "cm-abfk1", name: "ActionFan99", comment: "Episode 1 was intense! Great action sequences.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 07m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vTL8aqDn", size: "380MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 04m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/67rvTMzC", size: "350MB", quality: "720p" }, { name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/xrrfscdgn3h9", size: "350MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/zYEgsFZY", size: "350MB", quality: "720p" }, { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/qxynkgr6c8np", size: "350MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 05m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/NNdjoWYw", size: "350MB", quality: "720p" }, { name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/xwlvbclxip1d", size: "350MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "1h 02m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/UyNp79Ab", size: "350MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "1h 06m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/vjBPtgYz", size: "350MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "1h 03m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/KXF5GDAw", size: "350MB", quality: "720p" }, { name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/qfjnte0snf4w", size: "350MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "1h 04m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/x9aeAPK7", size: "350MB", quality: "720p" }, { name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/g8vc65gvh9v0", size: "350MB", quality: "720p" }] },
-      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/w5wna2td", size: "350MB", quality: "720p" }, { name: "Download Ep 9 (Buzzheavier)", url: "https://buzzheavier.com/734r42yqer5t", size: "350MB", quality: "720p" }] },
-      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/mnds55QL", size: "350MB", quality: "720p" }, { name: "Download Ep 10 (Buzzheavier)", url: "https://buzzheavier.com/jspynt7omks2", size: "350MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "1h 07m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vTL8aqDn", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "1h 04m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/67rvTMzC", quality: "HD" }, { name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/xrrfscdgn3h9", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/zYEgsFZY", quality: "HD" }, { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/qxynkgr6c8np", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "1h 05m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/NNdjoWYw", quality: "HD" }, { name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/xwlvbclxip1d", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "1h 02m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/UyNp79Ab", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "1h 06m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/vjBPtgYz", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "1h 03m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/KXF5GDAw", quality: "HD" }, { name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/qfjnte0snf4w", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "1h 04m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/x9aeAPK7", quality: "HD" }, { name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/g8vc65gvh9v0", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/w5wna2td", quality: "HD" }, { name: "Download Ep 9 (Buzzheavier)", url: "https://buzzheavier.com/734r42yqer5t", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/mnds55QL", quality: "HD" }, { name: "Download Ep 10 (Buzzheavier)", url: "https://buzzheavier.com/jspynt7omks2", quality: "HD" }] }
     ]
   },
   {
@@ -665,24 +665,24 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Kim Jang-han", "Mo Ji-hye"],
     views: "2.4M",
     downloadSources: [
-      { name: "Download Batch Pack (Pixeldrain)", url: "https://pixeldrain.com/u/iwJWuFyw", size: "4.2GB", quality: "720p" }
+      { name: "Download Batch Pack (Pixeldrain)", url: "https://pixeldrain.com/u/iwJWuFyw", quality: "HD" }
     ],
     comments: [
       { id: "cm-osl1", name: "KdramaLover", comment: "All 12 episodes are so good! Thanks for updating the links.", date: "Just now" }
     ],
     episodes: [
-      { epNum: 1, quality: "720p HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/iwJWuFyw", size: "380MB", quality: "720p" }] },
-      { epNum: 2, quality: "720p HD", title: "Episode 2", duration: "1h 04m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/3NFunGp5", size: "380MB", quality: "720p" }] },
-      { epNum: 3, quality: "720p HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/YSqVKfXE", size: "380MB", quality: "720p" }] },
-      { epNum: 4, quality: "720p HD", title: "Episode 4", duration: "1h 05m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/EUiYpcRy", size: "380MB", quality: "720p" }] },
-      { epNum: 5, quality: "720p HD", title: "Episode 5", duration: "1h 02m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/cpBJZpmX", size: "380MB", quality: "720p" }] },
-      { epNum: 6, quality: "720p HD", title: "Episode 6", duration: "1h 06m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/yXEeUm3w", size: "380MB", quality: "720p" }] },
-      { epNum: 7, quality: "720p HD", title: "Episode 7", duration: "1h 03m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/N3HubSPH", size: "380MB", quality: "720p" }] },
-      { epNum: 8, quality: "720p HD", title: "Episode 8", duration: "1h 04m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/hgAELGB7", size: "380MB", quality: "720p" }] },
-      { epNum: 9, quality: "720p HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/zriKa9J8", size: "380MB", quality: "720p" }] },
-      { epNum: 10, quality: "720p HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/7e1dQu2k", size: "380MB", quality: "720p" }] },
-      { epNum: 11, quality: "720p HD", title: "Episode 11", duration: "1h 01m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/6FDtCAdR", size: "380MB", quality: "720p" }] },
-      { epNum: 12, quality: "720p HD", title: "Episode 12", duration: "1h 06m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/CSAgmhtE", size: "380MB", quality: "720p" }] }
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "1h 02m", downloadSources: [{ name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/iwJWuFyw", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "1h 04m", downloadSources: [{ name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/3NFunGp5", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "1h 03m", downloadSources: [{ name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/YSqVKfXE", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "1h 05m", downloadSources: [{ name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/EUiYpcRy", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "1h 02m", downloadSources: [{ name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/cpBJZpmX", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "1h 06m", downloadSources: [{ name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/yXEeUm3w", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "1h 03m", downloadSources: [{ name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/N3HubSPH", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "1h 04m", downloadSources: [{ name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/hgAELGB7", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "1h 05m", downloadSources: [{ name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/zriKa9J8", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "1h 03m", downloadSources: [{ name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/7e1dQu2k", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "1h 01m", downloadSources: [{ name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/6FDtCAdR", quality: "HD" }] },
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "1h 06m", downloadSources: [{ name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/CSAgmhtE", quality: "HD" }] }
     ]
   },
   {
@@ -705,8 +705,8 @@ export const DRAMA_DATABASE: Drama[] = [
     cast: ["Seong Eun"],
     views: "1.9M",
     downloadSources: [
-      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/kCC2HTx5", size: "350MB", quality: "720p" },
-      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/e48kzy4ef4e7", size: "350MB", quality: "720p" }
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/kCC2HTx5", quality: "HD" },
+      { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/e48kzy4ef4e7", quality: "HD" }
     ],
     comments: [
       { id: "cm-mbmb1", name: "KdramaFanatic", comment: "Episode 1 was hilarious! Can't wait for Ep 2.", date: "Just now" }
@@ -714,92 +714,92 @@ export const DRAMA_DATABASE: Drama[] = [
     episodes: [
       { 
         epNum: 1, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 1", 
         duration: "1h 05m", 
         downloadSources: [
-          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/kCC2HTx5", size: "350MB", quality: "720p" },
-          { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/e48kzy4ef4e7", size: "350MB", quality: "720p" }
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/kCC2HTx5", quality: "HD" },
+          { name: "Download Ep 1 (Buzzheavier)", url: "https://buzzheavier.com/e48kzy4ef4e7", quality: "HD" }
         ] 
       },
       { 
         epNum: 2, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 2", 
         duration: "1h 04m", 
         downloadSources: [
-          { name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/KQtKCY8W", size: "350MB", quality: "720p" },
-          { name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/vz6o5vudwc3e", size: "350MB", quality: "720p" }
+          { name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/KQtKCY8W", quality: "HD" },
+          { name: "Download Ep 2 (Buzzheavier)", url: "https://buzzheavier.com/vz6o5vudwc3e", quality: "HD" }
         ] 
       },
       { 
         epNum: 3, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 3", 
         duration: "1h 03m", 
         downloadSources: [
-          { name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/GLeZ6tiZ", size: "350MB", quality: "720p" },
-          { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/nkenquyu4x47", size: "350MB", quality: "720p" }
+          { name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/GLeZ6tiZ", quality: "HD" },
+          { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/nkenquyu4x47", quality: "HD" }
         ] 
       },
       { 
         epNum: 4, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 4", 
         duration: "1h 05m", 
         downloadSources: [
-          { name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/1b9LRNEX", size: "350MB", quality: "720p" },
-          { name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/fev89f5vg58j", size: "350MB", quality: "720p" }
+          { name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/1b9LRNEX", quality: "HD" },
+          { name: "Download Ep 4 (Buzzheavier)", url: "https://buzzheavier.com/fev89f5vg58j", quality: "HD" }
         ] 
       },
       { 
         epNum: 5, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 5", 
         duration: "1h 02m", 
         downloadSources: [
-          { name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/ptST9eWC", size: "350MB", quality: "720p" },
-          { name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/yd0dsqxgxg7a", size: "350MB", quality: "720p" }
+          { name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/ptST9eWC", quality: "HD" },
+          { name: "Download Ep 5 (Buzzheavier)", url: "https://buzzheavier.com/yd0dsqxgxg7a", quality: "HD" }
         ] 
       },
       { 
         epNum: 6, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 6", 
         duration: "1h 06m", 
         downloadSources: [
-          { name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/XzE5GpEz", size: "350MB", quality: "720p" },
-          { name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/ycke5pdziiiw", size: "350MB", quality: "720p" }
+          { name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/XzE5GpEz", quality: "HD" },
+          { name: "Download Ep 6 (Buzzheavier)", url: "https://buzzheavier.com/ycke5pdziiiw", quality: "HD" }
         ] 
       },
       { 
         epNum: 7, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 7", 
         duration: "1h 03m", 
         downloadSources: [
-          { name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/mftxwhxv", size: "350MB", quality: "720p" },
-          { name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/ca2jjy8k2g6m", size: "350MB", quality: "720p" }
+          { name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/mftxwhxv", quality: "HD" },
+          { name: "Download Ep 7 (Buzzheavier)", url: "https://buzzheavier.com/ca2jjy8k2g6m", quality: "HD" }
         ] 
       },
       { 
         epNum: 8, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 8", 
         duration: "1h 04m", 
         downloadSources: [
-          { name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/tHZMwP45", size: "350MB", quality: "720p" },
-          { name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/n0ncdxtabdxt", size: "350MB", quality: "720p" }
+          { name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/tHZMwP45", quality: "HD" },
+          { name: "Download Ep 8 (Buzzheavier)", url: "https://buzzheavier.com/n0ncdxtabdxt", quality: "HD" }
         ] 
       },
       { 
         epNum: 9, 
-        quality: "720p HD", 
+        quality: "HD", 
         title: "Episode 9", 
         duration: "1h 05m", 
         downloadSources: [
-          { name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/HBc9BrCH", size: "350MB", quality: "720p" },
-          { name: "Download Ep 9 (Buzzheavier)", url: "https://buzzheavier.com/7e73hh09wgp8", size: "350MB", quality: "720p" }
+          { name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/HBc9BrCH", quality: "HD" },
+          { name: "Download Ep 9 (Buzzheavier)", url: "https://buzzheavier.com/7e73hh09wgp8", quality: "HD" }
         ] 
       }
     ]

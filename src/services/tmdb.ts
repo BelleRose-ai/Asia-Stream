@@ -118,16 +118,16 @@ export async function fetchSeasonEpisodes(tmdbId: number, seasonNumber: number):
 
     return data.episodes.map((ep: any): Episode => ({
       epNum: ep.episode_number,
-      quality: '1080p FHD',
+      quality: 'HD',
       title: ep.name || `Episode ${ep.episode_number}`,
       duration: ep.runtime ? `${ep.runtime}m` : '45m',
       overview: ep.overview,
       stillPath: ep.still_path ? `https://image.tmdb.org/t/p/w500${ep.still_path}` : undefined,
       airDate: ep.air_date,
       downloadSources: [
-        { name: '480p (180MB)', url: `https://mixdrop.co/f/e-${tmdbId}-${seasonNumber}-${ep.episode_number}-480p`, size: '180MB', quality: '480p' },
-        { name: '720p (450MB)', url: `https://streamwish.to/e/e-${tmdbId}-${seasonNumber}-${ep.episode_number}-720p`, size: '450MB', quality: '720p' },
-        { name: '1080p (1.1GB)', url: `https://filemoon.sx/d/e-${tmdbId}-${seasonNumber}-${ep.episode_number}-1080p`, size: '1.1GB', quality: '1080p' }
+        { name: 'Download Mirror 1', url: `https://mixdrop.co/f/e-${tmdbId}-${seasonNumber}-${ep.episode_number}`, quality: 'HD' },
+        { name: 'Download Mirror 2', url: `https://streamwish.to/e/e-${tmdbId}-${seasonNumber}-${ep.episode_number}`, quality: 'HD' },
+        { name: 'Download Mirror 3', url: `https://filemoon.sx/d/e-${tmdbId}-${seasonNumber}-${ep.episode_number}`, quality: 'HD' }
       ]
     }));
   } catch (err) {
@@ -287,7 +287,7 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
     if (animeDramas.length > 0) {
       sections.push({
         title: "🌸 Anime Series",
-        subtitle: "Masterpieces with multi-quality mobile & 1080p downloads",
+        subtitle: "Masterpieces with multi-quality mobile & HD downloads",
         dramas: animeDramas
       });
     }
