@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Star, Calendar, ShieldCheck, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Play, Star, Calendar, Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Drama } from '../types';
 
 interface HeroBannerProps {
@@ -32,6 +32,10 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
     setCurrentIndex(prev => (prev + 1) % validDramas.length);
   };
 
+  const formattedOrigin = drama.country === 'China' || drama.language === 'Chinese'
+    ? 'China • Mandarin'
+    : `${drama.country} • ${drama.language}`;
+
   return (
     <div 
       className="relative w-full overflow-hidden bg-[#121212] border-b border-[#2d2f39]"
@@ -39,7 +43,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Backdrop Image with Gradients */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <img
           key={drama.id}
           src={drama.backdropUrl}
@@ -51,7 +55,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b0c10]/90 via-[#0b0c10]/40 to-transparent" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-24 flex flex-col justify-end min-h-[480px] md:min-h-[540px]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20 flex flex-col justify-end min-h-[460px] md:min-h-[520px]">
         <div className="max-w-2xl space-y-4">
           {/* Badges */}
           <div className="flex flex-wrap items-center gap-2.5">
@@ -66,9 +70,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
               <Calendar className="w-3.5 h-3.5 text-gray-400" />
               {drama.year}
             </span>
-            <span className="px-3 py-1 rounded-md text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              {drama.episodesCount ? `${drama.episodesCount} Episodes` : 'Feature'} ({drama.status})
+            <span className="px-3 py-1 rounded-md text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              {drama.episodesCount ? `${drama.episodesCount} Episodes` : 'Feature'} ({drama.status || 'Ongoing'})
             </span>
           </div>
 
@@ -76,11 +79,9 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
             {drama.title}
           </h1>
-          {drama.originalTitle && (
-            <p className="text-sm font-medium text-gray-400 -mt-2">
-              {drama.originalTitle} • {drama.country} ({drama.language})
-            </p>
-          )}
+          <p className="text-sm font-medium text-gray-400 -mt-2">
+            {drama.originalTitle ? `${drama.originalTitle} • ` : ''}{formattedOrigin}
+          </p>
 
           {/* Genres */}
           <div className="flex flex-wrap gap-2 pt-1">
@@ -96,18 +97,20 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
             {drama.synopsis}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-3 pt-3">
+          {/* CTA Buttons - Dominant Primary and Subtle Secondary */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-3 w-full sm:w-auto">
             <button
               onClick={() => onSelectDrama(drama)}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-xl shadow-violet-600/30 flex items-center gap-2 transform active:scale-95 transition-all"
+              style={{ minHeight: '48px', touchAction: 'manipulation' }}
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-xl shadow-violet-600/30 flex items-center justify-center gap-2 transform active:scale-95 transition-all cursor-pointer"
             >
               <Download className="w-4 h-4" />
               <span>Download & Stream Episodes</span>
             </button>
             <button
               onClick={() => onSelectDrama(drama)}
-              className="px-5 py-3 rounded-xl bg-[#1a1b23] hover:bg-[#2d2f39] text-gray-200 font-medium text-sm border border-[#2d2f39] flex items-center gap-2 transition-all"
+              style={{ minHeight: '48px', touchAction: 'manipulation' }}
+              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#1a1b23]/60 hover:bg-[#1a1b23] text-gray-300 hover:text-white font-medium text-sm border border-[#2d2f39] hover:border-gray-500 flex items-center justify-center gap-2 transition-all cursor-pointer"
             >
               <Play className="w-4 h-4 text-cyan-400 fill-cyan-400" />
               <span>View Details</span>
@@ -115,16 +118,19 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
           </div>
         </div>
 
-        {/* Carousel Navigation Arrows & Indicators */}
+        {/* Dedicated Carousel Navigation Container placed completely below CTA buttons */}
         {validDramas.length > 1 && (
-          <div className="absolute bottom-6 right-6 flex items-center gap-4">
+          <div 
+            style={{ marginTop: '20px' }}
+            className="w-full pt-4 border-t border-[#2d2f39]/40 flex items-center justify-between sm:justify-end gap-4 z-10"
+          >
             <div className="flex items-center gap-1.5 bg-[#1a1b23]/80 backdrop-blur-md p-1.5 rounded-xl border border-[#2d2f39]">
               {validDramas.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    idx === currentIndex ? 'bg-cyan-400 w-6' : 'bg-gray-600 hover:bg-gray-400'
+                  className={`h-2.5 rounded-full transition-all cursor-pointer ${
+                    idx === currentIndex ? 'bg-cyan-400 w-6' : 'bg-gray-600 hover:bg-gray-400 w-2.5'
                   }`}
                   aria-label={`Slide ${idx + 1}`}
                 />
@@ -133,14 +139,14 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({ dramas, onSelectDrama })
             <div className="flex items-center gap-2">
               <button
                 onClick={handlePrev}
-                className="p-2.5 rounded-xl bg-[#1a1b23]/80 hover:bg-[#2d2f39] text-white border border-[#2d2f39] backdrop-blur-md transition-all shadow-lg"
+                className="p-2.5 rounded-xl bg-[#1a1b23]/80 hover:bg-[#2d2f39] text-white border border-[#2d2f39] backdrop-blur-md transition-all shadow-lg cursor-pointer"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-2.5 rounded-xl bg-[#1a1b23]/80 hover:bg-[#2d2f39] text-white border border-[#2d2f39] backdrop-blur-md transition-all shadow-lg"
+                className="p-2.5 rounded-xl bg-[#1a1b23]/80 hover:bg-[#2d2f39] text-white border border-[#2d2f39] backdrop-blur-md transition-all shadow-lg cursor-pointer"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-5 h-5" />

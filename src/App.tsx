@@ -7,6 +7,7 @@ import { DramaModal } from './components/DramaModal';
 import { TelegramModal } from './components/TelegramModal';
 import { SettingsModal } from './components/SettingsModal';
 import { Footer } from './components/Footer';
+import { AdBanner } from './components/AdBanner';
 import { Drama, CategoryType } from './types';
 import { fetchAllCuratedGenreRows, GenreSection } from './services/tmdb';
 import { DRAMA_DATABASE } from './data/dramas';
@@ -91,6 +92,8 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        {/* Desktop Leaderboard Ad Banner */}
+        <AdBanner type="728x90" desktopOnly={true} className="mb-6" />
         
         {/* Shimmering Skeleton Loader */}
         {isLoadingRows && !searchQuery && (

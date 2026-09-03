@@ -1,6 +1,7 @@
 import React from 'react';
 import { Film, Send, ShieldCheck, Heart } from 'lucide-react';
 import { CategoryType } from '../types';
+import { AdBanner } from './AdBanner';
 
 interface FooterProps {
   onSelectCategory: (cat: CategoryType) => void;
@@ -12,6 +13,12 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram
     <footer className="bg-[#0b0c10] border-t border-[#2d2f39] text-gray-400 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
         
+        {/* Footer Ad Banners */}
+        <div className="space-y-4 pb-6 border-b border-[#2d2f39]/60">
+          <AdBanner type="728x90" desktopOnly={true} className="mb-4" />
+          <AdBanner type="300x250" className="my-4" />
+        </div>
+
         {/* Top row */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3 md:col-span-2">

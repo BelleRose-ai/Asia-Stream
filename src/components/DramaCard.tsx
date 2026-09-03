@@ -69,7 +69,16 @@ export const DramaCard: React.FC<DramaCardProps> = ({ drama, onSelectDrama }) =>
       {/* Card Content Info */}
       <div className="p-3.5 flex flex-col flex-1 justify-between gap-2">
         <div>
-          <h3 className="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors line-clamp-1">
+          <h3 
+            className="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug"
+            style={{
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              wordBreak: 'break-word',
+            }}
+          >
             {drama.title}
           </h3>
           <p className="text-xs text-gray-400 line-clamp-1 mt-0.5">

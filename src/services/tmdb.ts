@@ -248,12 +248,12 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
     const sections: GenreSection[] = [
       {
         title: "🔥 Curated Trending Series",
-        subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
+        subtitle: "Verified direct download links.",
         dramas: trending
       },
       {
         title: "🎬 Feature K-Movies (Standalone Films)",
-        subtitle: "Standalone feature films kept strictly separate from series",
+        subtitle: "Full-length Korean movies in HD.",
         dramas: moviesDatabase
       },
       {

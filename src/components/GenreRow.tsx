@@ -118,7 +118,18 @@ export const GenreRow: React.FC<GenreRowProps> = ({
 
                   {/* Title & Year on Hover/Bottom */}
                   <div className="absolute bottom-3 left-3 right-3 pointer-events-none">
-                    <h4 className="text-sm font-bold text-white truncate drop-shadow">{drama.title}</h4>
+                    <h4 
+                      className="text-sm font-bold text-white drop-shadow leading-snug"
+                      style={{
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                        wordBreak: 'break-word',
+                      }}
+                    >
+                      {drama.title}
+                    </h4>
                     <p className="text-[11px] text-gray-300 flex items-center gap-2 mt-0.5">
                       <span>{drama.year}</span>
                       <span>•</span>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Star, Download, Film, Sparkles, MessageSquare, Send, CheckCircle2, ShieldCheck, HardDrive } from 'lucide-react';
 import { Drama, Episode, CommentItem, DownloadSource } from '../types';
 import { fetchMovieDetails, fetchSeasonEpisodes, enrichCuratedDrama } from '../services/tmdb';
+import { DownloadConfirmModal, PendingDownload, parseServerName } from './DownloadConfirmModal';
+import { AdBanner } from './AdBanner';
 
 interface DramaModalProps {
   drama: Drama;
@@ -15,6 +17,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
   const [selectedSeason, setSelectedSeason] = useState<number>(1);
   const [seasonEpisodes, setSeasonEpisodes] = useState<Episode[]>(drama.episodes || []);
   const [isLoadingSeason, setIsLoadingSeason] = useState<boolean>(false);
+  const [pendingDownload, setPendingDownload] = useState<PendingDownload | null>(null);
 
   // Comment & Request form state
   const [comments, setComments] = useState<CommentItem[]>(drama.comments || [
@@ -60,6 +63,15 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
       setSeasonEpisodes(eps);
     }
     setIsLoadingSeason(false);
+  };
+
+  const handleInitiateDownload = (source: DownloadSource, itemTitle?: string) => {
+    const serverName = parseServerName(source.url, source.name);
+    setPendingDownload({
+      source,
+      itemTitle: itemTitle || currentDrama.title,
+      serverName
+    });
   };
 
   const handleAddComment = (e: React.FormEvent) => {
@@ -137,7 +149,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
             </h1>
             {currentDrama.originalTitle && (
               <p className="text-xs sm:text-sm font-medium text-gray-400">
-                {currentDrama.originalTitle} • {currentDrama.country} ({currentDrama.language})
+                {currentDrama.originalTitle} • {currentDrama.country === 'China' || currentDrama.language === 'Chinese' ? 'China • Mandarin' : `${currentDrama.country} • ${currentDrama.language}`}
               </p>
             )}
           </div>
@@ -167,12 +179,10 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {currentDrama.downloadSources.map((source, idx) => (
-                <a
+                <button
                   key={idx}
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 rounded-2xl bg-[#1a1b23] hover:bg-[#252836] border border-[#2d2f39] hover:border-emerald-500/60 transition-all flex items-center justify-between group shadow-lg"
+                  onClick={() => handleInitiateDownload(source, `${currentDrama.title} (Feature Film)`)}
+                  className="p-4 rounded-2xl bg-[#1a1b23] hover:bg-[#252836] border border-[#2d2f39] hover:border-emerald-500/60 transition-all flex items-center justify-between group shadow-lg text-left cursor-pointer"
                 >
                   <div className="space-y-1">
                     <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider block">
@@ -191,7 +201,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                   <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-all flex items-center justify-center flex-shrink-0 shadow">
                     <Download className="w-5 h-5" />
                   </div>
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -278,6 +288,9 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
               </div>
             )}
 
+            {/* Native Banner Ad (Centered) */}
+            <AdBanner type="native" className="my-4" />
+
             {/* Episode Cards with Download Sources */}
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
@@ -310,33 +323,32 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                     <div className="flex flex-wrap items-center gap-2">
                       {ep.downloadSources && ep.downloadSources.length > 0 ? (
                         ep.downloadSources.map((ds, sIdx) => (
-                          <a
+                          <button
                             key={sIdx}
-                            href={ds.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] hover:border-emerald-500 font-bold text-xs flex items-center gap-1.5 transition-all shadow"
+                            onClick={() => handleInitiateDownload(ds, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
+                            className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] hover:border-emerald-500 font-bold text-xs flex items-center gap-1.5 transition-all shadow cursor-pointer group"
                           >
                             <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
                             <span>{ds.name}</span>
-                          </a>
+                          </button>
                         ))
                       ) : (
-                        <a
-                          href="https://mixdrop.co"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] font-bold text-xs flex items-center gap-1.5 transition-all"
+                        <button
+                          onClick={() => handleInitiateDownload({ name: 'Download 720p (Mixdrop)', url: 'https://mixdrop.co', quality: '720p' }, `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`)}
+                          className="px-4 py-2 rounded-xl bg-[#1a1b23] hover:bg-emerald-600 text-gray-200 hover:text-white border border-[#2d2f39] font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer group"
                         >
-                          <Download className="w-3.5 h-3.5 text-emerald-400" />
+                          <Download className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white" />
                           <span>Download 720p</span>
-                        </a>
+                        </button>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* 300x250 Rectangle Ad Banner */}
+            <AdBanner type="300x250" className="my-6" />
           </div>
         )}
 
@@ -381,7 +393,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-bold text-xs shadow-lg flex items-center gap-2 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-bold text-xs shadow-lg flex items-center gap-2 transition-all cursor-pointer"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Post Comment / Request</span>
@@ -404,6 +416,12 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
         </div>
 
       </main>
+
+      {/* Clean Download Confirmation Modal */}
+      <DownloadConfirmModal
+        pendingDownload={pendingDownload}
+        onClose={() => setPendingDownload(null)}
+      />
     </div>
   );
 };
