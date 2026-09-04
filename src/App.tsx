@@ -52,22 +52,16 @@ export default function App() {
     );
   }, [searchQuery]);
 
-  // Carousel featured dramas: randomly rotating up to 2 movies/series from each category (Anime, C-Drama, K-Drama)
+  // Carousel featured dramas: two from each category (last added first)
   const carouselDramas = useMemo(() => {
-    const categories: CategoryType[] = ['Anime', 'C-Drama', 'K-Drama'];
-    let selected: Drama[] = [];
-
-    categories.forEach(cat => {
-      const items = DRAMA_DATABASE.filter(d => d.category === cat && d.backdropUrl);
-      const sorted = [...items].reverse(); // newest first
-      selected.push(...sorted.slice(0, 2));
-    });
-
-    if (selected.length === 0) {
-      selected = DRAMA_DATABASE.filter(d => d.backdropUrl).slice(0, 6);
+    const categories: CategoryType[] = ['K-Drama', 'C-Drama', 'J-Drama', 'PH-Drama', 'Anime', 'Anime-Movies', 'K-Movies'];
+    const result: Drama[] = [];
+    for (const cat of categories) {
+      const catDramas = DRAMA_DATABASE.filter(d => d.category === cat && d.backdropUrl);
+      const reversedCatDramas = [...catDramas].reverse();
+      result.push(...reversedCatDramas.slice(0, 2));
     }
-
-    return selected.sort(() => Math.random() - 0.5);
+    return result;
   }, []);
 
   return (

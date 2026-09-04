@@ -40,8 +40,15 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
         if (isMounted) {
           setCurrentDrama(enriched);
           if (enriched.seasons && enriched.seasons.length > 0) {
-            const firstSeasonNum = enriched.seasons[0].seasonNumber;
-            setSelectedSeason(firstSeasonNum);
+            const firstSeason = enriched.seasons[0];
+            setSelectedSeason(firstSeason.seasonNumber);
+            if (firstSeason.episodes && firstSeason.episodes.length > 0) {
+              setSeasonEpisodes(firstSeason.episodes);
+            } else if (enriched.episodes && enriched.episodes.length > 0) {
+              setSeasonEpisodes(enriched.episodes);
+            }
+          } else if (enriched.episodes && enriched.episodes.length > 0) {
+            setSeasonEpisodes(enriched.episodes);
           }
           setIsLoadingDetails(false);
         }
@@ -55,6 +62,13 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
 
   const handleSeasonChange = async (seasonNum: number) => {
     setSelectedSeason(seasonNum);
+
+    const targetSeason = currentDrama.seasons?.find(s => s.seasonNumber === seasonNum);
+    if (targetSeason && targetSeason.episodes && targetSeason.episodes.length > 0) {
+      setSeasonEpisodes(targetSeason.episodes);
+      return;
+    }
+
     if (!currentDrama.tmdbId || isMovie) return;
 
     setIsLoadingSeason(true);
@@ -365,33 +379,70 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
                     </div>
 
                     {/* Episode Download Button CTA */}
-                    <div className="w-full md:w-auto md:min-w-[260px]">
-                      <button
-                        onClick={() => handleInitiateDownload(
-                          ep.downloadSources?.[0] || { name: 'Clicknupload', url: 'https://clicknupload.click', quality: 'HD' },
-                          `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`
-                        )}
-                        style={{
-                          padding: '12px 16px',
-                          borderRadius: '8px',
-                          width: '100%',
-                          backgroundColor: '#1F2937',
-                          border: '1px solid #374151',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          gap: '8px',
-                        }}
-                        className="text-white text-sm font-semibold hover:bg-[#374151] transition-all cursor-pointer shadow-sm group"
-                      >
-                        <Download className="w-4 h-4 text-emerald-400" />
-                        <span>Download (Clicknupload)</span>
-                      </button>
+                    <div className="w-full md:w-auto md:min-w-[280px] space-y-2">
+                      {ep.downloadSources && ep.downloadSources.length > 0 ? (
+                        ep.downloadSources.map((source, sIdx) => {
+                          const isSmaller = source.name.toLowerCase().includes('smaller') || source.quality === 'SD';
+                          return (
+                            <button
+                              key={sIdx}
+                              onClick={() => handleInitiateDownload(
+                                source,
+                                `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum} (${source.name})`
+                              )}
+                              style={{
+                                padding: '11px 16px',
+                                borderRadius: '8px',
+                                width: '100%',
+                                backgroundColor: isSmaller ? '#0E7490' : '#1F2937',
+                                border: isSmaller ? '1px solid #22D3EE' : '1px solid #374151',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                gap: '8px',
+                              }}
+                              className={`text-white text-xs sm:text-sm font-semibold transition-all cursor-pointer shadow-sm group ${
+                                isSmaller ? 'hover:bg-[#155E75]' : 'hover:bg-[#374151]'
+                              }`}
+                            >
+                              <Download className={`w-4 h-4 ${isSmaller ? 'text-cyan-200' : 'text-emerald-400'}`} />
+                              <span>{source.name}</span>
+                              {isSmaller && (
+                                <span className="ml-1.5 px-2 py-0.5 rounded text-[10px] bg-cyan-300 text-gray-950 font-bold uppercase tracking-wider">
+                                  Smaller Size
+                                </span>
+                              )}
+                            </button>
+                          );
+                        })
+                      ) : (
+                        <button
+                          onClick={() => handleInitiateDownload(
+                            { name: 'Clicknupload', url: 'https://clicknupload.click', quality: 'HD' },
+                            `${currentDrama.title} - Season ${selectedSeason} Ep ${ep.epNum}`
+                          )}
+                          style={{
+                            padding: '12px 16px',
+                            borderRadius: '8px',
+                            width: '100%',
+                            backgroundColor: '#1F2937',
+                            border: '1px solid #374151',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '8px',
+                          }}
+                          className="text-white text-sm font-semibold hover:bg-[#374151] transition-all cursor-pointer shadow-sm group"
+                        >
+                          <Download className="w-4 h-4 text-emerald-400" />
+                          <span>Download (Clicknupload)</span>
+                        </button>
+                      )}
 
                       <div
                         style={{
-                          marginTop: '6px',
-                          fontSize: '0.75rem',
+                          marginTop: '4px',
+                          fontSize: '0.7rem',
                           color: '#6B7280',
                           textAlign: 'center',
                         }}

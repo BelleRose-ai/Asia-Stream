@@ -17,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSearchChange,
   onOpenTelegram
 }) => {
-  const categories: CategoryType[] = ['All', 'K-Drama', 'K-Movies', 'C-Drama', 'J-Drama', 'PH-Drama', 'Anime', 'Trending'];
+  const categories: CategoryType[] = ['All', 'K-Drama', 'K-Movies', 'C-Drama', 'J-Drama', 'PH-Drama', 'Anime', 'Anime-Movies', 'Trending'];
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 
   return (

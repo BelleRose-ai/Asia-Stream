@@ -193,24 +193,25 @@ export interface GenreSection {
  * No dynamic search index scraping for the catalog.
  */
 export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'All'): Promise<GenreSection[]> {
-  const isMovieCategory = activeCategory === 'K-Movies';
+  const isMovieCategory = activeCategory === 'K-Movies' || activeCategory === 'Anime-Movies';
 
-  const seriesDatabase = DRAMA_DATABASE.filter(item => item.category !== 'K-Movies');
-  const moviesDatabase = DRAMA_DATABASE.filter(item => item.category === 'K-Movies');
+  const seriesDatabase = [...DRAMA_DATABASE.filter(item => item.category !== 'K-Movies' && item.category !== 'Anime-Movies')].reverse();
+  const moviesDatabase = [...DRAMA_DATABASE.filter(item => item.category === 'K-Movies')].reverse();
+  const animeMoviesDatabase = [...DRAMA_DATABASE.filter(item => item.category === 'Anime-Movies')].reverse();
   
-  const kDramas = DRAMA_DATABASE.filter(item => item.category === 'K-Drama');
-  const cDramas = DRAMA_DATABASE.filter(item => item.category === 'C-Drama');
-  const jDramas = DRAMA_DATABASE.filter(item => item.category === 'J-Drama');
-  const phDramas = DRAMA_DATABASE.filter(item => item.category === 'PH-Drama');
-  const animeDramas = DRAMA_DATABASE.filter(item => item.category === 'Anime');
+  const kDramas = [...DRAMA_DATABASE.filter(item => item.category === 'K-Drama')].reverse();
+  const cDramas = [...DRAMA_DATABASE.filter(item => item.category === 'C-Drama')].reverse();
+  const jDramas = [...DRAMA_DATABASE.filter(item => item.category === 'J-Drama')].reverse();
+  const phDramas = [...DRAMA_DATABASE.filter(item => item.category === 'PH-Drama')].reverse();
+  const animeDramas = [...DRAMA_DATABASE.filter(item => item.category === 'Anime')].reverse();
 
-  const filtered = DRAMA_DATABASE.filter(item => {
+  const filtered = [...DRAMA_DATABASE.filter(item => {
     if (activeCategory === 'All') return true;
     if (activeCategory === 'Trending') return item.isTrending;
     return item.category === activeCategory;
-  });
+  })].reverse();
 
-  if (isMovieCategory) {
+  if (activeCategory === 'K-Movies') {
     return [
       {
         title: "Feature K-Movies",
@@ -219,27 +220,49 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
       },
       {
         title: "🔥 Trending K-Movies",
-        subtitle: "Most popular standalone film releases",
-        dramas: moviesDatabase.filter(m => m.isTrending)
+        subtitle: "Top-rated standalone film releases (8.0+ Rating)",
+        dramas: moviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)
       }
     ];
   }
 
-  const trending = seriesDatabase.filter(item => item.isTrending);
-  const romance = seriesDatabase.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'));
-  const action = seriesDatabase.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical') || item.genres.includes('Crime'));
+  if (activeCategory === 'Anime-Movies') {
+    return [
+      {
+        title: "🌸 Anime Movies Collection",
+        subtitle: "Standalone animated feature films & masterpieces.",
+        dramas: animeMoviesDatabase
+      },
+      {
+        title: "🔥 Trending Anime Movies",
+        subtitle: "Top-rated animated feature films (8.0+ Rating)",
+        dramas: animeMoviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)
+      }
+    ];
+  }
+
+  const trending = [...seriesDatabase.filter(item => item.isTrending && item.category !== 'Anime' && item.category !== 'Anime-Movies' && item.rating >= 8.0)];
+  const trendingMovies = [...moviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)];
+  const trendingAnimeMovies = [...animeMoviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)];
+  const romance = [...seriesDatabase.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'))];
+  const action = [...seriesDatabase.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical') || item.genres.includes('Crime'))];
 
   if (activeCategory === 'Trending') {
     return [
       {
         title: "🔥 Trending Series & Shows",
-        subtitle: "Verified direct download links for popular K-Dramas, C-Dramas & Anime",
+        subtitle: "Verified direct download links for top-rated K-Dramas & C-Dramas (8.0+ Rating)",
         dramas: trending
       },
       {
         title: "🔥 Trending K-Movies",
-        subtitle: "Most popular standalone feature films",
-        dramas: moviesDatabase.filter(m => m.isTrending)
+        subtitle: "Top-rated standalone feature films (8.0+ Rating)",
+        dramas: trendingMovies
+      },
+      {
+        title: "🔥 Trending Anime Movies",
+        subtitle: "Top-rated anime feature films (8.0+ Rating)",
+        dramas: trendingAnimeMovies
       }
     ];
   }
@@ -289,6 +312,14 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
         title: "🌸 Anime Series",
         subtitle: "Masterpieces with multi-quality mobile & HD downloads",
         dramas: animeDramas
+      });
+    }
+
+    if (animeMoviesDatabase.length > 0) {
+      sections.push({
+        title: "🌸 Anime Movies",
+        subtitle: "Standalone animated feature films & theatrical masterpieces",
+        dramas: animeMoviesDatabase
       });
     }
 
