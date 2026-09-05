@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Send, Film, Flame, X } from 'lucide-react';
+import { Search, Send, Film, Flame, X, Sparkles } from 'lucide-react';
 import { CategoryType } from '../types';
 
 interface NavbarProps {

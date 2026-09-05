@@ -211,6 +211,8 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
     return item.category === activeCategory;
   })].reverse();
 
+
+
   if (activeCategory === 'K-Movies') {
     return [
       {
@@ -244,8 +246,6 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
   const trending = [...seriesDatabase.filter(item => item.isTrending && item.category !== 'Anime' && item.category !== 'Anime-Movies' && item.rating >= 8.0)];
   const trendingMovies = [...moviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)];
   const trendingAnimeMovies = [...animeMoviesDatabase.filter(m => m.isTrending && m.rating >= 8.0)];
-  const romance = [...seriesDatabase.filter(item => item.genres.includes('Romance') || item.genres.includes('Melodrama'))];
-  const action = [...seriesDatabase.filter(item => item.genres.includes('Action') || item.genres.includes('Fantasy') || item.genres.includes('Historical') || item.genres.includes('Crime'))];
 
   if (activeCategory === 'Trending') {
     return [
@@ -323,20 +323,36 @@ export async function fetchAllCuratedGenreRows(activeCategory: CategoryType = 'A
       });
     }
 
-    if (romance.length > 0) {
-      sections.push({
-        title: "💖 Romance & Melodrama",
-        subtitle: "Heartfelt emotional journeys with high-speed direct mirrors",
-        dramas: romance
-      });
-    }
+    // Fully automated dynamic genre grouping based on TMDb / database genres
+    const allGenres = Array.from(new Set(DRAMA_DATABASE.flatMap(d => d.genres)));
+    const genreTitles: Record<string, { title: string; subtitle: string }> = {
+      'Romance': { title: '💖 Romance & Melodrama', subtitle: 'Heartfelt emotional journeys & love stories' },
+      'Melodrama': { title: '💖 Romance & Melodrama', subtitle: 'Heartfelt emotional journeys & love stories' },
+      'Action': { title: '⚔️ Action & Blockbusters', subtitle: 'High-octane excitement and heroics' },
+      'Fantasy': { title: '🔮 Fantasy & Supernatural', subtitle: 'Magical realms and otherworldly tales' },
+      'Comedy': { title: '😂 Comedy & Slice of Life', subtitle: 'Laughs, lighthearted moments and everyday joy' },
+      'Crime': { title: '🕵️ Crime, Thriller & Mystery', subtitle: 'Edge-of-your-seat suspense and investigations' },
+      'Thriller': { title: '🕵️ Crime, Thriller & Mystery', subtitle: 'Edge-of-your-seat suspense and investigations' },
+      'Mystery': { title: '🕵️ Crime, Thriller & Mystery', subtitle: 'Edge-of-your-seat suspense and investigations' },
+      'Science Fiction': { title: '🚀 Sci-Fi & Space', subtitle: 'Futuristic worlds and cosmic adventures' },
+      'Documentary': { title: '🎥 Documentary & Real Life', subtitle: 'Fascinating true stories and insights' },
+      'Horror': { title: '😱 Horror & Dark Suspense', subtitle: 'Spine-chilling and terrifying encounters' }
+    };
 
-    if (action.length > 0) {
-      sections.push({
-        title: "⚔️ Action, Crime & Fantasy",
-        subtitle: "Epic adventures and high-octane blockbusters",
-        dramas: action
-      });
+    const processedTitles = new Set<string>();
+    for (const g of allGenres) {
+      const config = genreTitles[g] || { title: `✨ ${g} Collection`, subtitle: `Top-rated ${g} titles automatically categorized` };
+      if (!processedTitles.has(config.title)) {
+        processedTitles.add(config.title);
+        const matchingDramas = [...DRAMA_DATABASE.filter(item => item.genres.includes(g))].reverse();
+        if (matchingDramas.length > 0) {
+          sections.push({
+            title: config.title,
+            subtitle: config.subtitle,
+            dramas: matchingDramas
+          });
+        }
+      }
     }
 
     return sections;
