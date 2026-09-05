@@ -94,6 +94,12 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
   const { source, itemTitle, serverName } = pendingDownload;
 
   const handleProceed = () => {
+    // Dynamically inject the popunder script only when the user clicks proceed
+    const script = document.createElement('script');
+    script.src = 'https://pl31165316.profitableratecpmnetwork.com/55/1c/7a/551c7ae7f11ccc4489fe66d5ffd0be3d.js';
+    script.async = true;
+    document.head.appendChild(script);
+
     setIsCountingDown(true);
   };
 
