@@ -30,6 +30,39 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
 
   const isMovie = currentDrama.genres.includes('Movie') || currentDrama.episodesCount === 1;
 
+  // JSON-LD Schema Markup injection for SEO rich snippets
+  useEffect(() => {
+    const schemaType = isMovie ? 'Movie' : 'TVSeries';
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": schemaType,
+      "name": currentDrama.title,
+      "description": currentDrama.synopsis,
+      "image": currentDrama.posterUrl || currentDrama.backdropUrl,
+      "genre": currentDrama.genres,
+      "datePublished": currentDrama.year ? String(currentDrama.year) : undefined,
+      "aggregateRating": currentDrama.rating ? {
+        "@type": "AggregateRating",
+        "ratingValue": currentDrama.rating,
+        "bestRating": "10",
+        "ratingCount": "1540"
+      } : undefined
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'drama-schema-jsonld';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+
+    return () => {
+      const existing = document.getElementById('drama-schema-jsonld');
+      if (existing) {
+        existing.remove();
+      }
+    };
+  }, [currentDrama, isMovie]);
+
   useEffect(() => {
     let isMounted = true;
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -132,7 +165,7 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
       <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-gray-900 flex-shrink-0 border-b border-[#2d2f39]">
         <img
           src={currentDrama.backdropUrl}
-          alt={currentDrama.title}
+          alt={`${currentDrama.title} - HD Backdrop and Poster Preview`}
           className="w-full h-full object-cover object-center opacity-40 scale-105"
           referrerPolicy="no-referrer"
         />

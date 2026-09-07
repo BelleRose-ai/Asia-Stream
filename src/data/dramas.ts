@@ -161,7 +161,7 @@ export const DRAMA_DATABASE: Drama[] = [
     category: "C-Drama",
     isTrending: true,
     year: 2026,
-    episodesCount: 14,
+    episodesCount: 17,
     status: "Ongoing",
     language: "Chinese",
     country: "China",
@@ -192,7 +192,13 @@ export const DRAMA_DATABASE: Drama[] = [
       { epNum: 11, quality: "HD", title: "Episode 11", duration: "45m", downloadSources: [{ name: "Download Ep 11 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/1f0lklq0npp0/The.Early.Spring.E11.mp4", quality: "HD" }] },
       { epNum: 12, quality: "HD", title: "Episode 12", duration: "45m", downloadSources: [{ name: "Download Ep 12 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/cp4t5e8hvqwp/The.Early.Spring.E12.mp4", quality: "HD" }] },
       { epNum: 13, quality: "HD", title: "Episode 13", duration: "45m", downloadSources: [{ name: "Download Ep 13 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/ukjzw7y6me16/The.Early.Spring.E13.mp4", quality: "HD" }] },
-      { epNum: 14, quality: "HD", title: "Episode 14", duration: "45m", downloadSources: [{ name: "Download Ep 14 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/u5jw1ai61rbt/The.Early.Spring.E14.mp4", quality: "HD" }] }
+      { epNum: 14, quality: "HD", title: "Episode 14", duration: "45m", downloadSources: [{ name: "Download Ep 14 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/u5jw1ai61rbt/The.Early.Spring.E14.mp4", quality: "HD" }] },
+      { epNum: 15, quality: "HD", title: "Episode 15", duration: "45m", downloadSources: [
+        { name: "Download Ep 15 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/6d4u2eu60ed4/The.Early.Spring.2026.E15.mp4", quality: "HD" },
+        { name: "Download Ep 15 (Smaller Size)", url: "https://loadedfiles.net/2f023519ccf5c46c?pt=NDVNck5wWTUyOE5XcExYcmRKaGhGM053YUZkemMwdDVjREJsY2l0R2J6RkhiMWxWVGxFOVBRPT0%3D", quality: "SD" }
+      ] },
+      { epNum: 16, quality: "HD", title: "Episode 16", duration: "45m", downloadSources: [{ name: "Download Ep 16 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/jxlzcpxngyoq/The.Early.Spring.2026.E16.mp4", quality: "HD" }] },
+      { epNum: 17, quality: "HD", title: "Episode 17", duration: "45m", downloadSources: [{ name: "Download Ep 17 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/biy4crg9r5ca/The.Early.Spring.E17.mp4", quality: "HD" }] }
     ]
   },
   {
@@ -679,6 +685,16 @@ export const DRAMA_DATABASE: Drama[] = [
           { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/mkWzhiYZ", quality: "HD" },
           { name: "Download Ep 2 (Smaller Size)", url: "https://loadedfiles.net/b204f1697381101b?pt=dFd2RzhTd0M1TUs5Y2J4T01yZ21NRXcwYkdkTUwwVlNiekpPY3pjd1NWTlVUWFZRWjBFOVBRPT0%3D", quality: "SD" }
         ] 
+      },
+      { 
+        epNum: 3, 
+        quality: "HD", 
+        title: "Episode 3", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/p6owebw4aum6", quality: "HD" },
+          { name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/NZWxRj2m", quality: "HD" }
+        ] 
       }
     ]
   },
@@ -868,7 +884,7 @@ export const DRAMA_DATABASE: Drama[] = [
     category: "K-Drama",
     isTrending: true,
     year: 2026,
-    episodesCount: 12,
+    episodesCount: 13,
     status: "Ongoing",
     language: "Korean",
     country: "South Korea",
@@ -1005,6 +1021,15 @@ export const DRAMA_DATABASE: Drama[] = [
         downloadSources: [
           { name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/dtjvLGQR", quality: "HD" },
           { name: "Download Ep 12 (Smaller Size)", url: "https://loadedfiles.net/29478c5f89f181ca?pt=dWF0dWg2ak81akhBaG92c2lQYkRNa3hWVEZsMFFVMUZielJRTDNFNVN5OHpTRlYzTDBFOVBRPT0%3D", quality: "SD" }
+        ] 
+      },
+      { 
+        epNum: 13, 
+        quality: "HD", 
+        title: "Episode 13", 
+        duration: "1h 02m", 
+        downloadSources: [
+          { name: "Download Ep 13 (Pixeldrain)", url: "https://pixeldrain.com/u/imnZJS8S", quality: "HD" }
         ] 
       }
     ]
@@ -2578,6 +2603,66 @@ export const DRAMA_DATABASE: Drama[] = [
     ],
     episodes: [
       { epNum: 1, quality: "HD", title: "Your Name. (Movie)", duration: "106m", downloadSources: [{ name: "Download (Kwik)", url: "https://kwik.cx/f/8jL60htgfwjK", quality: "HD" }] }
+    ]
+  },
+  {
+    id: "the-two-sisters",
+    tmdbId: 241384,
+    title: "The Two Sisters",
+    originalTitle: "피도 눈물도 없이",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2024,
+    episodesCount: 104,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 5.3,
+    genres: ["Drama", "Mystery"],
+    synopsis: "A tragic story about young sisters who part ways after their parent's divorce but reunite once again as mother and daughter-in-law in the whirlwind of fate, ending up in catastrophe after desire and conflict.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/1StP2NmPGjzhIvMIQyTvZfweUu2.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/cf7oJph5G9TP2RsZdb2YIZczq0a.jpg",
+    cast: [],
+    views: "3.8M",
+    downloadSources: [
+      { name: "Download Ep 74 (LoadedFiles)", url: "https://loadedfiles.net/e40ce585740b5270?pt=NTJLWEpIZGhaVFVxajBnYzhtdkh1WEZTVUVSalJYSm5WSFp2TkRReGNtMURSVGd4VkVFOVBRPT0%3D", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-tts1", name: "KDramaFan", comment: "Episodes 74-83 are here! Amazing series.", date: "Just now" }
+    ],
+    episodes: [
+      ...Array.from({ length: 104 }, (_, i) => {
+        const epNum = i + 1;
+        let sources = [];
+        if (epNum === 74) {
+          sources = [{ name: "Download Ep 74 (LoadedFiles)", url: "https://loadedfiles.net/e40ce585740b5270?pt=NTJLWEpIZGhaVFVxajBnYzhtdkh1WEZTVUVSalJYSm5WSFp2TkRReGNtMURSVGd4VkVFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 75) {
+          sources = [{ name: "Download Ep 75 (LoadedFiles)", url: "https://loadedfiles.net/a55746dad81e2726?pt=MzVHeFFwNkNSaHFJdXJRV2c1V1VlM0JtVFhwSVRqRlZlR05vVDFwQ2NWUjRNU3RtWWxFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 76) {
+          sources = [{ name: "Download Ep 76 (LoadedFiles)", url: "https://loadedfiles.net/6c20ad013cc93e3c?pt=Tkt2TWRNUTg5RElLRG5QendTU2pwMVZhWTFkamVHMWpabWRCVGtOM01GbG9kMDgwVVdjOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 77) {
+          sources = [{ name: "Download Ep 77 (LoadedFiles)", url: "https://loadedfiles.net/b77bdfab08271234?pt=MkYzZGgxZkg4dGdvaHpIcDVVL1BzRzlUZWt0bVZXMW5abEJyTTBwSGRYcEVRVzFEVkZFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 78) {
+          sources = [{ name: "Download Ep 78 (LoadedFiles)", url: "https://loadedfiles.net/9c8d32723d75e6f1?pt=dTRkcG12bTlyM3p5WlFXaXB3T3NrRlJ2T1dwRFR6TlNiemR0VWtSdWIwWkNkWGxXVEVFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 79) {
+          sources = [{ name: "Download Ep 79 (LoadedFiles)", url: "https://loadedfiles.net/61f1cb9e807ac903?pt=VWFEU01OOERMUTNROE0zSzdBVnhvWEJqVUZvdlVVMDFRWFJZY1d0dGIzVjNSbFEwY2tFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 80) {
+          sources = [{ name: "Download Ep 80 (LoadedFiles)", url: "https://loadedfiles.net/859c2205a584c868?pt=OWwzbG55Q2phNDArOXBMTkVQMkh1bE42T1UxdU1tUXdPV1pSY2tGemNHVjNURkIzUlZFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 81) {
+          sources = [{ name: "Download Ep 81 (LoadedFiles)", url: "https://loadedfiles.net/a01e793e0f3c778e?pt=VW1MemNIL285V2JxWUlOUnc1UlVrMWRSTWxWWU5WVklNV1J1Y1djcldVNWFXbWQ1U21jOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 82) {
+          sources = [{ name: "Download Ep 82 (LoadedFiles)", url: "https://loadedfiles.net/cc9398f5f8a79fcb?pt=SEFHOFd5d0JaZDB1K1Q5a0V0cndQVFJXT0RkbE1VWm1UVzU1YVZWTVdHMVhZemRZUVVFOVBRPT0%3D", quality: "HD" }];
+        } else if (epNum === 83) {
+          sources = [{ name: "Download Ep 83 (LoadedFiles)", url: "https://loadedfiles.net/ea2841e92916fcfb?pt=Smg1MmlhUXk2TVlZTnIzQ3ZaTmZDa3QzV1U1Q1QxTnhVemhhTW5sRGQyaEpZbXREZVhjOVBRPT0%3D", quality: "HD" }];
+        }
+        return {
+          epNum,
+          quality: "HD",
+          title: `Episode ${epNum}`,
+          duration: "31m",
+          downloadSources: sources
+        };
+      })
     ]
   }
 ];

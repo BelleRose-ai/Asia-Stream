@@ -8,6 +8,7 @@ import { TelegramModal } from './components/TelegramModal';
 import { DMCAModal } from './components/DMCAModal';
 import { Footer } from './components/Footer';
 import { AdBanner } from './components/AdBanner';
+import { AppConversionBanner } from './components/AppConversionBanner';
 import { Drama, CategoryType } from './types';
 import { fetchAllCuratedGenreRows, GenreSection } from './services/tmdb';
 import { DRAMA_DATABASE } from './data/dramas';
@@ -66,6 +67,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0b0c10] text-white flex flex-col font-sans selection:bg-cyan-500 selection:text-black">
+      {/* App Conversion Banner */}
+      <AppConversionBanner />
+
       {/* Navbar */}
       <Navbar
         activeCategory={activeCategory}
