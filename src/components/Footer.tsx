@@ -7,9 +7,10 @@ interface FooterProps {
   onSelectCategory: (cat: CategoryType) => void;
   onOpenTelegram: () => void;
   onOpenDMCA: () => void;
+  onOpenPrivacy: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram, onOpenDMCA }) => {
+export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram, onOpenDMCA, onOpenPrivacy }) => {
   return (
     <footer className="bg-[#0b0c10] border-t border-[#2d2f39] text-gray-400 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
@@ -70,16 +71,32 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenTelegram
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Legal & DMCA</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Legal & Compliance</h4>
             <p className="text-[11px] leading-relaxed text-gray-400">
               AsiaStream does not host any media files. All content is indexed from external third-party sources.
             </p>
-            <button
-              onClick={onOpenDMCA}
-              className="text-xs text-cyan-400 hover:text-cyan-300 font-medium underline underline-offset-2 transition-colors cursor-pointer"
-            >
-              View Full DMCA Policy
-            </button>
+            <div className="flex flex-col space-y-1.5 pt-1">
+              <a
+                href="https://asia-stream.vercel.app/privacy"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenPrivacy();
+                }}
+                className="text-xs text-cyan-400 hover:text-cyan-300 font-medium underline underline-offset-2 transition-colors text-left cursor-pointer inline-block"
+              >
+                🔒 Privacy Policy (https://asia-stream.vercel.app/privacy)
+              </a>
+              <a
+                href="https://asia-stream.vercel.app/dmca"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenDMCA();
+                }}
+                className="text-xs text-cyan-400 hover:text-cyan-300 font-medium underline underline-offset-2 transition-colors text-left cursor-pointer inline-block"
+              >
+                ⚖️ DMCA Notice (https://asia-stream.vercel.app/dmca)
+              </a>
+            </div>
           </div>
         </div>
 

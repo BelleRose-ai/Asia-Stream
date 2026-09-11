@@ -6,6 +6,7 @@ import { DramaCard } from './components/DramaCard';
 import { DramaModal } from './components/DramaModal';
 import { TelegramModal } from './components/TelegramModal';
 import { DMCAModal } from './components/DMCAModal';
+import { PrivacyModal } from './components/PrivacyModal';
 import { Footer } from './components/Footer';
 import { AdBanner } from './components/AdBanner';
 import { AppConversionBanner } from './components/AppConversionBanner';
@@ -20,11 +21,19 @@ export default function App() {
   const [selectedDrama, setSelectedDrama] = useState<Drama | null>(null);
   const [showTelegramModal, setShowTelegramModal] = useState<boolean>(false);
   const [showDMCAModal, setShowDMCAModal] = useState<boolean>(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState<boolean>(false);
   const [genreRows, setGenreRows] = useState<GenreSection[]>([]);
   const [isLoadingRows, setIsLoadingRows] = useState<boolean>(true);
 
   // Fetch curated rows strictly from local store & TMDB metadata loader
   useEffect(() => {
+    const path = window.location.pathname;
+    if (path.includes('/privacy')) {
+      setShowPrivacyModal(true);
+    } else if (path.includes('/dmca')) {
+      setShowDMCAModal(true);
+    }
+
     let isMounted = true;
     setIsLoadingRows(true);
     fetchAllCuratedGenreRows(activeCategory)
@@ -183,6 +192,7 @@ export default function App() {
         }}
         onOpenTelegram={() => setShowTelegramModal(true)}
         onOpenDMCA={() => setShowDMCAModal(true)}
+        onOpenPrivacy={() => setShowPrivacyModal(true)}
       />
 
       {/* Details & Download Modal */}
@@ -201,6 +211,13 @@ export default function App() {
       {showDMCAModal && (
         <DMCAModal
           onClose={() => setShowDMCAModal(false)}
+          onOpenTelegram={() => setShowTelegramModal(true)}
+        />
+      )}
+
+      {showPrivacyModal && (
+        <PrivacyModal
+          onClose={() => setShowPrivacyModal(false)}
           onOpenTelegram={() => setShowTelegramModal(true)}
         />
       )}

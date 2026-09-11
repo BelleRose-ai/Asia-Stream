@@ -161,7 +161,7 @@ export const DRAMA_DATABASE: Drama[] = [
     category: "C-Drama",
     isTrending: true,
     year: 2026,
-    episodesCount: 17,
+    episodesCount: 20,
     status: "Ongoing",
     language: "Chinese",
     country: "China",
@@ -198,7 +198,10 @@ export const DRAMA_DATABASE: Drama[] = [
         { name: "Download Ep 15 (Smaller Size)", url: "https://loadedfiles.net/2f023519ccf5c46c?pt=NDVNck5wWTUyOE5XcExYcmRKaGhGM053YUZkemMwdDVjREJsY2l0R2J6RkhiMWxWVGxFOVBRPT0%3D", quality: "SD" }
       ] },
       { epNum: 16, quality: "HD", title: "Episode 16", duration: "45m", downloadSources: [{ name: "Download Ep 16 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/jxlzcpxngyoq/The.Early.Spring.2026.E16.mp4", quality: "HD" }] },
-      { epNum: 17, quality: "HD", title: "Episode 17", duration: "45m", downloadSources: [{ name: "Download Ep 17 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/biy4crg9r5ca/The.Early.Spring.E17.mp4", quality: "HD" }] }
+      { epNum: 17, quality: "HD", title: "Episode 17", duration: "45m", downloadSources: [{ name: "Download Ep 17 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/biy4crg9r5ca/The.Early.Spring.E17.mp4", quality: "HD" }] },
+      { epNum: 18, quality: "HD", title: "Episode 18", duration: "45m", downloadSources: [{ name: "Download Ep 18 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/py1jjqxw4iej/The.Early.Spring.2026.E18.mp4", quality: "HD" }] },
+      { epNum: 19, quality: "HD", title: "Episode 19", duration: "45m", downloadSources: [{ name: "Download Ep 19 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/py1jjqxw4iej/The.Early.Spring.2026.E19.mp4", quality: "HD" }] },
+      { epNum: 20, quality: "HD", title: "Episode 20", duration: "45m", downloadSources: [{ name: "Download Ep 20 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/83n19z9mmmhp/The.Early.Spring.E20.mp4", quality: "HD" }] }
     ]
   },
   {
