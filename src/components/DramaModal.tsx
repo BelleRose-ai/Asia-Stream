@@ -113,12 +113,20 @@ export const DramaModal: React.FC<DramaModalProps> = ({ drama, onClose, onOpenTe
   };
 
   const handleInitiateDownload = (source: DownloadSource, itemTitle?: string) => {
-    const serverName = parseServerName(source.url, source.name);
-    setPendingDownload({
-      source,
-      itemTitle: itemTitle || currentDrama.title,
-      serverName
-    });
+    const targetUrl = source.url;
+    const unlockedKey = 'download_unlocked_' + btoa(targetUrl);
+    const isUnlocked = sessionStorage.getItem(unlockedKey) === 'true';
+
+    if (isUnlocked) {
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      const serverName = parseServerName(targetUrl, source.name);
+      setPendingDownload({
+        source,
+        itemTitle: itemTitle || currentDrama.title,
+        serverName
+      });
+    }
   };
 
   const handleAddComment = (e: React.FormEvent) => {

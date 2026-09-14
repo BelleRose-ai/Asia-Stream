@@ -161,7 +161,7 @@ export const DRAMA_DATABASE: Drama[] = [
     category: "C-Drama",
     isTrending: true,
     year: 2026,
-    episodesCount: 20,
+    episodesCount: 24,
     status: "Ongoing",
     language: "Chinese",
     country: "China",
@@ -201,7 +201,11 @@ export const DRAMA_DATABASE: Drama[] = [
       { epNum: 17, quality: "HD", title: "Episode 17", duration: "45m", downloadSources: [{ name: "Download Ep 17 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/biy4crg9r5ca/The.Early.Spring.E17.mp4", quality: "HD" }] },
       { epNum: 18, quality: "HD", title: "Episode 18", duration: "45m", downloadSources: [{ name: "Download Ep 18 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/py1jjqxw4iej/The.Early.Spring.2026.E18.mp4", quality: "HD" }] },
       { epNum: 19, quality: "HD", title: "Episode 19", duration: "45m", downloadSources: [{ name: "Download Ep 19 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/py1jjqxw4iej/The.Early.Spring.2026.E19.mp4", quality: "HD" }] },
-      { epNum: 20, quality: "HD", title: "Episode 20", duration: "45m", downloadSources: [{ name: "Download Ep 20 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/83n19z9mmmhp/The.Early.Spring.E20.mp4", quality: "HD" }] }
+      { epNum: 20, quality: "HD", title: "Episode 20", duration: "45m", downloadSources: [{ name: "Download Ep 20 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/83n19z9mmmhp/The.Early.Spring.E20.mp4", quality: "HD" }] },
+      { epNum: 21, quality: "HD", title: "Episode 21", duration: "45m", downloadSources: [{ name: "Download Ep 21 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/jhehb5cz6tez/The.Early.Spring.E21.mp4", quality: "HD" }] },
+      { epNum: 22, quality: "HD", title: "Episode 22", duration: "45m", downloadSources: [{ name: "Download Ep 22 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/5aso030025u1/The.Early.Spring.E22.mp4", quality: "HD" }] },
+      { epNum: 23, quality: "HD", title: "Episode 23", duration: "45m", downloadSources: [{ name: "Download Ep 23 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/8f1bsyfbeyv0/The.Early.Spring.E23.mp4", quality: "HD" }] },
+      { epNum: 24, quality: "HD", title: "Episode 24", duration: "45m", downloadSources: [{ name: "Download Ep 24 (Clicknupload) - use the SLOW DOWNLOAD OPTION", url: "https://clicknupload.click/6jbb5l7bcm98/The.Early.Spring.E24.mp4", quality: "HD" }] }
     ]
   },
   {
@@ -697,6 +701,33 @@ export const DRAMA_DATABASE: Drama[] = [
         downloadSources: [
           { name: "Download Ep 3 (Buzzheavier)", url: "https://buzzheavier.com/p6owebw4aum6", quality: "HD" },
           { name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/NZWxRj2m", quality: "HD" }
+        ] 
+      },
+      { 
+        epNum: 4, 
+        quality: "HD", 
+        title: "Episode 4", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/utzRub3f", quality: "HD" }
+        ] 
+      },
+      { 
+        epNum: 5, 
+        quality: "HD", 
+        title: "Episode 5", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/utzRub3f", quality: "HD" }
+        ] 
+      },
+      { 
+        epNum: 6, 
+        quality: "HD", 
+        title: "Episode 6", 
+        duration: "59m", 
+        downloadSources: [
+          { name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/PwA8UkPk", quality: "HD" }
         ] 
       }
     ]
@@ -2666,6 +2697,367 @@ export const DRAMA_DATABASE: Drama[] = [
           downloadSources: sources
         };
       })
+    ]
+  },
+  {
+    id: "a-love-other-than-yours",
+    tmdbId: 314939,
+    title: "A Love Other Than Yours",
+    originalTitle: "너 말고 다른 연애",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 14,
+    status: "Ongoing",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.5,
+    genres: ["Drama", "Comedy"],
+    synopsis: "A realistic, emotionally resonant romance about a couple in their tenth year together whose comfortable relationship is tested by unexpected feelings.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/iKgdhgBPi1cCRRqsUgaxUDRuFP6.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/moUjiEzpJVNZc7hyNRBbLPt0CPX.jpg",
+    cast: ["Yoo Soo-ji"],
+    views: "3.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/Pf4vH4TT", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-aloty1", name: "KDramaFan", comment: "Amazing romance series! Loving the chemistry.", date: "Just now" }
+    ],
+    episodes: [
+      { 
+        epNum: 1, 
+        quality: "HD", 
+        title: "Episode 1", 
+        duration: "64m", 
+        downloadSources: [
+          { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/Pf4vH4TT", quality: "HD" },
+          { name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/1a3f7c47fbcd0ea6?pt=RDVMMGFZdEhOTDExOFVNNnl2MHM1blF6TW5kT2VXTkdWemR5VlVWWFNVWlNjMjU2ZFhjOVBRPT0%3D", quality: "SD" }
+        ] 
+      },
+      { 
+        epNum: 2, 
+        quality: "HD", 
+        title: "Episode 2", 
+        duration: "64m", 
+        downloadSources: [
+          { name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/S7kCCPgy", quality: "HD" },
+          { name: "Download Ep 2 (LoadedFiles)", url: "https://loadedfiles.net/c082bdbbcce635bc?pt=NGsyU0FhVy8yejhleXJTY3VmSVZnbVYxTUdsMmQyVldOVll5VjJkcFMzUldVM0p2TDBFOVBRPT0%3D", quality: "SD" }
+        ] 
+      }
+    ]
+  },
+  {
+    id: "another-child",
+    tmdbId: 571632,
+    title: "Another Child",
+    originalTitle: "미성년",
+    category: "K-Movies",
+    isTrending: true,
+    year: 2019,
+    episodesCount: 1,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 7.5,
+    genres: ["Drama"],
+    synopsis: "Teenage girls suffer from conflicts from their parents' affairs. A baby from the affair is born, and the two families have to accept reality.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/ukGYYwHzBoGau8BnYtO5rPHhaxH.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/kgVdkAIsYiqwpgKawSv6srtzlFF.jpg",
+    cast: [],
+    views: "1.9M",
+    downloadSources: [
+      { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/yGwJLGZ5", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-ac1", name: "MovieBuff", comment: "Powerful family drama.", date: "Just now" }
+    ],
+    episodes: [
+      { 
+        epNum: 1, 
+        quality: "HD", 
+        title: "Full Movie", 
+        duration: "96m", 
+        downloadSources: [
+          { name: "Download Movie (Pixeldrain)", url: "https://pixeldrain.com/u/yGwJLGZ5", quality: "HD" }
+        ] 
+      }
+    ]
+  },
+  {
+    id: "the-husband",
+    tmdbId: 300954,
+    title: "The Husband",
+    originalTitle: "결혼의 완성",
+    category: "K-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 12,
+    status: "Completed",
+    language: "Korean",
+    country: "South Korea",
+    rating: 8.75,
+    genres: ["Crime", "Drama", "Mystery"],
+    synopsis: "Taeju and Seyun are on the verge of divorce. But when a drunken comment from Taeju gets Seyun kidnapped, everything changes. Even worse, he's now the prime suspect. Forced to go on the run, Taeju must rescue his wife on his own.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/z74qJEf1MRsEEIKFgbeyBAHmJXg.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/lfTUwBiSyCVcvBPAMzSOYGUgr2c.jpg",
+    cast: [],
+    views: "4.1M",
+    downloadSources: [
+      { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vHcuXFuq", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-th1", name: "ThrillerFan", comment: "Incredible suspenseful thriller!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "62m", downloadSources: [
+        { name: "Download Ep 1 (Pixeldrain)", url: "https://pixeldrain.com/u/vHcuXFuq", quality: "HD" },
+        { name: "Download Ep 1 (Smaller Size)", url: "https://loadedfiles.net/5c162ea07bfeb944?pt=ai9BN29WSXlOWWZHZkoyNHQxYjRSMGd4TTBKSGJ6WnhRVzVFU0ZKc1pXc3ZNMFI0VTFFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "62m", downloadSources: [
+        { name: "Download Ep 2 (Pixeldrain)", url: "https://pixeldrain.com/u/oLeyCeZx", quality: "HD" },
+        { name: "Download Ep 2 (Smaller Size)", url: "https://loadedfiles.net/2a142181c5076dd3?pt=TlpXZ3FVZEZvcTBLeG53ajd0QTN2WFEzVG5aV2JqQm1WVUpFWldoQmJtbzNZM3ByVVZFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "62m", downloadSources: [
+        { name: "Download Ep 3 (Pixeldrain)", url: "https://pixeldrain.com/u/3JHtafVY", quality: "HD" },
+        { name: "Download Ep 3 (Smaller Size)", url: "https://loadedfiles.net/4b88b5f59cff2f67?pt=amlVZUtBQ0dYZ2ppWGFCVUY0dWoxRzk1YkVNd05WUkdTVzFrZFcxNlRsVkZTMU12T0hjOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "62m", downloadSources: [
+        { name: "Download Ep 4 (Pixeldrain)", url: "https://pixeldrain.com/u/hkQTxuse", quality: "HD" },
+        { name: "Download Ep 4 (Smaller Size)", url: "https://loadedfiles.net/c0b5b7a6504babc4?pt=RCtSbW96ekVFRVZWcWlWTDlQaWt1Mk5PTlRRME1HZEJOVmM1VkNzMk5UQlhaWFppT1ZFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "62m", downloadSources: [
+        { name: "Download Ep 5 (Pixeldrain)", url: "https://pixeldrain.com/u/zBMdPVhh", quality: "HD" },
+        { name: "Download Ep 5 (Smaller Size)", url: "https://loadedfiles.net/b496a7564b41e874?pt=TERPa1BESW10NmtCS2N0L2QyNjFWbGhzZHpkaE4xSTRRelJIUW5jMVdETXpWMkowZDFFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "62m", downloadSources: [
+        { name: "Download Ep 6 (Pixeldrain)", url: "https://pixeldrain.com/u/zU6617x3", quality: "HD" },
+        { name: "Download Ep 6 (Smaller Size)", url: "https://loadedfiles.net/008e8ef7ac3d478d?pt=dWUxWnZ5aWJVQ2l6RW1aYTJmUXo2M2s0UVM4MldqQkJNRGxPV0hRNVVtSmtXV2szVmtFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "62m", downloadSources: [
+        { name: "Download Ep 7 (Pixeldrain)", url: "https://pixeldrain.com/u/LKeLPDEe", quality: "HD" },
+        { name: "Download Ep 7 (Smaller Size)", url: "https://loadedfiles.net/969bc05de572334b?pt=czBzemxya3I2WTJVZSt4dHBmNDc2bWd6YmswelIzWXpMMlpCUmpseWFVaFRMMVpvY1djOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "62m", downloadSources: [
+        { name: "Download Ep 8 (Pixeldrain)", url: "https://pixeldrain.com/u/vNxyiimi", quality: "HD" },
+        { name: "Download Ep 8 (Smaller Size)", url: "https://loadedfiles.net/076ac27de65a4499?pt=d21jUzBIZmtwRXgwMmxRNW5wZk1xbGxPVGxkdVNGWjZWWE5zVlVWQlVIVndSRU53WlZFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "62m", downloadSources: [
+        { name: "Download Ep 9 (Pixeldrain)", url: "https://pixeldrain.com/u/fZfyog7Y", quality: "HD" },
+        { name: "Download Ep 9 (Smaller Size)", url: "https://loadedfiles.net/faf419b5beefbcb9?pt=UWFYZlRUWHYrUG94KzlFajBHT043U3RVU0ZaRWEwcFNjM3BhUkU5Q09WZHZVRE5VWlVFOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "62m", downloadSources: [
+        { name: "Download Ep 10 (Pixeldrain)", url: "https://pixeldrain.com/u/rBTJpUsP", quality: "HD" },
+        { name: "Download Ep 10 (Smaller Size)", url: "https://loadedfiles.net/46d846315aa6f05c?pt=QW1NbjY4TU5McE9LeFlVeWl0R2tFRE50UVcxVmNFTk1SME5QTUdRNWFFUktURVZhWVdjOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "62m", downloadSources: [
+        { name: "Download Ep 11 (Pixeldrain)", url: "https://pixeldrain.com/u/LxxVuUk9", quality: "HD" },
+        { name: "Download Ep 11 (Smaller Size)", url: "https://loadedfiles.net/54ddb38a71eff2cf?pt=WjZNclZ5bmZoQWY4dElQUWpJT08xMGhrUzFCR2NuQnNXRTFEWm1kQ1JETjVUak5YTkhjOVBRPT0%3D", quality: "SD" }
+      ]},
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "62m", downloadSources: [
+        { name: "Download Ep 12 (Pixeldrain)", url: "https://pixeldrain.com/u/5micCEEC", quality: "HD" },
+        { name: "Download Ep 12 (Smaller Size)", url: "https://loadedfiles.net/c5b2d724e189d2dc?pt=ejJxK3oyY2hmeDVJN3JqbHl5K1R3eTlJZUZRd1dGZGhOWEJ6WkVGak9FeHZaalUxSzFFOVBRPT0%3D", quality: "SD" }
+      ]}
+    ]
+  },
+  {
+    id: "ph-drama-263689",
+    tmdbId: 263689,
+    title: "Sins of the Father",
+    originalTitle: "Sins of the Father",
+    category: "PH-Drama",
+    isTrending: true,
+    year: 2025,
+    episodesCount: 10,
+    status: "Ongoing",
+    language: "Tagalog",
+    country: "Philippines",
+    rating: 8.0,
+    genres: ["Drama", "Crime", "Mystery"],
+    synopsis: "A self-made man has spent his life building an honest name, desperate to escape his estranged father’s criminal legacy. Now, falsely implicated in his father’s sins, he must fight to prove his innocence before they destroy everything he holds dear.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/jDtpYX2JTtDwlpc1FJcPynpL53m.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/moUjiEzpJVNZc7hyNRBbLPt0CPX.jpg",
+    cast: [],
+    views: "3.2M",
+    downloadSources: [
+      { name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/250dc8d5888e9a53?pt=bkxtMVZJWExKdkRNMktRUitHL2MrR2xSZW1GbWMxSTJSV2RxUldZeFlXZEdXbU4xYWxFOVBRPT0%3D", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-ph263689", name: "PHSeriesFan", comment: "Loving this new PH series!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "45m", downloadSources: [{ name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/250dc8d5888e9a53?pt=bkxtMVZJWExKdkRNMktRUitHL2MrR2xSZW1GbWMxSTJSV2RxUldZeFlXZEdXbU4xYWxFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "45m", downloadSources: [{ name: "Download Ep 2 (LoadedFiles)", url: "https://loadedfiles.net/b5e88910bcfd8ea4?pt=RmhuQ0FTajZ2cG1YVEs1VFRKeDJTV1V4TVdwRGVWUnpSV0l2UkhCQmFVTldURVY1WlVFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "45m", downloadSources: [{ name: "Download Ep 3 (LoadedFiles)", url: "https://loadedfiles.net/654e717170015e77?pt=YWY1TWN6bWdiL0ZScS8rMFVNN3hpbHBQVkhscmFrWTFhMVJ5UjFWV1EzVXpZamw1ZEZFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "45m", downloadSources: [{ name: "Download Ep 4 (LoadedFiles)", url: "https://loadedfiles.net/654e717170015e77?pt=M1FNTDdtc2hZcFRRZExVK2VyQk9VRWszVEZodFZWcERSRzR6VVdWRGJYWTNZMVZCUVVFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "45m", downloadSources: [{ name: "Download Ep 5 (LoadedFiles)", url: "https://loadedfiles.net/04f6115de2cdda2e?pt=Ym1BeURwUjZLNlpVaEl4dTI2WlVoM1ZuZUROT1F6aHVXaXREVlRoS1oxbHpVM1ZoWW1jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "45m", downloadSources: [{ name: "Download Ep 6 (LoadedFiles)", url: "https://loadedfiles.net/2aeb6e20392187e4?pt=aXpOTG1Qckkvd251QWcwS3hYVVdQMEpqTUdoRFJERmxRVk5yZDBORGJXVklkSEpYWlhjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "45m", downloadSources: [{ name: "Download Ep 7 (LoadedFiles)", url: "https://loadedfiles.net/66ab1a0a03aaa87d?pt=S2FuOFAyNENhV1JrNHJBcHphL20xWGROVmpGSVNreDVRVVJGUkc4MU5YQTBMekZJYjBFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "45m", downloadSources: [{ name: "Download Ep 8 (LoadedFiles)", url: "https://loadedfiles.net/7b070e674c7376dc?pt=U1VyWDZKbE4zM294RFYySWFIV0pkRXBxZEdOVE0wZFNSMlU0V1dGWWFYTmtXWFpoWjJjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "45m", downloadSources: [{ name: "Download Ep 9 (LoadedFiles)", url: "https://loadedfiles.net/5f2b9170f58094da?pt=b3orOTNnK0p1NHFDdlVJeXNPVGREbUZuUm01UFNXUk5ZekZSZURSeVNIVlpTME51ZUdjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "45m", downloadSources: [{ name: "Download Ep 10 (LoadedFiles)", url: "https://loadedfiles.net/edfe0b9a07f22ff6?pt=cVFEZmU2N2thSlJIVEpBc0R5SkxDa1J5V0hCeFZDOWhkR1JYWkdsRVRUUnRRMU53UkhjOVBRPT0%3D", quality: "HD" }] }
+    ]
+  },
+  {
+    id: "someone-someday",
+    tmdbId: 305830,
+    title: "Someone, Someday",
+    originalTitle: "Someone, Someday",
+    category: "PH-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 25,
+    status: "Ongoing",
+    language: "Tagalog",
+    country: "Philippines",
+    rating: 8.3,
+    genres: ["Mystery", "Drama"],
+    synopsis: "When the CEO of a dating app unknowingly befriends someone out for revenge, old wounds resurface—threatening her company, family, friendships, love life, and even her dream of finding “someone, someday.”",
+    posterUrl: "https://image.tmdb.org/t/p/w500/a0w1k9cTa3273nhwrFaUhy6YkLR.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/6xVKvVhzCSfJzdxzUIgaw86vLjU.jpg",
+    cast: [],
+    views: "3.5M",
+    downloadSources: [
+      { name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/c668f89aa648993d?pt=M21YMzBvQ1I5aHZzdHpqbFI4ang2ekE1TlRCdlpsQTJkVGxYWlRWRVlVUjVTREpxWkVFOVBRPT0%3D", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-ss305830", name: "KapamilyaFan", comment: "So excited for Someone, Someday!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "42m", downloadSources: [{ name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/c668f89aa648993d?pt=M21YMzBvQ1I5aHZzdHpqbFI4ang2ekE1TlRCdlpsQTJkVGxYWlRWRVlVUjVTREpxWkVFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "42m", downloadSources: [{ name: "Download Ep 2 (LoadedFiles)", url: "https://loadedfiles.net/7b0380a762395e4d?pt=S2d3WWs4Y2huT25vWmVDWG5sMjBGR1kxU2trNU9XVlBabkl5TVhreFNHbDBRM2xZSzFFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "42m", downloadSources: [{ name: "Download Ep 3 (LoadedFiles)", url: "https://loadedfiles.net/133ce1a96c9941ba?pt=bkQxSXhiRFNDMTdIUkZtSFQyRlh0RTlWT1ZSWGJHdGhRV2xSVlhoUFRrTjJUVmx1VG1jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "42m", downloadSources: [{ name: "Download Ep 4 (LoadedFiles)", url: "https://loadedfiles.net/cc2efaa1d2b1a1fa?pt=eisxLzF0QnNWMEw1K2ovZUdkS0F1bmRMVWxOSWRYZGhiMjFVUVROWGIxRm1kbEJtYldjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "42m", downloadSources: [{ name: "Download Ep 5 (LoadedFiles)", url: "https://loadedfiles.net/35b761033a850e72?pt=bi9NRDNIWGovUjlDR0UrekRHNFZRVE5pY0ZFdlYyTjNkVU5OVm0xek5UUmhMekJRT0djOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "42m", downloadSources: [{ name: "Download Ep 6 (LoadedFiles)", url: "https://loadedfiles.net/179226396f661b89?pt=UDJkUjFBK3RkUURNajBURlNjNkIxaXRoYUZsTlRrWjFibkZHTkcwM1FYQjJkemhuTlVFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "42m", downloadSources: [{ name: "Download Ep 7 (LoadedFiles)", url: "https://loadedfiles.net/7c79b014bffb8bea?pt=VWRqWHdUTlpQNWtJdDJrL3A1WHJtMGR6V0dGNWVGZHVaUzlVUVVKWWNGSnRVVzFtZVZFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "42m", downloadSources: [{ name: "Download Ep 8 (LoadedFiles)", url: "https://loadedfiles.net/66dae1e738f64f65?pt=M0Y2aG9FOHBJeU5YYXVMTnNES1NiMjVHUlhCNFRXVk1VRFpLTTJGUE4zRXdNMGs0U2xFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "42m", downloadSources: [{ name: "Download Ep 9 (LoadedFiles)", url: "https://loadedfiles.net/f39ff50f4e3e72a7?pt=c0VrdkJnRU01ZDNPY3pGakhQSU12SEZDVTJKd1ExQjNNMFJKYWtadGN6SldWbGxzVWxFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "42m", downloadSources: [{ name: "Download Ep 10 (LoadedFiles)", url: "https://loadedfiles.net/5d50358657922eed?pt=a1ZZbDlLZVR6MjNxU2RlaWlwVUR2aTlVYUdaWFEzVnNOMU5XYVNzMlJXZFVNMEUySzFFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "42m", downloadSources: [{ name: "Download Ep 11 (LoadedFiles)", url: "https://loadedfiles.net/1111595c0e04d062?pt=NU9nWmJqQkcwQ2VFUzlRZXFIT2wxek5RZUVSSmRrMDFVVVp0VVZrellrSm1TbmhKWm1jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 12, quality: "HD", title: "Episode 12", duration: "42m", downloadSources: [{ name: "Download Ep 12 (LoadedFiles)", url: "https://loadedfiles.net/c660b2d89570c2d3?pt=WXZnYVlNQUFoTCtRdmNza2lKQWZhWFJ6VjFkSWJ5dHBPRGxUVEdSamNFY3lXV3N3WVdjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 13, quality: "HD", title: "Episode 13", duration: "42m", downloadSources: [{ name: "Download Ep 13 (LoadedFiles)", url: "https://loadedfiles.net/0d6fa86b6a0c0ac8?pt=Ky8wMUpnR3hURXRudTVDS2hYa1paR1ZXV0dKcFZHbHVWMUpMV1VKVlZEWlJTalZTYm1jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 14, quality: "HD", title: "Episode 14", duration: "42m", downloadSources: [{ name: "Download Ep 14 (LoadedFiles)", url: "https://loadedfiles.net/7a1315b83fb1179b?pt=YjcwOXlGVlI5OTA1bGVCWmk3MGtjWGhvYVc5VmNHdzFZM0pRV1ZKRll6QTFiVmhoVTFFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 15, quality: "HD", title: "Episode 15", duration: "42m", downloadSources: [{ name: "Download Ep 15 (LoadedFiles)", url: "https://loadedfiles.net/bcc39998e9300a69?pt=Ukk2MlZhUUNVUjhqcmhGa1llTDZIM2xzWVZCa1QzcE1OelIzZVRKNVp6SkJPRFJ4T0hjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 16, quality: "HD", title: "Episode 16", duration: "42m", downloadSources: [{ name: "Download Ep 16 (LoadedFiles)", url: "https://loadedfiles.net/d8893db4fd307026?pt=NndJL3lxTVl6WUpkeGlrU1ZtYmE1MFEyWjNsUlJFaHRibE5tWW14Mk4zSkhaVEkzUzBFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 17, quality: "HD", title: "Episode 17", duration: "42m", downloadSources: [{ name: "Download Ep 17 (LoadedFiles)", url: "https://loadedfiles.net/bb95f76e54c387d8?pt=c3gvZEVOWm8zdEMzeVh5N0xIMnJkSHBKYzBoUlprWk5TekpTU0haQmVIUkpkbWhMWkZFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 18, quality: "HD", title: "Episode 18", duration: "42m", downloadSources: [{ name: "Download Ep 18 (LoadedFiles)", url: "https://loadedfiles.net/41149753b233a571?pt=NkNTbUdFT2R1Qk0rTUFhUmppUk9yazl2Tnk5SFkxVXdUMjF3ZUhKeFFuUTBTRzVXYlhjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 19, quality: "HD", title: "Episode 19", duration: "42m", downloadSources: [{ name: "Download Ep 19 (LoadedFiles)", url: "https://loadedfiles.net/bcbbefa10e74a181?pt=ZW13V3hJZEVCY05KSE9WSGlEVTN6V1V4ZDJ0Mk1WWjRkRXd4YkUwMVpYVm1jRXhIVkZFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 20, quality: "HD", title: "Episode 20", duration: "42m", downloadSources: [{ name: "Download Ep 20 (LoadedFiles)", url: "https://loadedfiles.net/de9c80bf522b0d33?pt=bmpFUVFudTUvM0Fxd09FYjlyS2JKRUpZTVdoNmNYQlFMMk42TVRCSlVtcGxXRlo1VjJjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 21, quality: "HD", title: "Episode 21", duration: "42m", downloadSources: [{ name: "Download Ep 21 (LoadedFiles)", url: "https://loadedfiles.net/957fdb3f34f60fbd?pt=YnhNRmFzZ3N4RllZb0tLNU5NUU93QzlQTUcxelZFOVdRWFZ0TDNwUVNsTk9jVFVyYzNjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 22, quality: "HD", title: "Episode 22", duration: "42m", downloadSources: [{ name: "Download Ep 22 (LoadedFiles)", url: "https://loadedfiles.net/cf5b0f6f531d9345?pt=N2ZhVy9welVGeko2TzlCc3htNFFvbFJ1ZEhkM2JqVnRWa1psVkdVdlZGZDRObkJXZG5jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 23, quality: "HD", title: "Episode 23", duration: "42m", downloadSources: [{ name: "Download Ep 23 (LoadedFiles)", url: "https://loadedfiles.net/53883c6f17fa067d?pt=cW5EOW1WMUR3TjQrZHVzeTlyU2FKekF2U0ZCMVdsSjRNMVEwVW5jM2NtRktObTFHYlhjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 24, quality: "HD", title: "Episode 24", duration: "42m", downloadSources: [{ name: "Download Ep 24 (LoadedFiles)", url: "https://loadedfiles.net/e58354b3d64a60cf?pt=MHJvSXVlWG1SOHo4WFhVRk9qdXNjR1ZNV0dkdVkwdFZZekEwVFc5NlYzcFRXbGhSZDFFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 25, quality: "HD", title: "Episode 25", duration: "42m", downloadSources: [{ name: "Download Ep 25 (LoadedFiles)", url: "https://loadedfiles.net/b454dce03f28b2d8?pt=QlpBMjBGT2pWVzJ4RHlvYVIwRU5kMDFDU2xCUll5OXFWMnBSVVRNMmFqSlVOR3MwTjBFOVBRPT0%3D", quality: "HD" }] }
+    ]
+  },
+  {
+    id: "project-loki",
+    tmdbId: 312381,
+    title: "Project Loki",
+    originalTitle: "Project Loki",
+    category: "PH-Drama",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 6,
+    status: "Ongoing",
+    language: "Tagalog",
+    country: "Philippines",
+    rating: 9.5,
+    genres: ["Crime", "Drama", "Mystery"],
+    synopsis: "A troubled new student and an aloof young man make an unlikely investigative pair as they try to uncover the truth behind crimes at their school.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/AjVecMJdv9GffRVhKP2IRoWtaQL.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/jIx6ieN5NEjytfLA0L0kvBCbQSq.jpg",
+    cast: ["Xian Lim"],
+    views: "4.2M",
+    downloadSources: [
+      { name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/350c1ef11aa3a453?pt=NkNzWU83SzUwaHlNdzRaS0JVNEh5RVpzVEVKMlVVaGtSMmt4UkZVNU5ETTRhbFpFUjFFOVBRPT0%3D", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-pl312381", name: "LokiFan", comment: "Project Loki is masterpiece!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "55m", downloadSources: [{ name: "Download Ep 1 (LoadedFiles)", url: "https://loadedfiles.net/350c1ef11aa3a453?pt=NkNzWU83SzUwaHlNdzRaS0JVNEh5RVpzVEVKMlVVaGtSMmt4UkZVNU5ETTRhbFpFUjFFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "55m", downloadSources: [{ name: "Download Ep 2 (LoadedFiles)", url: "https://loadedfiles.net/cbc5ab20c6929274?pt=Y3JjeGtGNE0vNTJ6aFhTVWhkU2tlRk5xWlROeU1sRllTalY1VFZKNk15OXFkbEptY0ZFOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "55m", downloadSources: [{ name: "Download Ep 3 (LoadedFiles)", url: "https://loadedfiles.net/5688ab53464fb5e6?pt=RUowcWplcWZiU0tHdU8xZy8yc3g3bVpYUTNkUVZYcGxORVJPV1U5SFJtRk1UVnBaWm5jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "55m", downloadSources: [{ name: "Download Ep 4 (LoadedFiles)", url: "https://loadedfiles.net/4acd0fc3d47d1438?pt=U1V0ZEVLLy9jZ3JtRm0zUWVmQXh3VFZ2TDA1Uk1HcHpiM3BqVDJ3ME9ISmtSMk14U21jOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "55m", downloadSources: [{ name: "Download Ep 5 (LoadedFiles)", url: "https://loadedfiles.net/565f46e7cae0da28?pt=Nm1NTXdUTlRsMDVvZFpBTHpFYS9UbEExWWl0RGNqbDRiRk50THpRd1QwMVJlbGN4WVdjOVBRPT0%3D", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "55m", downloadSources: [{ name: "Download Ep 6 (LoadedFiles)", url: "https://loadedfiles.net/c7e3bf1d961ebfda?pt=T2RaeXV5dnFxR3NPT2NiRmJ2dlhEV2xGVVZkVUwxSktNbFJ2TlRGclpuRXdZVnA1TTBFOVBRPT0%3D", quality: "HD" }] }
+    ]
+  },
+  {
+    id: "the-ogres-bride",
+    tmdbId: 293489,
+    title: "The Ogre's Bride",
+    originalTitle: "鬼の花嫁",
+    category: "Anime",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 11,
+    status: "Ongoing",
+    language: "Japanese",
+    country: "Japan",
+    rating: 9.7,
+    genres: ["Animation", "Drama", "Sci-Fi & Fantasy"],
+    synopsis: "In a world where humans and ayakashi–supernatural beings–coexist, being chosen as an ayakashi’s bride is the ultimate honor. Yuzu, an ordinary schoolgirl, has been overlooked her whole life, eclipsed by the shadow of her sister Karin, a chosen bride. Just when Yuzu has had enough, she unexpectedly captures the heart of Reiya, a dashing ogre from a powerful clan who claims Yuzu as his own.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/oZHzniVRilau9vY7mOe36smC09T.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/4dlXMSpEw5wiuXr87IKQm22OHQg.jpg",
+    cast: [],
+    views: "5.1M",
+    downloadSources: [
+      { name: "Download Ep 1 (Kwik)", url: "https://kwik.cx/f/Z76CqIISZf3h", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-tob293489", name: "AnimeFan", comment: "The Ogre's Bride is amazing!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "24m", downloadSources: [{ name: "Download Ep 1 (Kwik)", url: "https://kwik.cx/f/Z76CqIISZf3h", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "24m", downloadSources: [{ name: "Download Ep 2 (Kwik)", url: "https://kwik.cx/f/RxgoHRdp3iHI", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "24m", downloadSources: [{ name: "Download Ep 3 (Kwik)", url: "https://kwik.cx/f/xJYJEodliiJ9", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "24m", downloadSources: [{ name: "Download Ep 4 (Kwik)", url: "https://kwik.cx/f/kIZIt1p2bBD6", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "24m", downloadSources: [{ name: "Download Ep 5 (Kwik)", url: "https://kwik.cx/f/oCteeHykdn2P", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "24m", downloadSources: [{ name: "Download Ep 6 (Kwik)", url: "https://kwik.cx/f/eeZheV0HuxBx", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "24m", downloadSources: [{ name: "Download Ep 7 (Kwik)", url: "https://kwik.cx/f/mXLPTGoFSLYf", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "24m", downloadSources: [{ name: "Download Ep 8 (Kwik)", url: "https://kwik.cx/f/Gz3Dt406fKnk", quality: "HD" }] },
+      { epNum: 9, quality: "HD", title: "Episode 9", duration: "24m", downloadSources: [{ name: "Download Ep 9 (Kwik)", url: "https://kwik.cx/f/PqAV9eVAoE9M", quality: "HD" }] },
+      { epNum: 10, quality: "HD", title: "Episode 10", duration: "24m", downloadSources: [{ name: "Download Ep 10 (Kwik)", url: "https://kwik.cx/f/13rEeFTb5Qun", quality: "HD" }] },
+      { epNum: 11, quality: "HD", title: "Episode 11", duration: "24m", downloadSources: [{ name: "Download Ep 11 (Kwik)", url: "https://kwik.cx/f/PzGEqfiwnPZY", quality: "HD" }] }
+    ]
+  },
+  {
+    id: "bleach-tybw-calamity",
+    tmdbId: 1669841,
+    title: "Bleach: Thousand-Year Blood War - The Calamity",
+    originalTitle: "Bleach: Thousand-Year Blood War - The Calamity",
+    category: "Anime",
+    isTrending: true,
+    year: 2026,
+    episodesCount: 8,
+    status: "Ongoing",
+    language: "Japanese",
+    country: "Japan",
+    rating: 8.5,
+    genres: ["Action", "Adventure", "Animation"],
+    synopsis: "The Soul Reapers and Quincies clash in a final battle as Yhwach breaches the Royal Palace. When the Soul King falls, reality begins collapsing. Former enemies unite to storm the transformed palace and face a threat to all existence.",
+    posterUrl: "https://image.tmdb.org/t/p/w500/tEaeXZZO7SEcDr6yRP31UrrxcX0.jpg",
+    backdropUrl: "https://image.tmdb.org/t/p/w1280/fwdosqd1BW1tDlvaF9qhMuERQGY.jpg",
+    cast: [],
+    views: "6.8M",
+    downloadSources: [
+      { name: "Download Ep 1 (Kwik)", url: "https://kwik.cx/f/JladEGDJb3K1", quality: "HD" }
+    ],
+    comments: [
+      { id: "cm-bleach1669841", name: "SoulReaper", comment: "The final battle is epic!", date: "Just now" }
+    ],
+    episodes: [
+      { epNum: 1, quality: "HD", title: "Episode 1", duration: "24m", downloadSources: [{ name: "Download Ep 1 (Kwik)", url: "https://kwik.cx/f/JladEGDJb3K1", quality: "HD" }] },
+      { epNum: 2, quality: "HD", title: "Episode 2", duration: "24m", downloadSources: [{ name: "Download Ep 2 (Kwik)", url: "https://kwik.cx/f/JBaiG6Etupx4", quality: "HD" }] },
+      { epNum: 3, quality: "HD", title: "Episode 3", duration: "24m", downloadSources: [{ name: "Download Ep 3 (Kwik)", url: "https://kwik.cx/f/pR84wbrnuzWm", quality: "HD" }] },
+      { epNum: 4, quality: "HD", title: "Episode 4", duration: "24m", downloadSources: [{ name: "Download Ep 4 (Kwik)", url: "https://kwik.cx/f/39ZCxe1BV7xz", quality: "HD" }] },
+      { epNum: 5, quality: "HD", title: "Episode 5", duration: "24m", downloadSources: [{ name: "Download Ep 5 (Kwik)", url: "https://kwik.cx/f/9IIOHZ15Ixnj", quality: "HD" }] },
+      { epNum: 6, quality: "HD", title: "Episode 6", duration: "24m", downloadSources: [{ name: "Download Ep 6 (Kwik)", url: "https://kwik.cx/f/VdRZjrn6uFLU", quality: "HD" }] },
+      { epNum: 7, quality: "HD", title: "Episode 7", duration: "24m", downloadSources: [{ name: "Download Ep 7 (Kwik)", url: "https://kwik.cx/f/4gayUaukAR2w", quality: "HD" }] },
+      { epNum: 8, quality: "HD", title: "Episode 8", duration: "24m", downloadSources: [{ name: "Download Ep 8 (Kwik)", url: "https://kwik.cx/f/X8Lqb0sM2DV4", quality: "HD" }] }
     ]
   }
 ];
