@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { ShieldCheck, X } from 'lucide-react';
 import { DownloadSource } from '../types';
 
@@ -56,11 +56,14 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
   onClose,
 }) => {
   const [countdown, setCountdown] = useState(5);
+  const [isReady, setIsReady] = useState(false);
+  const modalAdRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let timer: any;
     if (pendingDownload) {
       setCountdown(5);
+      setIsReady(false);
       timer = setInterval(() => {
         setCountdown((prev) => {
           if (prev <= 1) {
@@ -68,8 +71,7 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
             const targetUrl = pendingDownload.source.url;
             const unlockedKey = 'download_unlocked_' + btoa(targetUrl);
             sessionStorage.setItem(unlockedKey, 'true');
-            onClose();
-            window.location.href = 'https://bigotcomet.com/wpkxj35nq9?key=43a936cdcf000461a4c773cb5b5b608c';
+            setIsReady(true);
             return 0;
           }
           return prev - 1;
@@ -79,7 +81,25 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
     return () => {
       if (timer) clearInterval(timer);
     };
-  }, [pendingDownload, onClose]);
+  }, [pendingDownload]);
+
+  // Inject 300x250 Adsterra banner into modal dynamically
+  useEffect(() => {
+    if (pendingDownload && modalAdRef.current) {
+      modalAdRef.current.innerHTML = '';
+      (window as any).atOptions = {
+        'key' : 'f6956208cadaf0e605d6e0478707f118',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://bigotcomet.com/f6956208cadaf0e605d6e0478707f118/invoke.js';
+      modalAdRef.current.appendChild(script);
+    }
+  }, [pendingDownload]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -98,13 +118,21 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
   const { source, serverName } = pendingDownload;
   const targetUrl = source.url;
 
+  const handleOpenAdsterraAndContinue = () => {
+    const unlockedKey = 'download_unlocked_' + btoa(targetUrl);
+    sessionStorage.setItem(unlockedKey, 'true');
+    // Open Adsterra direct link in a new tab / window upon user click
+    window.open('https://bigotcomet.com/wpkxj35nq9?key=43a936cdcf000461a4c773cb5b5b608c', '_blank', 'noopener,noreferrer');
+    onClose();
+  };
+
   return (
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-lg bg-[#121216] border border-[#2d2f39] rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 text-left"
+        className="relative w-full max-w-lg bg-[#121216] border border-[#2d2f39] rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 text-left max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -136,21 +164,45 @@ export const DownloadConfirmModal: React.FC<DownloadConfirmModalProps> = ({
         </div>
 
         {/* Countdown View */}
-        <div className="space-y-6 text-center py-2">
-          <div className="flex flex-col items-center justify-center space-y-3">
-            {/* Circular Progress Timer */}
-            <div className="relative w-24 h-24 flex items-center justify-center bg-[#181922] border-4 border-emerald-500/30 rounded-full shadow-inner shadow-emerald-500/20">
-              <div className="absolute inset-0 rounded-full border-4 border-emerald-500 animate-pulse"></div>
-              <span className="text-3xl font-black text-emerald-400">{countdown}s</span>
+        <div className="space-y-4 text-center py-2">
+          {!isReady ? (
+            <div className="flex flex-col items-center justify-center space-y-3">
+              {/* Circular Progress Timer */}
+              <div className="relative w-24 h-24 flex items-center justify-center bg-[#181922] border-4 border-emerald-500/30 rounded-full shadow-inner shadow-emerald-500/20">
+                <div className="absolute inset-0 rounded-full border-4 border-emerald-500 animate-pulse"></div>
+                <span className="text-3xl font-black text-emerald-400">{countdown}s</span>
+              </div>
+              <p className="text-sm font-medium text-gray-300">
+                Please wait while you are redirected to <span className="text-white font-bold">{serverName}</span>...
+              </p>
             </div>
-            <p className="text-sm font-medium text-gray-300">
-              Please wait while you are redirected to <span className="text-white font-bold">{serverName}</span>...
-            </p>
+          ) : (
+            <div className="space-y-2">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/40">
+                ✓
+              </div>
+              <p className="text-sm font-bold text-emerald-400">Countdown complete!</p>
+            </div>
+          )}
+
+          {/* 300x250 Banner in Countdown Modal */}
+          <div className="modal-ad-container p-3 rounded-2xl bg-[#181922] border border-[#2d2f39] flex flex-col items-center justify-center min-h-[250px] my-4">
+            <span style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '5px' }}>Advertisement</span>
+            <div ref={modalAdRef} className="flex items-center justify-center w-[300px] h-[250px]" />
           </div>
 
-          <div className="text-xs text-gray-400">
-            Your download will start automatically in a moment. Do not close this window.
-          </div>
+          {isReady ? (
+            <button
+              onClick={handleOpenAdsterraAndContinue}
+              className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-sm shadow-xl shadow-emerald-600/20 transition-all cursor-pointer"
+            >
+              Link ready - Click here to continue
+            </button>
+          ) : (
+            <div className="text-xs text-gray-400">
+              Your download will start automatically in a moment. Do not close this window.
+            </div>
+          )}
         </div>
       </div>
     </div>
