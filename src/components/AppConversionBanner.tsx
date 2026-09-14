@@ -11,7 +11,7 @@ export const AppConversionBanner: React.FC = () => {
     setDownloading(true);
     setTimeout(() => {
       setDownloading(false);
-      window.location.href = "https://download1649.mediafire.com/bir7i60wrcsghYZH8DqHb88dNCOUJ0WU6TjUGV67avlzakjE8mJFiS_opuWPu8VQrdsAo0GMNkvROZA77D5kC54lqwAIL6_U_WEYvhANeQESdcTHaA6c4IEAvbnzK-rDO-N8GzMUsXu9NUNPuHVx1ltgxsXzD8PG2CPs4NpF_uo/rkxhbhfrvn613pn/AsiaStream+%285%29.apk";
+      window.location.href = "https://www.mediafire.com/file/2dh6hs1s98l2glu/AsiaStream-v1.10-build11+%283%29.apk/file";
     }, 800);
   };
 
